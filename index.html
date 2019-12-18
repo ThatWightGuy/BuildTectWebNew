@@ -3,14 +3,15 @@
 <head>
 	<title>Build Tect Building Designs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="scripts/navscript.js"></script>
+	<script type="text/javascript" src="scripts/navscript.js"></script>
 </head>
 <body>
-	<nav class="navi-main">
+	<!-- navi-mian's "display: none" is temporary -->
+	<nav class="navi-main" style="display: none">
 		<div class="navi-cont white-text">
 			<ul>
 				<li class="navi-logo white-logo">
@@ -21,20 +22,43 @@
 				<li class="navi-item navi-bars">
 					<i class="fa fa-bars"></i>
 				</li>
-				<li class="navi-item">
-					<i class="fa fa-search"></i>
-				</li>
-				<li class="navi-item">
-					<a href="#second">Contact</a>
-				</li>
-				<li class="navi-item">
-					<a href="#first">About</a>
-				</li>
+				<div class="navi-item-drop-content background-black">
+					<li class="navi-item navi-item-drop navi-search">
+						<form class="navi-search-form white-border">
+							<button type="submit" class="navi-search-button white-text">
+								<i class="fa fa-search"></i>
+							</button>
+							<input placeholder="Search" class="navi-search-input white-text" type="text" name="">
+						</form>
+					</li>
+					<li class="navi-item navi-item-drop">
+						<a href="#contact">Contact</a>
+					</li>
+					<li class="navi-item navi-item-drop">
+						<a href="#about">About</a>
+					</li>
+				</div>
 			</ul>
 		</div>
 	</nav>
-	<div class="test" id="first"></div>
-	<div class="test" id="second"></div>
-	<div class="test" id="third"></div>
+	<div class="main-sect" id="welcome">
+		<div class="main-sect-cont" id="welcome-cont">
+			<div class="welcome-logo">
+				<img class="welcome-logo-img" src="img/Logo.png">
+				<h1>
+					build<span class="tect-blue">tect</span>
+				</h1>
+			</div>
+			<div class="welcome-nav">
+				
+			</div>
+		</div>
+	</div>
+	<div class="main-sect" id="about">
+		<div class="main-sect-cont"></div>
+	</div>
+	<div class="main-sect" id="contact">
+		<div class="main-sect-cont"></div>
+	</div>
 </body>
 </html>
