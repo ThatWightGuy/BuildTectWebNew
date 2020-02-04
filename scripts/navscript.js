@@ -1,35 +1,25 @@
 $(document).ready(function(){
 	$(window).scroll(function(){
-		if ($(document).scrollTop() > 30){
-			$('.navi-main').addClass("navi-main-scroll");
-			$('.navi-cont').removeClass("white-text");
-			$('.navi-cont').addClass("black-text");
-			$('.navi-logo').removeClass("white-logo");
-			$('.navi-logo').addClass("black-logo");
-			$('.navi-search-button').removeClass("white-text");
-			$('.navi-search-button').addClass("black-text");
-			$('.navi-search-input').removeClass("white-text");
-			$('.navi-search-input').addClass("black-text");
-			$('.navi-search-form').removeClass("white-border");
-			$('.navi-search-form').addClass("black-border");
-			$('.navi-item-drop-content').removeClass("background-black");
-			$('.navi-item-drop-content').addClass("background-white");
+		var next_position = $('#about').position().top
+		console.log(next_position);
+		if ($(document).scrollTop() > next_position-25){
+			$('.navi-main').css('display', 'flex');
 		}
 		else{
-			$('.navi-main').removeClass("navi-main-scroll");
-			$('.navi-cont').addClass("white-text");
-			$('.navi-cont').removeClass("black-text");
-			$('.navi-logo').addClass("white-logo");
-			$('.navi-logo').removeClass("black-logo");
-			$('.navi-search-button').addClass("white-text");
-			$('.navi-search-button').removeClass("black-text");
-			$('.navi-search-input').addClass("white-text");
-			$('.navi-search-input').removeClass("black-text");
-			$('.navi-search-form').addClass("white-border");
-			$('.navi-search-form').removeClass("black-border");
-			$('.navi-item-drop').removeClass("background-white");
-			$('.navi-item-drop-content').addClass("background-black");
-			$('.navi-item-drop-content').removeClass("background-white");
+			$('.navi-main').css('display', 'none');
 		}
 	});
+
+	$('.welcome-nav-i')
+	.mouseover(function(){
+		$(this).removeClass('fa-angle-down');
+		$(this).addClass('fa-angle-double-down');
+	})
+	.mouseout(function(){
+		$(this).removeClass('fa-angle-double-down');
+		$(this).addClass('fa-angle-down');
+	});
+
+	var date = new Date();
+	$('.footer-year').append(date.getFullYear());
 });

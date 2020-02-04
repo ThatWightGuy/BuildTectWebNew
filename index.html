@@ -8,33 +8,36 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
 	<script type="text/javascript" src="scripts/navscript.js"></script>
+	<link rel="shortcut icon" href="img/Logo.png">
 </head>
 <body>
-	<!-- navi-mian's "display: none" is temporary -->
 	<nav class="navi-main" style="display: none">
-		<div class="navi-cont white-text">
+		<div class="navi-cont">
 			<ul>
 				<li class="navi-logo white-logo">
 					<a href="#">
 						<img src="img/Logo.png">
 					</a>
 				</li>
-				<li class="navi-item navi-bars">
+				<li class="navi-item navi-bars white-text">
 					<i class="fa fa-bars"></i>
 				</li>
 				<div class="navi-item-drop-content background-black">
-					<li class="navi-item navi-item-drop navi-search">
-						<form class="navi-search-form white-border">
-							<button type="submit" class="navi-search-button white-text">
+					<!--<li class="navi-item navi-item-drop navi-search">
+						<form class="navi-search-form black-border">
+							<button type="submit" class="navi-search-button black-text">
 								<i class="fa fa-search"></i>
 							</button>
-							<input placeholder="Search" class="navi-search-input white-text" type="text" name="">
+							<input placeholder="Search" class="navi-search-input black-text" type="text" name="">
 						</form>
-					</li>
-					<li class="navi-item navi-item-drop">
+					</li>-->
+					<li class="navi-item white-text navi-item-drop">
 						<a href="#contact">Contact</a>
 					</li>
-					<li class="navi-item navi-item-drop">
+					<li class="navi-item white-text navi-item-drop">
+						<a href="#portfolio">Portfolio</a>
+					</li>
+					<li class="navi-item white-text navi-item-drop">
 						<a href="#about">About</a>
 					</li>
 				</div>
@@ -43,22 +46,68 @@
 	</nav>
 	<div class="main-sect" id="welcome">
 		<div class="main-sect-cont" id="welcome-cont">
+			<div class="welcome-top"></div>
 			<div class="welcome-logo">
 				<img class="welcome-logo-img" src="img/Logo.png">
 				<h1>
-					build<span class="tect-blue">tect</span>
+					Build <span class="tect-blue">Tect</span>
 				</h1>
+				<!--<h6>Building Designs</h6>-->
 			</div>
 			<div class="welcome-nav">
-				
+				<ul class="welcome-nav-list">
+					<li class="welcome-nav-li">
+						<a href="#about">About</a>
+					</li>
+					<li class="welcome-nav-li">
+						<a href="#portfolio">Portfolio</a>
+					</li>
+					<li class="welcome-nav-li">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+				<a href="#about">
+					<i class="welcome-nav-i fa fa-angle-down"></i>
+				</a>
 			</div>
 		</div>
 	</div>
 	<div class="main-sect" id="about">
-		<div class="main-sect-cont"></div>
+		<div class="parallax-content" id="about-parallax">
+			<div class="overlay-div"><!-- blank div --></div>
+			<h1 class="parallax-header">About</h1>
+		</div>
+		<div class="main-sect-cont" id="main-sect-about">
+			<div class="sect-short" id="about-short">
+				<h3 id="about-description">
+					Build Tect Building Designs is a small architectural firm based in the San Fernando Valley that specializes in designing both small-scale residential projects and large commercial venues. 
+				</h3>
+				<div class="learn-more">
+					<a href="">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-sect" id="portfolio">
+		<div class="parallax-content" id="portfolio-parallax">
+			<div class="overlay-div"><!-- blank div --></div>
+			<h1 class="parallax-header">Portfolio</span></h1>
+		</div>
+		<div class="main-sect-cont" id="main-sect-portfolio">
+
+		</div>
 	</div>
 	<div class="main-sect" id="contact">
-		<div class="main-sect-cont"></div>
+		<div class="parallax-content" id="contact-parallax">
+			<div class="overlay-div"><!-- blank div --></div>
+			<h1 class="parallax-header">Contact</span></h1>
+		</div>
+		<div class="main-sect-cont" id="main-sect-contact">
+			
+		</div>
 	</div>
+	<footer>
+		<h6>Build Tect Building Designs - <span class="footer-year"></span></h6>
+	</footer>
 </body>
 </html>
