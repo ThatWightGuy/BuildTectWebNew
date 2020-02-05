@@ -5,12 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="styles/index.css">
 	<script type="text/javascript" src="scripts/navscript.js"></script>
+	<script type="text/javascript" src="scripts/about-image.js"></script>
 	<link rel="shortcut icon" href="img/Logo.png">
 </head>
 <body>
+	<!-- Overlays -->
+	<div class="full-img-overlay">
+		<img class="full-img-overlay-img" src="">
+	</div>
+
+	<!-- Main Markup -->
 	<nav class="navi-main" style="display: none">
 		<div class="navi-cont">
 			<ul>
@@ -75,15 +82,46 @@
 	<div class="main-sect" id="about">
 		<div class="parallax-content" id="about-parallax">
 			<div class="overlay-div"><!-- blank div --></div>
-			<h1 class="parallax-header">About</h1>
+			<h1 class="parallax-header">
+				<a href="#main-sect-about">About</a>
+			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-about">
 			<div class="sect-short" id="about-short">
-				<h3 id="about-description">
-					Build Tect Building Designs is a small architectural firm based in the San Fernando Valley that specializes in designing both small-scale residential projects and large commercial venues. 
-				</h3>
+				<div class="sect-title" id="about-us">
+					<h1>What is <span class="tect-blue">Build Tect</span>?</h1>
+				</div>
+				<p class="sect-description" id="about-us-desc">
+					<span class="tect-blue">Build Tect Building Designs</span> is a <span class="tect-blue">design firm</span> based in the San Fernando Valley that specializes in designing both small-scale <span class="tect-blue">residential projects</span> and larger <span class="tect-blue">commercial venues</span>. 
+				</p>
+				<div class="sect-short-cont" id="about-images">
+					<div class="sect-short-img-cont" id="about-img-1">
+						<div class="img-cont-overlay">
+							<div class="img-cont-overlay-button">
+								<i class="fas fa-expand"></i>
+							</div>
+						</div>
+					</div>
+					<div class="sect-short-img-cont" id="about-img-2">
+						<div class="img-cont-overlay">
+							<div class="img-cont-overlay-button">
+								<i class="fas fa-expand"></i>
+							</div>
+						</div>
+					</div>
+					<div class="sect-short-img-cont" id="about-img-3">
+						<div class="img-cont-overlay">
+							<div class="img-cont-overlay-button">
+								<i class="fas fa-expand"></i>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="learn-more">
-					<a href="">Learn More</a>
+					<a href="">
+						<span class="learn-more-text">Learn More</span> 
+						<span class="learn-more-bar"><i class="fa fa-angle-right"></i></span>
+					</a> 
 				</div>
 			</div>
 		</div>
@@ -91,7 +129,9 @@
 	<div class="main-sect" id="portfolio">
 		<div class="parallax-content" id="portfolio-parallax">
 			<div class="overlay-div"><!-- blank div --></div>
-			<h1 class="parallax-header">Portfolio</span></h1>
+			<h1 class="parallax-header">
+				<a href="#main-sect-portfolio">Portfolio</a>
+			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-portfolio">
 
@@ -100,7 +140,9 @@
 	<div class="main-sect" id="contact">
 		<div class="parallax-content" id="contact-parallax">
 			<div class="overlay-div"><!-- blank div --></div>
-			<h1 class="parallax-header">Contact</span></h1>
+			<h1 class="parallax-header">
+				<a href="#main-sect-contact">Contact</a>
+			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-contact">
 			

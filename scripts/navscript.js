@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	$(window).scroll(function(){
 		var next_position = $('#about').position().top
-		console.log(next_position);
 		if ($(document).scrollTop() > next_position-25){
 			$('.navi-main').css('display', 'flex');
 		}
