@@ -3,6 +3,7 @@
 <head>
 	<title>Build Tect Building Designs</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
@@ -14,19 +15,27 @@
 <body>
 	<!-- Overlays -->
 	<div class="full-img-overlay">
-		<img class="full-img-overlay-img" src="">
+		<div class="full-img-overlay-button button-usable" id="overlay-button-prev">
+			<i class="fa fa-angle-left"></i>
+		</div>
+		<div class="full-img-overlay-img-cont">
+			<img class="full-img-overlay-img" src="">
+		</div>
+		<div class="full-img-overlay-button button-usable" id="overlay-button-next">
+			<i class="fa fa-angle-right"></i>
+		</div>
 	</div>
 
 	<!-- Main Markup -->
 	<nav class="navi-main" style="display: none">
 		<div class="navi-cont">
 			<ul>
-				<li class="navi-logo white-logo">
+				<li class="navi-logo white-logo" onclick="">
 					<a href="#">
 						<img src="img/Logo.png">
 					</a>
 				</li>
-				<li class="navi-item navi-bars white-text">
+				<li class="navi-item navi-bars white-text" onclick="">
 					<i class="fa fa-bars"></i>
 				</li>
 				<div class="navi-item-drop-content background-black">
@@ -91,32 +100,44 @@
 				<div class="sect-title" id="about-us">
 					<h1>What is <span class="tect-blue">Build Tect</span>?</h1>
 				</div>
-				<p class="sect-description" id="about-us-desc">
-					<span class="tect-blue">Build Tect Building Designs</span> is a <span class="tect-blue">design firm</span> based in the San Fernando Valley that specializes in designing both small-scale <span class="tect-blue">residential projects</span> and larger <span class="tect-blue">commercial venues</span>. 
+				<p class="sect-description about-us-desc" id="about-what">
+					Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners. We pride ourselves on the reputation we have built with our clients through our years in business for our excellence in service, quick turn-around, and our abliity to help clients solve difficult design problems.
 				</p>
 				<div class="sect-short-cont" id="about-images">
 					<div class="sect-short-img-cont" id="about-img-1">
-						<div class="img-cont-overlay">
-							<div class="img-cont-overlay-button">
+						<div class="img-cont-overlay" onclick="">
+							<div class="img-cont-overlay-button" onclick="">
 								<i class="fas fa-expand"></i>
 							</div>
 						</div>
 					</div>
 					<div class="sect-short-img-cont" id="about-img-2">
-						<div class="img-cont-overlay">
-							<div class="img-cont-overlay-button">
+						<div class="img-cont-overlay" onclick="">
+							<div class="img-cont-overlay-button" onclick="">
 								<i class="fas fa-expand"></i>
 							</div>
 						</div>
 					</div>
 					<div class="sect-short-img-cont" id="about-img-3">
-						<div class="img-cont-overlay">
-							<div class="img-cont-overlay-button">
+						<div class="img-cont-overlay" onclick="">
+							<div class="img-cont-overlay-button" onclick="">
 								<i class="fas fa-expand"></i>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="learn-more" onclick="">
+					<a href="" onclick="" >
+						<span class="learn-more-text">Learn More</span> 
+						<span class="learn-more-bar"><i class="fa fa-angle-right"></i></span>
+					</a> 
+				</div>
+				<div class="sect-title" id="about-offer">
+					<h1>What Do We <span class="tect-blue">Offer</span>?</h1>
+				</div>
+				<p class="sect-description about-us-desc" id="what-is-desc">
+					At Build Tect, we specialize in providing plans for custom homes, remodels, additions, commercial remodels, and tenant improvements. Our team consists of experienced industry professionals who believe in a hands-on approach to every project, ensuring each client recieves the individual attention they deserve. As a team we produce successful designs that are creative and financially feasible. 
+				</p>
 				<div class="learn-more">
 					<a href="">
 						<span class="learn-more-text">Learn More</span> 
