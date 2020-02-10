@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var original = $('html').css('overflow');
-	var img_height = $(".full-img-overlay-img").css('max-height');
-	var img_width = $(".full-img-overlay-img").css('max-width');
+	//var img_height = $(".full-img-overlay-img").css('max-height');
+	//var img_width = $(".full-img-overlay-img").css('max-width');
 	var next;
 	var current;
 	var prev;
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 	$('.img-cont-overlay-button').click(function(){
 		$('.full-img-overlay').css('display', 'flex');
-		$('html').css('overflow', 'hidden');
+		//$('html').css('overflow', 'hidden');
 		current = $(this).parent().parent();
 
 		setNextImages();
@@ -108,4 +108,7 @@ $(document).ready(function(){
 		setImageSize();
 	});
 
+	$(window).on( "orientationchange", function(event){
+		$('#test-orientation').text(event.orientation);
+	});
 });
