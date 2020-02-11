@@ -22,15 +22,15 @@ $(document).ready(function(){
 
 		setImageSize();
 
-		if($(current).prev('.sect-short-img-cont').length > 0){
-			prev = $(current).prev('.sect-short-img-cont');
+		if($(current).parent().prev('.sect-short-img-cont-main').length > 0){
+			prev = $(current).parent().prev('.sect-short-img-cont-main').find('.sect-short-img-cont');
 		}
 		else{
 			prev = {'length': 0};
 		}
 
-		if($(current).next('.sect-short-img-cont').length > 0){
-			next = $(current).next('.sect-short-img-cont');
+		if($(current).parent().next('.sect-short-img-cont-main').length > 0){
+			next = $(current).parent().next('.sect-short-img-cont-main').find('.sect-short-img-cont');
 		}
 		else{
 			next = {'length': 0};
