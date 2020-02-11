@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 	$('.img-cont-overlay-button').click(function(){
 		$('.full-img-overlay').css('display', 'flex');
-		//$('html').css('overflow', 'hidden');
+		$('html').css('overflow', 'hidden');
 		current = $(this).parent().parent();
 
 		setNextImages();
