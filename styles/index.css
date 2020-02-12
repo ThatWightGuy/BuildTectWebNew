@@ -276,8 +276,8 @@ footer h6{
 }
 
 .sect-short-img-cont:hover{
-	transform: scale(1.05);
-	box-shadow: 0 0 20px;
+	transform: scale(1.02);
+	box-shadow: 0 0 10px;
 }
 
 .learn-more{
@@ -491,10 +491,87 @@ footer h6{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 }
 
 #main-sect-portfolio{
-	height: 400px;
+	min-height: 400px;
+}
+
+#portfolio-short{
+	padding: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.portfolio-col-cont{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 100%;
+	margin: 10px;
+}
+
+.portfolio-col-cont-main{
+	display: flex;
+	width: 100%;
+	height: 800px;
+	background-color: #1885ff;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+	transition-property: transform, box-shadow;
+	transition-duration: .2s;
+}
+
+.col-cont-items{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#learn-more-port-col{
+	color: rgba(255, 255, 255, .4);
+}
+
+#learn-more-port-text{
+	transform: translateX(8px);
+}
+
+.learn-more-bar{
+	transition: transform .2s;
+}
+
+#learn-more-port-col:hover{
+	color: rgba(255, 255, 255, 1);
+}
+
+#learn-more-port-col a{
+	transition: color .2s;
+}
+
+#learn-more-port-col a:hover{
+	color: white;
+	/*color: #1885ff;*/
+}
+
+#learn-more-port-col a:hover #learn-more-port-text{
+	transform: translateX(-4px);
+}
+
+#learn-more-port-col a:hover #learn-more-port-bar{
+	visibility: visible;
+	transform: translateX(1px);
+}
+
+.portfolio-col-cont-main:hover{
+	transform: scale(1.02);
+	box-shadow: 0 0 10px black;
 }
 
 /* Contact */
@@ -610,6 +687,28 @@ footer h6{
 		height: 25vw;
 		width: 25vw;
 	}
+
+	.portfolio-col-cont{
+		width: 25vw;
+	}
+
+	.portfolio-col-cont-main{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1300px){
+	#portfolio-short{
+		padding: 50px;
+	}
+
+	.portfolio-col-cont{
+		width: 70vw;
+	}
+
+	.portfolio-col-cont-main{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 1000px){
@@ -668,8 +767,21 @@ footer h6{
 	.navi-search-input{
 		width: 95%;
 	}
+
 	#about-short{
 		padding: 100px 50px;
+	}
+
+	#portfolio-short{
+		padding: 10px;
+	}
+
+	.portfolio-col-cont{
+		width: 70vw;
+	}
+
+	.portfolio-col-cont-main{
+		width: 100%;
 	}
 }
 
@@ -683,6 +795,22 @@ footer h6{
 		font-size: 40px;
 	}
 
+}
+
+@media only screen and (max-width: 800px){
+	#portfolio-short{
+		flex-direction: column;
+		padding: 15px 30px;
+	}
+
+	.portfolio-col-cont{
+		margin: 15px 30px;
+		width: 100%;
+	}
+
+	.portfolio-col-cont-main{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 700px){
