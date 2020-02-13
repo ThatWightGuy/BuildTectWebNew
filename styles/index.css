@@ -212,6 +212,7 @@ footer h6{
 .sect-short-cont{
 	width: 100%;
 	padding: 0; 
+	margin: 0;
 }
 
 .sect-short-img-cont-main{
@@ -224,7 +225,7 @@ footer h6{
 	height: 100%;
 	width: 100%;
 	transition-property: transform, box-shadow;
-	transition:.2s;
+	transition: .2s;
 }
 
 .img-cont-overlay{
@@ -432,16 +433,7 @@ footer h6{
 
 #main-sect-about{
 	height: 100%;
-	display: flex;
 	text-align: center;
-}
-
-
-#about-short{
-	padding: 100px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
 }
 
 #about-offer{
@@ -467,6 +459,7 @@ footer h6{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items: center;
 	margin: 0px 0px 50px 0px;
 }
 
@@ -501,9 +494,14 @@ footer h6{
 #portfolio-short{
 	padding: 100px;
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#portfolio-cols{
+	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
 }
 
 .portfolio-col-cont{
@@ -699,11 +697,20 @@ footer h6{
 
 @media only screen and (max-width: 1300px){
 	#portfolio-short{
-		padding: 50px;
+		padding: 100px 50px;
+	}
+
+	#about-short{
+		padding: 100px 50px;
 	}
 
 	.portfolio-col-cont{
-		width: 70vw;
+		width: 30vw;
+	}
+
+	.sect-short-img-cont-main{
+		width: 30vw;
+		height: 30vw;
 	}
 
 	.portfolio-col-cont-main{
@@ -712,14 +719,8 @@ footer h6{
 }
 
 @media only screen and (max-width: 1000px){
-	#about-images{
-		justify-content: space-around;
-		flex-wrap: wrap;
-	}
-
-	.sect-short-img-cont-main{
-		height: 37vw;
-		width: 37vw;
+	#about-short{
+		padding: 100px 20px; 
 	}
 
 	.navi-item-drop-content{
@@ -768,16 +769,8 @@ footer h6{
 		width: 95%;
 	}
 
-	#about-short{
-		padding: 100px 50px;
-	}
-
 	#portfolio-short{
-		padding: 10px;
-	}
-
-	.portfolio-col-cont{
-		width: 70vw;
+		padding: 100px 20px;
 	}
 
 	.portfolio-col-cont-main{
@@ -799,8 +792,13 @@ footer h6{
 
 @media only screen and (max-width: 800px){
 	#portfolio-short{
+		padding: 100px 30px;
+	}
+
+	#portfolio-cols{
 		flex-direction: column;
-		padding: 15px 30px;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.portfolio-col-cont{
@@ -822,6 +820,10 @@ footer h6{
 		width: 90%;
 	}
 
+	#about-short{
+		padding: 100px 30px
+	}
+
 	#about-images{
 		flex-direction: column;
 		justify-content: center;
@@ -829,8 +831,8 @@ footer h6{
 	}
 
 	.sect-short-img-cont-main{
-		height: 57vw;
-		width: 57vw;
+		margin: 15px 30px;
+		width: 100%;
 	}
 }
 
