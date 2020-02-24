@@ -267,7 +267,7 @@ footer h6{
 }
 
 .img-cont-overlay-button:hover{
-	box-shadow: 0 0 5px;
+	box-shadow: 0 0 5px grey;
 	transform: scale(1.2);
 	cursor: pointer;
 }
@@ -287,7 +287,7 @@ footer h6{
 
 .sect-short-img-cont:hover{
 	transform: scale(1.02);
-	box-shadow: 0 0 10px;
+	box-shadow: 0 0 10px grey;
 }
 
 .learn-more{
@@ -633,7 +633,7 @@ footer h6{
 
 .portfolio-col-cont-main:hover{
 	transform: scale(1.02);
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px grey;
 }
 
 /* Contact */
