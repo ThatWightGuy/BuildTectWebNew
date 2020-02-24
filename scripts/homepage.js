@@ -10,11 +10,8 @@ $(document).ready(function(){
 		$(".sect-short-img-cont-main").css("height", about_img_width + "px");
 
 		// For Portfolio Cards
-
-		if($(window).width() <= 783){
-			$(".portfolio-col-cont-main").css("height", port_width + "px");
-		}
-		else if($(window).width() <= 1583){
+		
+		if(($(window).width() <= 1583) && ($(window).width() >= 784)){
 			$(".portfolio-col-cont-main").css("height", (port_width)*2 + "px");
 		}
 		else{

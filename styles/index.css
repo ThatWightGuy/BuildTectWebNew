@@ -5,6 +5,7 @@ html, body{
 	font-family: sans-serif;
 	font-weight: 100;
 	scroll-behavior: smooth;
+	background-color: white;
 }
 
 a{
@@ -199,20 +200,28 @@ footer h6{
 }
 
 .sect-title h1{
-	font-size: 45px;
+	font-size: 30px;
 	
 }
 
 .sect-description{
 	padding: 0;
-	margin: 10px;
-	font-size: 20px;
+	font-size: 17px;
 }
 
 .sect-short-cont{
 	width: 100%;
 	padding: 0; 
 	margin: 0;
+}
+
+.short-cont{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	text-align: center;
+	align-content: space-between;
 }
 
 .sect-short-img-cont-main{
@@ -285,7 +294,7 @@ footer h6{
 	color: rgba(0, 0, 0, .4);
 	padding: 10px;
 	margin: 10px;
-	font-size: 18px;
+	font-size: 15px;
 	transition: color .2s;
 }
 
@@ -433,26 +442,75 @@ footer h6{
 
 #main-sect-about{
 	height: 100%;
-	text-align: center;
 }
 
 #about-offer{
-	margin: 100px 0px 0px 0px;
+}
+
+#about-us-cont{
+	width: 50%;
+}
+
+#about-offer-cont{
+	width: 50%;
 }
 
 #about-short{
 	padding: 100px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 }
 
-#about-offer{
-	margin: 100px 0px 0px 0px;
+#about-descriptions{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+#about-desc-divide{
+	border: 1px solid lightgrey;
+	height: 80%;
+	margin: 20px;
 }
 
 .about-us-desc{
-	margin: 50px 10px;
+	padding: 10px;
+}
+
+#about-blurb-image-cont{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+.about-blurb-image{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.about-blurb-placeholder{
+	background-color: #1885ff;
+	height: 120px;
+	width: 120px;
+	margin: 5px;
+	border-radius: 100%;
+}
+
+.about-blurb-header{
+	margin: 5px;
+	padding: 0;
+}
+.about-blurb-desc{
+	font-size: 15px;
+	margin: 5px;
+	padding: 0;
 }
 
 #about-images{
@@ -522,15 +580,21 @@ footer h6{
 	justify-content: center;
 	align-items: center;
 	color: white;
-	text-align: center;
 	transition-property: transform, box-shadow;
 	transition-duration: .2s;
 }
 
-.col-cont-items{
+.col-cont-main-items{
 	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-content: center;
 	justify-content: center;
 	align-items: center;
+}
+
+.col-cont-main-items h1{
+	font-size: 30px;
 }
 
 #learn-more-port-col{
@@ -784,30 +848,17 @@ footer h6{
 		padding: 0 5px
 	}
 
-	.sect-title h1{
-		font-size: 40px;
-	}
 
 }
 
 @media only screen and (max-width: 800px){
-	#portfolio-short{
-		padding: 100px 30px;
-	}
-
-	#portfolio-cols{
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
 	.portfolio-col-cont{
-		margin: 15px 30px;
-		width: 100%;
+		height: 456px;
 	}
 
 	.portfolio-col-cont-main{
-		width: 100%;
+		width: 228px;
+
 	}
 }
 
@@ -821,8 +872,30 @@ footer h6{
 	}
 
 	#about-short{
-		padding: 100px 30px
+		padding: 100px 30px;
 	}
+
+	#about-descriptions{
+		flex-direction: column;
+	}
+
+	#about-us-cont{
+		width: 100%;
+	}
+
+	#about-offer-cont{
+		width: 100%;
+	}
+
+	#about-desc-divide{
+		height: none;
+		width: 80%;
+	}
+
+	#about-blurb-image-cont{
+		flex-direction: column;
+	}
+
 
 	#about-images{
 		flex-direction: column;
@@ -850,13 +923,6 @@ footer h6{
 		font-size: 18vw;
 	}
 
-	.sect-title h1{
-		font-size: 30px;
-	}
-
-	.sect-description{
-		font-size: 18px;
-	}
 }
 
 
