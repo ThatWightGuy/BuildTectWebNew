@@ -19,9 +19,24 @@ $(document).ready(function(){
 		}
 	}
 
+	function setTrianDiv(){
+		var sect_divs = $(".sect-div");
+
+		if(sect_divs.length > 0){
+			for(var i = 0; i < sect_divs.length; i++){
+				$(sect_divs[i]).css("border-left-width", $(window).width()/2 + "px");
+				$(sect_divs[i]).css("border-right-width", $(window).width()/2 + "px");
+				$(sect_divs[i]).css("top", $(sect_divs[i]).prev().offset().top + $(sect_divs[i]).prev().height() + "px");
+				$(sect_divs[i]).css("border-top-color", $(sect_divs[i]).prev().css("background-color"));
+			}
+		}
+	} 
+	
+	setTrianDiv();
 	setFrame();
 
 	$(window).resize(function(){
+		setTrianDiv();
 		setFrame();
 	});
 });
