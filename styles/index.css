@@ -582,6 +582,7 @@ footer h6{
 #portfolio-short{
 	padding: 100px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
@@ -591,8 +592,12 @@ footer h6{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	-moz-user-select: none;
-	-webkit-user-select: none;
+	/*-moz-user-select: none;
+	-webkit-user-select: none;*/
+}
+
+#portfolio-scroll-prompt{
+	display: none;
 }
 
 .portfolio-col-cont{
@@ -885,10 +890,10 @@ footer h6{
 }
 
 @media only screen and (max-width: 800px){
-	#portfolio-cols{
+	/*#portfolio-cols{
 		display: grid;
 		grid-auto-flow: column;
-		grid-auto-columns: 248px;
+		grid-auto-columns: 214.667px;
 		justify-content: space-between;
 		justify-items: center;
 	}
@@ -898,13 +903,13 @@ footer h6{
 	}
 
 	.portfolio-col-cont{
-		height: 456px;
+		height: 389.333px;
 	}
 
 	.portfolio-col-cont-main{
-		width: 228px;
+		width: 194.667px;
 
-	}
+	}*/
 }
 
 @media only screen and (max-width: 700px){
@@ -959,8 +964,32 @@ footer h6{
 		margin: 15px 30px;
 		width: 100%;
 	}
-}
 
+	#portfolio-cols{
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: 214.667px;
+		justify-content: space-between;
+		justify-items: center;
+	}
+
+	#portfolio-scroll-prompt{
+		display: block;
+	}
+
+	#portfolio-cols:hover{
+		cursor: grab;
+	}
+
+	.portfolio-col-cont{
+		height: 389.333px;
+	}
+
+	.portfolio-col-cont-main{
+		width: 194.667px;
+
+	}
+}
 
 @media only screen and (max-width: 400px){
 	.navi-search-button{

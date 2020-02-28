@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 		// For Portfolio Cards
 		
-		if(($(window).width() <= 1583) && ($(window).width() >= 784)){
+		if(($(window).width() <= 1583) && ($(window).width() >= 684)){
 			$(".portfolio-col-cont-main").css("height", (port_width)*2 + "px");
 		}
 		else{

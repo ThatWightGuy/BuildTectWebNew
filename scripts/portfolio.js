@@ -1,14 +1,31 @@
 $(document).ready(function(){
+	var previous_width = $(window).width();
+
 	function calculateOffset(){
-		console.log("window: " + $(window).width());
-		console.log("offset: " + $("#portfolio-cols").offset().left);
-		console.log("neg set: " + (($(window).width() - (-20)) - 774)); // left overlap
-		console.log("pos set: " + (($(window).width() - 20) - 774)); // right overlap
-		console.log("added: " + (($(window).width() - $("#portfolio-cols").offset().left) - 774));
+		var neg = ($(window).width() - (-20)) - 673;
+		//var pos = 774 - ($(window).width() - 20) + $(window).width();
+
+		//console.log("neg set: " + (neg - 10)); // left overlap
+		//console.log("pos set: " + pos); // right overlap
+
+		if(neg < 0){
+			$("#portfolio-cols").draggable({
+				axis: "x",
+				containment: [(neg - 10), 0, 20, 0]
+			});
+		}
+		else{
+			$("#portfolio-cols").draggable({
+				axis: "x",
+				containment: [20, 0, 20, 0]
+			});
+		}
+
+		return neg;
 	}
 
 	function setDrag(){
-		if($(window).width() <= 783){
+		if($(window).width() <= 683){
 			$("#portfolio-cols").css("cursor", "grab");
 			$("#portfolio-cols").draggable("enable");
 		}
@@ -22,21 +39,18 @@ $(document).ready(function(){
 
 	$("#portfolio-cols").draggable({
 		axis: "x",
-		drag: function(event, ui){
-			calculateOffset()
-		}
+		scroll: false,
+		containment: $(".portfolio-short")
 	});
 
-	console.log();
-
 	$("#portfolio-cols").mousedown(function(){
-		if($(window).width() <= 783){
+		if($(window).width() <= 683){
 			$("#portfolio-cols").css("cursor", "grabbing");
 		}
 	});
 
 	$("#portfolio-cols").mouseup(function(){
-		if($(window).width() <= 783){
+		if($(window).width() <= 683){
 			$("#portfolio-cols").css("cursor", "grab");
 
 		}
@@ -47,6 +61,12 @@ $(document).ready(function(){
 
 	$(window).resize(function(){
 		setDrag();
-		calculateOffset();	
+		var neg = calculateOffset();
+		if($(window).width() <= 683){
+			var diff = $("#portfolio-cols").offset().left - neg;
+			if(diff < -20){
+				$("#portfolio-cols").css("left", ($("#portfolio-cols").offset().left - (diff + 20)) + "px");
+			}	
+		}
 	});
 });
