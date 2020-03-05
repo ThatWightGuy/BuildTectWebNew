@@ -125,7 +125,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners. We pride ourselves on the reputation we have built with our clients through our years in business for our excellence in service, quick turn-around, and our abliity to help clients solve difficult design problems.
 						</p>
 						<div class="learn-more">
-							<a href="" onclick="" >
+							<a href="/about" onclick="" >
 								<span class="learn-more-text">Learn More</span> 
 								<span class="learn-more-bar"><i class="fa fa-angle-right"></i></span>
 							</a> 
