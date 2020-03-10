@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="main-sect" id="about">
 		<div class="parallax-content" id="about-parallax">
-			<div class="overlay-div"><!-- blank div --></div>
+			<div class="overlay-div"></div>
 			<h1 class="parallax-header">
 				<a href="#main-sect-about">About</a>
 			</h1>
@@ -117,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="sect-short" id="about-short">
 				<div class="sect-short-cont" id="about-descriptions">
-					<div class="short-cont" id="about-us-cont" data-aos="fade-up">
+					<div class="short-cont" id="about-us-cont" data-aos="fade-right">
 						<div class="sect-title" id="about-us">
 							<h1>What is <span class="tect-blue">Build Tect</span>?</h1>
 						</div>
@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 					<div class="short-cont-divide" id="about-desc-divide" data-aos="fade-up"></div>
-					<div class="short-cont" id="about-offer-cont"  data-aos="fade-up">
+					<div class="short-cont" id="about-offer-cont"  data-aos="fade-left">
 						<div class="sect-title" id="about-offer">
 							<h1>What Do We <span class="tect-blue">Offer</span>?</h1>
 						</div>
@@ -148,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="sect-short-cont" id="about-blurb-image-cont">
-					<div class="about-blurb-image" data-aos="fade-up">
+					<div class="about-blurb-image" data-aos="fade-right">
 						<div class="about-blurb-placeholder">
 							<i class="far fa-calendar-alt"></i>
 						</div>
@@ -162,7 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<h6 class="about-blurb-header tect-blue">100+</h6>
 						<h6 class="about-blurb-desc">Projects Completed</h6>
 					</div>
-					<div class="about-blurb-image" data-aos="fade-up">
+					<div class="about-blurb-image" data-aos="fade-left">
 						<div class="about-blurb-placeholder">
 							<i class="fas fa-user-friends"></i>
 						</div>
@@ -173,6 +173,66 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 				<div class="short-cont-divide" id="about-divide-one"></div>
 				
+				<div class="sect-short-cont" id="about-testimonials">
+					<div class="sect-title" id="about-test-main-title" data-aos="fade-up">
+						<h1>What They <span class="tect-blue">Are Saying</span></h1>
+					</div>
+					<div class="about-testimonial" data-aos="fade-right">
+						<div class="about-test-image">
+							<img src="../img/stock3.jpg">
+						</div>
+						<div class="about-test-desc">
+							<div class="sect-title about-test-blurb">
+								<i class="fas fa-quote-left"></i>
+								<h1>The Results Were Amazing!</h1>
+							</div>
+							<p class="sect-description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+							</p>
+							<div class="about-test-signature">
+								<h6 class="sig-name tect-blue">Jane Doe</h6>
+								<h6 class="sig-occupation">Former Client</h6>
+							</div>
+						</div>
+					</div>
+					<div class="about-testimonial" data-aos="fade-left">
+						<div class="about-test-image">
+
+						</div>
+						<div class="about-test-desc">
+							<div class="sect-title about-test-blurb">
+								<i class="fas fa-quote-left"></i>
+								<h1>Very Professional</h1>
+							</div>
+							<p class="sect-description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+							</p>
+							<div class="about-test-signature">
+								<h6 class="sig-name tect-blue">Adam Smith</h6>
+								<h6 class="sig-occupation">Former Client</h6>
+							</div>
+						</div>
+					</div>
+					<div class="about-testimonial" data-aos="fade-right">
+						<div class="about-test-image">
+							
+						</div>
+						<div class="about-test-desc">
+							<div class="sect-title about-test-blurb">
+								<i class="fas fa-quote-left"></i>
+								<h1>Incredible Atmosphere</h1>
+							</div>
+							<p class="sect-description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+							</p>
+							<div class="about-test-signature">
+								<h6 class="sig-name tect-blue">John Doe</h6>
+								<h6 class="sig-occupation">Former Client</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<!--<div class="sect-short-cont" id="about-images">
 					<div class="sect-short-img-cont-main" data-aos="fade-up">
 						<div class="sect-short-img-cont" id="about-img-1" >
@@ -210,7 +270,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="main-sect" id="portfolio">
 		<div class="parallax-content" id="portfolio-parallax">
-			<div class="overlay-div"><!-- blank div --></div>
+			<div class="overlay-div"></div>
 			<h1 class="parallax-header">
 				<a href="#main-sect-portfolio">Portfolio</a>
 			</h1>
@@ -230,7 +290,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</p>
 				</div>
 				<div class="sect-short-cont" id="portfolio-cols">
-					<div class="portfolio-col-cont" data-aos="fade-up">
+					<div class="portfolio-col-cont" data-aos="fade-right">
 						<div class="portfolio-col-cont-main">
 							<div class="col-cont-main-items">
 								<h1>All</h1>
@@ -256,7 +316,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-col-cont" data-aos="fade-up">
+					<div class="portfolio-col-cont" data-aos="fade-left">
 						<div class="portfolio-col-cont-main">
 							<div class="col-cont-main-items">
 								<h1>Commercial</h1>
@@ -274,12 +334,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
-
 	<!-- Contact Section -->
 
 	<div class="main-sect" id="contact">
 		<div class="parallax-content" id="contact-parallax">
-			<div class="overlay-div"><!-- blank div --></div>
+			<div class="overlay-div"></div>
 			<h1 class="parallax-header">
 				<a href="#main-sect-contact">Contact</a>
 			</h1>
@@ -302,7 +361,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="short-cont-divide" id="contact-info-div"></div>
 							<h6 id="contact-info-phone">(818) 894-5335</h6>
 							<h6 id="contact-info-addr">9707 Woodley Ave. Northridge, CA. 91343</h6>
-							<h6 id="contact-info-email">info@buildtect.com</h6>
+							<div id="contact-info-email">
+								<h6>info@buildtect.com<h6>
+								<div id="contact-info-email-tool">Or Email: dean.btdesigns11@yahoo.com</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -333,7 +395,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
-  		AOS.init();
+  		AOS.init({
+  			once:"true"
+  		});
 	</script>
 </body>
 </html>

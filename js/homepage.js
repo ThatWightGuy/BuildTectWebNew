@@ -46,4 +46,13 @@ $(document).ready(function(){
 		setFrame();
 		setTrianDiv();
 	});
+
+	/*$("#contact-info-email").mousemove(function(event){
+		var relX = event.pageX - $(this).offset().left;
+		var toolX = $("#contact-info-email").position().left;
+		
+		if (relX >= 0 && relX <=140) {
+			$("#contact-info-email-tool").css("left", ((relX - toolX) + 35) +  "px");
+		}
+	});*/
 });
