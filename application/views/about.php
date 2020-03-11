@@ -9,5 +9,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body ontouchmove >
 	<h1 style="font-family: fantasy;">TEST</h1>
+
+	<?php foreach ($query as $item): ?>
+		<img src="<?php echo base_url(), $item['fileLocation']; ?>">
+	<?php endforeach; ?>
+
 </body>
 </html>

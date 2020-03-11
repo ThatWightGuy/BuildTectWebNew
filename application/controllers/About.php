@@ -20,7 +20,12 @@ class About extends CI_Controller {
 	 */
 	public function index()
 	{	
+		$this->load->model('test_model');
 		$this->load->helper('url');
-		$this->load->view('about');
+
+		$data['query'] = $this->test_model->get_images_by_id(1);
+
+		$this->load->view('about', $data);
 	}
 }
+?>
