@@ -22,7 +22,18 @@ class About extends CI_Controller {
 	{	
 		$this->load->model('test_model');
 		$this->load->helper('url');
+		
+		$navbar_data = array(
+			'logo_link' => base_url(), // href for logo
+			'links' => array(
+				array('name' => 'Services', 'link' => base_url()),
+				array('name' => 'History', 'link' => base_url())
+			),
+			'styles' => array()
+		);	
 
+		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
+		
 		$data['query'] = $this->test_model->get_images_by_id(1);
 
 		$this->load->view('about', $data);

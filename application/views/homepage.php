@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/basic.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/index.css">
 	<link rel="shortcut icon" href="img/Logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,43 +37,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<!-- Main Markup -->
-	<nav class="navi-main" style="display: none">
-		<div class="navi-cont">
-			<ul>
-				<li class="navi-logo white-logo">
-					<a href="#">
-						<img src="img/Logo.png">
-					</a>
-				</li>
-				<li class="navi-item navi-bars white-text">
-					<i class="fa fa-bars"></i>
-				</li>
-				<div class="navi-item-drop-content background-black">
-					<!--<li class="navi-item navi-item-drop navi-search">
-						<form class="navi-search-form black-border">
-							<button type="submit" class="navi-search-button black-text">
-								<i class="fa fa-search"></i>
-							</button>
-							<input placeholder="Search" class="navi-search-input black-text" type="text" name="">
-						</form>
-					</li>-->
-					<li class="navi-item white-text navi-item-drop">
-						<a href="#contact">Contact</a>
-					</li>
-					<li class="navi-item white-text navi-item-drop">
-						<a href="#portfolio">Portfolio</a>
-					</li>
-					<li class="navi-item white-text navi-item-drop">
-						<a href="#about">About</a>
-					</li>
-				</div>
-			</ul>
-		</div>
-	</nav>
+
+	<?php echo $navbar?>
 
 	<!-- Welcome Section -->
 
 	<div class="main-sect" id="welcome">
+		
 		<div class="main-sect-cont" id="welcome-cont">
 			<div class="welcome-top"></div>
 			<div class="welcome-logo">
@@ -94,9 +65,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<a href="#contact">Contact</a>
 					</li>
 				</ul>
-				<a href="#about">
-					<i class="welcome-nav-i fa fa-angle-down"></i>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -115,6 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
 			</div>
+			<div id="about-gradient"></div>
 			<div class="sect-short" id="about-short">
 				<div class="sect-short-cont" id="about-descriptions">
 					<div class="short-cont" id="about-us-cont" data-aos="fade-right">
@@ -286,7 +255,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<h1>See Our <span class="tect-blue">Work</span></h1>
 					</div>
 					<p class="sect-description" id="portfolio-sect-desc" data-aos="fade-up">
-						Below are links to our jobs portfolio. Clicking on a link will automatically filter our database to show one of three job types (shown below). You may also click <a href=""><span class="tect-blue">here</span></a> to navigate to our portfolio page.  
+						Below are links to our jobs portfolio. Clicking on a link will automatically filter our database to show one of three job types (shown below). You may also click <a href="/portfolio"><span class="tect-blue">here</span></a> to navigate to our portfolio page.  
 					</p>
 				</div>
 				<div class="sect-short-cont" id="portfolio-cols">

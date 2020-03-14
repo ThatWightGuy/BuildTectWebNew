@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Homepage extends CI_Controller {
+class Portfolio extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,23 +20,10 @@ class Homepage extends CI_Controller {
 	 */
 	public function index()
 	{	
+		$this->load->model('test_model');
 		$this->load->helper('url');
 
-		$navbar_data = array(
-			'logo_link' => '#', // href for logo
-			'links' => array(
-				array('name' => 'Contact', 'link' => "#contact"),
-				array('name' => 'Portfolio', 'link' => "#portfolio"),
-				array('name' => 'About', 'link' => "#about")
-			),
-			'styles' => array(
-				'display: none;',
-			)
-		);	
-
-		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
-
-
-		$this->load->view('homepage', $data);
+		$this->load->view('portfolio');
 	}
 }
+?>
