@@ -1,0 +1,68 @@
+.portfolio-sidebar{
+	position: fixed;
+	top: 57px;
+	height: calc(100vh - 57px);
+	width: 300px;
+	background-color: #dfeeff;
+}
+
+.sidebar-button-frame{
+	position: fixed;
+	display: flex;
+	top: 57px;
+	height: calc(100vh - 57px);
+	width: auto;
+	z-index: 3;
+	transition-property: transform;
+	transition-duration: .2s;
+}
+
+.sidebar-button{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	top: 15px;
+	padding: 20px;
+	border-radius: 100%;
+	background-color: #1885ff;
+	color: white;
+	transform: translateX(-30px);
+	transition-property: transform, box-shadow, opacity;
+	transition-duration: .2s;
+	font-size: 20px;
+	opacity: .5;
+}
+
+.sidebar-icon{
+	transform: translateX(12px);
+	transition-property: transform;
+	transition-duration: .2s;
+}
+
+.sidebar-button:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+	cursor: pointer;
+	opacity: 1;
+}
+
+.sidebar-button:hover .sidebar-icon{
+	transform: translateX(2px);
+}
+
+#portfolio-main-sect{
+	position: absolute;
+	/*min-height: calc(100vh - 57px);*/
+	height: 3000px;
+	z-index: 2;
+	top: 57px;
+	background-color: white;
+	box-shadow: 0 0 15px rgba(0,0,0,.5);
+	transition-property: transform;
+	transition-duration: .2s;
+}
+
+#portfolio-main-sect-cont{
+}

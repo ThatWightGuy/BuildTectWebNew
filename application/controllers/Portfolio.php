@@ -23,7 +23,18 @@ class Portfolio extends CI_Controller {
 		$this->load->model('test_model');
 		$this->load->helper('url');
 
-		$this->load->view('portfolio');
+		$navbar_data = array(
+			'logo_link' => base_url(), // href for logo
+			'links' => array(
+				array('name' => 'Services', 'link' => base_url()),
+				array('name' => 'History', 'link' => base_url())
+			),
+			'styles' => array()
+		);	
+
+		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
+		
+		$this->load->view('portfolio', $data);
 	}
 }
 ?>

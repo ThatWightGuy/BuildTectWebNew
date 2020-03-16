@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>/js/navscript.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>/js/about-image.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/portfolio.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/portfolio-home.js"></script>
 </head>
 <body ontouchmove >
 	<!-- Overlays -->
@@ -83,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
 			</div>
-			<div id="about-gradient"></div>
+			<div class="back-gradient"></div>
 			<div class="sect-short" id="about-short">
 				<div class="sect-short-cont" id="about-descriptions">
 					<div class="short-cont" id="about-us-cont" data-aos="fade-right">
@@ -146,57 +146,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-title" id="about-test-main-title" data-aos="fade-up">
 						<h1>What They <span class="tect-blue">Are Saying</span></h1>
 					</div>
-					<div class="about-testimonial" data-aos="fade-right">
-						<div class="about-test-image">
-							<img src="../img/stock3.jpg">
-						</div>
-						<div class="about-test-desc">
-							<div class="sect-title about-test-blurb">
-								<i class="fas fa-quote-left"></i>
-								<h1>The Results Were Amazing!</h1>
+					<div class="about-testimonial-cont" data-aos="fade-right">
+						<div class="about-testimonial">
+							<div class="about-test-image">
+								<img src="../img/stock3.jpg">
 							</div>
-							<p class="sect-description">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-							</p>
-							<div class="about-test-signature">
-								<h6 class="sig-name tect-blue">Jane Doe</h6>
-								<h6 class="sig-occupation">Former Client</h6>
+							<div class="about-test-desc">
+								<div class="sect-title about-test-blurb">
+									<i class="fas fa-quote-left"></i>
+									<h1>The Results Were Amazing!</h1>
+								</div>
+								<p class="sect-description">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+								</p>
+								<div class="about-test-signature">
+									<h6 class="sig-name tect-blue">Jane Doe</h6>
+									<h6 class="sig-occupation">Former Client</h6>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="about-testimonial" data-aos="fade-left">
-						<div class="about-test-image">
+					<div class="about-testimonial-cont" data-aos="fade-left">
+						<div class="about-testimonial" >
+							<div class="about-test-image">
 
-						</div>
-						<div class="about-test-desc">
-							<div class="sect-title about-test-blurb">
-								<i class="fas fa-quote-left"></i>
-								<h1>Very Professional</h1>
 							</div>
-							<p class="sect-description">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-							</p>
-							<div class="about-test-signature">
-								<h6 class="sig-name tect-blue">Adam Smith</h6>
-								<h6 class="sig-occupation">Former Client</h6>
+							<div class="about-test-desc">
+								<div class="sect-title about-test-blurb">
+									<i class="fas fa-quote-left"></i>
+									<h1>Very Professional</h1>
+								</div>
+								<p class="sect-description">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+								</p>
+								<div class="about-test-signature">
+									<h6 class="sig-name tect-blue">Adam Smith</h6>
+									<h6 class="sig-occupation">Former Client</h6>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="about-testimonial" data-aos="fade-right">
-						<div class="about-test-image">
-							
-						</div>
-						<div class="about-test-desc">
-							<div class="sect-title about-test-blurb">
-								<i class="fas fa-quote-left"></i>
-								<h1>Incredible Atmosphere</h1>
+					<div class="about-testimonial-cont" data-aos="fade-right">
+						<div class="about-testimonial">
+							<div class="about-test-image">
+								<img src="../img/stock3.jpg">
 							</div>
-							<p class="sect-description">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-							</p>
-							<div class="about-test-signature">
-								<h6 class="sig-name tect-blue">John Doe</h6>
-								<h6 class="sig-occupation">Former Client</h6>
+							<div class="about-test-desc">
+								<div class="sect-title about-test-blurb">
+									<i class="fas fa-quote-left"></i>
+									<h1>The Results Were Amazing!</h1>
+								</div>
+								<p class="sect-description">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+								</p>
+								<div class="about-test-signature">
+									<h6 class="sig-name tect-blue">Jane Doe</h6>
+									<h6 class="sig-occupation">Former Client</h6>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -245,6 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-portfolio">
+			<div class="back-gradient"></div>
 			<div class="sect-div" id="main-sect-portfolio-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
@@ -255,7 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<h1>See Our <span class="tect-blue">Work</span></h1>
 					</div>
 					<p class="sect-description" id="portfolio-sect-desc" data-aos="fade-up">
-						Below are links to our jobs portfolio. Clicking on a link will automatically filter our database to show one of three job types (shown below). You may also click <a href="/portfolio"><span class="tect-blue">here</span></a> to navigate to our portfolio page.  
+						Below are links to our jobs portfolio. Clicking on a link will automatically filter our database to show one of three job types (shown below). You may also click <a id="portfolio-here" href="/portfolio"><span class="tect-blue">here</span></a> to navigate to our portfolio page.  
 					</p>
 				</div>
 				<div class="sect-short-cont" id="portfolio-cols">
@@ -313,6 +320,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-contact">
+			<div class="back-gradient"></div>
 			<div class="sect-div" id="main-sect-contact-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>

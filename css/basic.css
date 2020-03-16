@@ -27,6 +27,13 @@ footer h6{
 	color: white;
 }
 
+.parallax{
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
 .sect-short{
 	height: 100%;
 	max-width: 1600px;
@@ -207,7 +214,21 @@ footer h6{
 	color: #1885ff;
 }
 
+.light-blue{
+	color: #dfeeff;
+}
+
 .title-underline{
 	border-bottom: 3px solid #1885ff;
 	padding: 0 5px
+}
+
+.back-gradient{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	background: rgb(223,238,255);
+	background: linear-gradient(0deg, rgba(223,238,255,1) 0%, rgba(250,252,255,1) 40%, rgba(255,255,255,0) 100%);
 }
