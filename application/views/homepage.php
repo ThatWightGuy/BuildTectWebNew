@@ -13,11 +13,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url();?>/js/jquery.ui.touch-punch.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/navscript.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/about-image.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/portfolio-home.js"></script>
+	<script src="<?php echo base_url();?>/js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/homepage.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/navscript.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/about-image.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/portfolio-home.js"></script>
 </head>
 <body ontouchmove >
 	<!-- Overlays -->

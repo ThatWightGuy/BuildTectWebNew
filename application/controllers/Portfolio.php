@@ -26,8 +26,7 @@ class Portfolio extends CI_Controller {
 		$navbar_data = array(
 			'logo_link' => base_url(), // href for logo
 			'links' => array(
-				array('name' => 'Services', 'link' => base_url()),
-				array('name' => 'History', 'link' => base_url())
+
 			),
 			'styles' => array()
 		);	

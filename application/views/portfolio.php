@@ -13,8 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url();?>/js/jquery.ui.touch-punch.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/portfolio.js"></script>
+	<script src="<?php echo base_url();?>/js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>/js/portfolio/portfolio-layout.js"></script>
 </head>
 <body ontouchmove >
 	<?php echo $navbar?>
@@ -28,7 +28,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div class="main-sect" id="portfolio-main-sect">
 		<div class="main-sect-cont" id="portfolio-main-sect-cont">
-			<h1>test</h1>
+			<div class="sect-short padding-100" id="portfolio-cont">
+				<div class="sect-short-cont" id="portfolio-main-dash">
+
+				</div>
+				<div class="sect-short-cont" id="portfolio-items">
+					<div class="portfolio-items-cont">
+
+						<?php for ($i=0; $i < 9; $i++): ?>
+							<div class="portfolio-item portfolio-item-570">
+								<div class="portfolio-item-cont">
+									
+								</div>
+							</div>
+						<?php endfor; ?>
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

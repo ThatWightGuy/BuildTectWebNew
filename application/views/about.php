@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url();?>/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo base_url();?>/js/basic/jquery.ui.touch-punch.min.js"></script>
 </head>
 <body ontouchmove >
 	<?php echo $navbar; ?>
