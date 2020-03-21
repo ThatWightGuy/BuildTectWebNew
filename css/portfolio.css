@@ -2,6 +2,11 @@ body, html{
 	width: 100vw;
 }
 
+h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0; 
+}
+
 .portfolio-sidebar{
 	position: fixed;
 	width: 0;
@@ -94,6 +99,12 @@ body, html{
 	right: 0;
 	color: white;
 	font-size: 25px;
+	transition-property: color;
+	transition-duration: .2s;
+}
+
+#sidebar-button-exit:hover{
+	color: #dfeeff;
 }
 
 #sidebar-button-exit i{
@@ -103,6 +114,136 @@ body, html{
 
 #sidebar-button-exit:hover{
 	cursor: pointer;
+}
+
+.sidebar-title-cont{
+	width: 300px;
+	height: 80px;
+	display: flex;
+	color: white;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid rgba(223, 238, 255, .4);
+	cursor: default;
+}
+
+.sidebar-filter-form{
+	position: relative;
+	width: 300px;
+}
+
+.sidebar-filter-cont{
+	position: relative;
+	width: 300px;
+	border-bottom: 1px solid rgba(223, 238, 255, .4);
+}
+
+.sidebar-filter-button{
+	padding: 0;
+	outline: none;
+	color: white;
+	background-color: transparent;
+	border: none;
+	transition-property: background-color;
+	transition-duration: .2s;
+}
+
+.sidebar-filter-button-cont{
+	display: grid;
+	width: 300px;
+	height: 60px;
+	grid-template-columns: auto 60px;
+	grid-template-rows: 60px;
+	align-content: center;
+	justify-items: center;
+	color: white;
+	background-color: transparent;
+	border: none;
+	transition-property: background-color;
+	transition-duration: .2s;
+}
+
+.sidebar-button-title{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.sidebar-button-indicator{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.sidebar-filter-button:hover{
+	cursor: pointer;
+}
+
+.sidebar-filter-dropdown{
+	width: 300px; 
+	height: 0px; 
+	overflow: hidden;
+	background-color: #dfeeff;
+	transition-duration: .5s;
+	transition-property: height;
+	transform-style: ease;
+}
+
+.sidebar-dropdown-item{
+	display: grid;
+	width: 300px;
+	height: 60px;
+	grid-template-columns: auto 60px;
+	grid-template-rows: 60px; 
+	color: black;
+	transition-duration: .2s;
+	transition-property: background-color. color;
+}
+
+.sidebar-dropdown-item:hover{
+	background-color: rgba(24, 133, 255, .4);
+	color: white;
+}
+
+.sidebar-drop-title{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	grid-column-start: 1; 
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	cursor: default;
+}
+
+.sidebar-drop-button{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	grid-column-start: 2; 
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.sidebar-drop-switch{
+	position: relative;
 }
 
 .portfolio-search{
@@ -116,6 +257,7 @@ body, html{
 .portfolio-search input{
 	border-radius: 22.5px;
 	border: none;
+	outline: none;
 	height: 100%; 
 	width: 100%;
 }
@@ -139,11 +281,20 @@ body, html{
 	width: 100%;
 	height: 100%;
 	background-color: #1885ff;
+	transition-property: transform;
+	transition-duration: .2s;
+}
+
+.portfolio-item-cont:hover{
+	transform: scale(1.05);
+}
+
+#help-switch{
+	position: absolute;
 }
 
 /* default stuff */
 .switch {
-	position: absolute;
 	display: inline-block;
 	width: 45px;
 	height: 24px;
@@ -208,10 +359,49 @@ body, html{
 	position: absolute;
 	display: flex;
 	width: 110px;
-	top: -40px;
-	right: 82px;
+	top: -30px;
+	right: 80px;
+	font-size: 15px;
 }
 
+#help-mode-underline{
+	border-bottom: 1px dotted black;
+}
+
+#help-mode-underline:hover{
+	cursor: pointer;
+}
+
+#help-mode-underline:hover ~ .popup-cont, .popup-cont:hover{
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup-cont{
+	position: absolute;
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	width: 200px;
+	z-index: 4;
+	background-color: #1885ff;
+	color: white;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	transition-property: opacity, visibility;
+	transition-delay: .05s;
+	transition-duration: .2s;
+}
+
+.popup-text{
+	width: 100%;
+	padding: 0 20px;
+}
+
+#help-mode-popup{
+	top: 30px;
+	left: -60px;
+}
 
 /* For Portfolio Items:*/
 /* default */

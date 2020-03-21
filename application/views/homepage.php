@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<h1>What is <span class="tect-blue">Build Tect</span>?</h1>
 						</div>
 						<p class="sect-description about-us-desc" id="about-what">
-							Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners. We pride ourselves on the reputation we have built with our clients through our years in business for our excellence in service, quick turn-around, and our abliity to help clients solve difficult design problems.
+							Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners. We pride ourselves on the reputation we have built with our clients through our years in business for our excellence in service, quick turn-around, and our ability to help clients solve difficult design problems.
 						</p>
 						<div class="learn-more">
 							<a href="/about" onclick="" >
