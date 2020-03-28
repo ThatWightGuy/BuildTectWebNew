@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body ontouchmove >
 	<?php echo $navbar; ?>
 	<?php foreach ($query as $item): ?>
-		<img src="<?php echo base_url(), $item['fileLocation']; ?>">
+		<img src="<?php echo base_url(), $item['image']; ?>">
 	<?php endforeach; ?>
 
 </body>

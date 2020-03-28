@@ -20,8 +20,16 @@ class Portfolio extends CI_Controller {
 	 */
 	public function index()
 	{	
-		$this->load->model('test_model');
+		$this->load->model('portfolio_model');
 		$this->load->helper('url');
+
+		$flash = $this->session->flashdata('test_flash');
+
+		$data['flashdata'] = "All";
+
+		if(!is_null($flash)){
+			$data['flashdata'] = $flash['response'];
+		}
 
 		$navbar_data = array(
 			'logo_link' => base_url(), // href for logo
@@ -31,9 +39,31 @@ class Portfolio extends CI_Controller {
 			'styles' => array()
 		);	
 
+		$data['projectTypes'] = $this->portfolio_model->get_project_types();
+
 		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
 		
 		$this->load->view('portfolio', $data);
+	}
+
+	public function searchForm(){
+		$post_data = $this->input->post();
+		$data = array();
+		$view_data = array();
+
+		$view_data['search'] = $post_data['PortfolioSearch'];
+		$view_data['job'] = $post_data['JobType'];
+		
+		if(array_key_exists('ProjectType', $post_data)){
+			$view_data['project'] = $post_data['ProjectType'];
+		}
+		else{
+			$view_data['project'] = array();
+		}
+
+		$data['PortfolioView'] = $this->load->view('segments/portfolio_items', $view_data, TRUE);
+		
+		echo json_encode($data);
 	}
 }
 ?>

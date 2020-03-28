@@ -1,8 +1,7 @@
 $(document).ready(function(){
 	var isClicked = {
 		"Job-Type-Filter-Button": false, 
-		"Test-Button": false,
-		"Test-Button-2": false,
+		"Project-Type-Filter-Button": false,
 	}
 
 	$(".sidebar-filter-button")

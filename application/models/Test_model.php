@@ -8,7 +8,7 @@ class Test_model extends CI_Model{
 	}
 
 	public function get_images_by_id($id){
-		$this->db->select('fileLocation');
+		$this->db->select('image');
 		$this->db->from('Images');
 		$this->db->where('jobID', $id);
 		$query = $this->db->get();

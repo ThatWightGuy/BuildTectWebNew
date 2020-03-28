@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	$("#help-checkbox").prop('checked', false);
 
 	$("#help-checkbox").click(function(){

@@ -7,17 +7,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/basic.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/index.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/basic.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/index.css">
 	<link rel="shortcut icon" href="img/Logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
-	<script src="<?php echo base_url();?>/js/basic/jquery.ui.touch-punch.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/homepage.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/navscript.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/about-image.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>/js/homepage/portfolio-home.js"></script>
+	<script type="text/javascript">
+		var baseURL = "<?php echo base_url(); ?>";
+	</script>
+	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/homepage.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/homepage-request.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/navscript.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/about-image.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/portfolio-home.js"></script>
 </head>
 <body ontouchmove >
 	<!-- Overlays -->
@@ -83,7 +87,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
 			</div>
-			<div class="back-gradient"></div>
 			<div class="sect-short" id="about-short">
 				<div class="sect-short-cont" id="about-descriptions">
 					<div class="short-cont" id="about-us-cont" data-aos="fade-right">
@@ -144,64 +147,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 				<div class="sect-short-cont" id="about-testimonials">
 					<div class="sect-title" id="about-test-main-title" data-aos="fade-up">
-						<h1>What They <span class="tect-blue">Are Saying</span></h1>
+						<h1>What Our <span class="tect-blue">Clients Say</span></h1>
 					</div>
-					<div class="about-testimonial-cont" data-aos="fade-right">
-						<div class="about-testimonial">
-							<div class="about-test-image">
-								<img src="../img/stock3.jpg">
-							</div>
-							<div class="about-test-desc">
-								<div class="sect-title about-test-blurb">
-									<i class="fas fa-quote-left"></i>
-									<h1>The Results Were Amazing!</h1>
+					<div class="about-testimonials-cont">
+						<div class="about-testimonial-cont" data-aos="fade-right">
+							<div class="about-testimonial">
+								<div class="about-test-image">
+									<img src="../img/stock3.jpg">
 								</div>
-								<p class="sect-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-								</p>
-								<div class="about-test-signature">
-									<h6 class="sig-name tect-blue">Jane Doe</h6>
-									<h6 class="sig-occupation">Former Client</h6>
+								<div class="about-test-desc">
+									<div class="sect-title about-test-blurb">
+										<h3 class="tect-blue">The Results Were Amazing!</h3>
+									</div>
+									<p class="sect-description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+									</p>
+									<div class="about-test-signature">
+										<h6 class="sig-name tect-blue">Jane Doe</h6>
+										<h6 class="sig-occupation">Former Client</h6>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="about-testimonial-cont" data-aos="fade-left">
-						<div class="about-testimonial" >
-							<div class="about-test-image">
-
-							</div>
-							<div class="about-test-desc">
-								<div class="sect-title about-test-blurb">
-									<i class="fas fa-quote-left"></i>
-									<h1>Very Professional</h1>
+						<div class="about-testimonial-cont" data-aos="fade-right">
+							<div class="about-testimonial">
+								<div class="about-test-image">
+									<img src="../img/stock3.jpg">
 								</div>
-								<p class="sect-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-								</p>
-								<div class="about-test-signature">
-									<h6 class="sig-name tect-blue">Adam Smith</h6>
-									<h6 class="sig-occupation">Former Client</h6>
+								<div class="about-test-desc">
+									<div class="sect-title about-test-blurb">
+										<h3 class="tect-blue">The Results Were Amazing!</h3>
+									</div>
+									<p class="sect-description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+									</p>
+									<div class="about-test-signature">
+										<h6 class="sig-name tect-blue">Jane Doe</h6>
+										<h6 class="sig-occupation">Former Client</h6>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="about-testimonial-cont" data-aos="fade-right">
-						<div class="about-testimonial">
-							<div class="about-test-image">
-								<img src="../img/stock3.jpg">
-							</div>
-							<div class="about-test-desc">
-								<div class="sect-title about-test-blurb">
-									<i class="fas fa-quote-left"></i>
-									<h1>The Results Were Amazing!</h1>
+						<div class="about-testimonial-cont" data-aos="fade-right">
+							<div class="about-testimonial">
+								<div class="about-test-image">
+									<img src="../img/stock3.jpg">
 								</div>
-								<p class="sect-description">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
-								</p>
-								<div class="about-test-signature">
-									<h6 class="sig-name tect-blue">Jane Doe</h6>
-									<h6 class="sig-occupation">Former Client</h6>
+								<div class="about-test-desc">
+									<div class="sect-title about-test-blurb">
+										<h3 class="tect-blue">The Results Were Amazing!</h3>
+									</div>
+									<p class="sect-description">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi.
+									</p>
+									<div class="about-test-signature">
+										<h6 class="sig-name tect-blue">Jane Doe</h6>
+										<h6 class="sig-occupation">Former Client</h6>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -251,7 +253,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-portfolio">
-			<div class="back-gradient"></div>
 			<div class="sect-div" id="main-sect-portfolio-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
@@ -265,16 +266,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						Below are links to our jobs portfolio. Clicking on a link will automatically filter our database to show one of three job types (shown below). You may also click <a id="portfolio-here" href="/portfolio"><span class="tect-blue">here</span></a> to navigate to our portfolio page.  
 					</p>
 				</div>
-				<div class="sect-short-cont" id="portfolio-cols">
+				<form class="sect-short-cont" id="portfolio-cols" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
 					<div class="portfolio-col-cont" data-aos="fade-right">
 						<div class="portfolio-col-cont-main">
 							<div class="col-cont-main-items">
 								<h1>All</h1>
-								<div class="learn-more" id="learn-more-port-col">
-									<a href="">
-										<span class="learn-more-text" id="learn-more-port-text">See Projects</span> 
-										<span class="learn-more-bar" id="learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
-									</a> 
+								<div class="learn-more learn-more-port-col">
+									<button class="learn-more-port-col-button" name="PortfolioValue" type="submit" value="All">
+										<span class="learn-more-text learn-more-port-text">See Projects</span> 
+										<span class="learn-more-bar learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
+									</button> 
 								</div>
 							</div>
 						</div>
@@ -283,11 +284,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="portfolio-col-cont-main">
 							<div class="col-cont-main-items">
 								<h1>Residential</h1>
-								<div class="learn-more" id="learn-more-port-col">
-									<a href="">
-										<span class="learn-more-text" id="learn-more-port-text">See Projects</span> 
-										<span class="learn-more-bar" id="learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
-									</a> 
+								<div class="learn-more learn-more-port-col">
+									<button class="learn-more-port-col-button" name="PortfolioValue" type="submit" value="Residential">
+										<span class="learn-more-text learn-more-port-text">See Projects</span> 
+										<span class="learn-more-bar learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
+									</button> 
 								</div>
 							</div>
 						</div>
@@ -296,16 +297,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="portfolio-col-cont-main">
 							<div class="col-cont-main-items">
 								<h1>Commercial</h1>
-								<div class="learn-more" id="learn-more-port-col">
-									<a href="">
-										<span class="learn-more-text" id="learn-more-port-text">See Projects</span> 
-										<span class="learn-more-bar" id="learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
-									</a> 
+								<div class="learn-more learn-more-port-col">
+									<button class="learn-more-port-col-button" name="PortfolioValue" type="submit" value="Commercial">
+										<span class="learn-more-text learn-more-port-text">See Projects</span> 
+										<span class="learn-more-bar learn-more-port-bar"><i class="fa fa-angle-right"></i></span>
+									</button> 
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 				<h6 id="portfolio-scroll-prompt" data-aos="fade-up">(Grab to Scroll)</h6>
 			</div>
 		</div>
@@ -320,7 +321,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-contact">
-			<div class="back-gradient"></div>
 			<div class="sect-div" id="main-sect-contact-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
@@ -337,7 +337,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<h5 id="contact-info-email-h5">Email</h5>
 							<div class="short-cont-divide" id="contact-info-div"></div>
 							<h6 id="contact-info-phone">(818) 894-5335</h6>
-							<h6 id="contact-info-addr">9707 Woodley Ave. Northridge, CA. 91343</h6>
+							<h6 id="contact-info-addr">9707 Woodley Ave. Northridge, CA 91343</h6>
 							<div id="contact-info-email">
 								<h6>info@buildtect.com<h6>
 								<div id="contact-info-email-tool">Or Email: dean.btdesigns11@yahoo.com</div>
