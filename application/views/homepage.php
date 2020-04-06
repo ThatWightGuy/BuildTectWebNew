@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	
 	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/homepage.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/homepage-request.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/homepage/navscript.js"></script>
@@ -25,20 +26,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body ontouchmove >
 	<!-- Overlays -->
-	<div class="full-img-overlay">
-		<div class="full-img-overlay-cont">
-			<div class="full-img-overlay-button button-usable" id="overlay-button-prev">
-				<i class="fa fa-angle-left"></i>
-			</div>
-			<div class="full-img-overlay-img-cont" data-aos="fade-down">
-				<img class="full-img-overlay-img" src="" >
-			</div>
-			<div class="full-img-overlay-button button-usable" id="overlay-button-next">
-				<i class="fa fa-angle-right"></i>
-			</div>
-		</div>
-		
-	</div>
 
 	<!-- Main Markup -->
 
@@ -153,6 +140,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="about-testimonial-cont" data-aos="fade-right">
 							<div class="about-testimonial">
 								<div class="about-test-image">
+									<div class="about-test-image-hover"></div>
 									<img src="../img/stock3.jpg">
 								</div>
 								<div class="about-test-desc">
@@ -172,6 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="about-testimonial-cont" data-aos="fade-right">
 							<div class="about-testimonial">
 								<div class="about-test-image">
+									<div class="about-test-image-hover"></div>
 									<img src="../img/stock3.jpg">
 								</div>
 								<div class="about-test-desc">
@@ -191,6 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="about-testimonial-cont" data-aos="fade-right">
 							<div class="about-testimonial">
 								<div class="about-test-image">
+									<div class="about-test-image-hover"></div>
 									<img src="../img/stock3.jpg">
 								</div>
 								<div class="about-test-desc">
@@ -209,36 +199,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-
-				<!--<div class="sect-short-cont" id="about-images">
-					<div class="sect-short-img-cont-main" data-aos="fade-up">
-						<div class="sect-short-img-cont" id="about-img-1" >
-							<div class="img-cont-overlay" >
-								<div class="img-cont-overlay-button" >
-									<i class="fas fa-expand"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="sect-short-img-cont-main" data-aos="fade-up">
-						<div class="sect-short-img-cont" id="about-img-2">
-							<div class="img-cont-overlay" >
-								<div class="img-cont-overlay-button" >
-									<i class="fas fa-expand"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="sect-short-img-cont-main" data-aos="fade-up">
-						<div class="sect-short-img-cont" id="about-img-3">
-							<div class="img-cont-overlay" >
-								<div class="img-cont-overlay-button" >
-									<i class="fas fa-expand"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>-->
 			</div>
 		</div>
 	</div>
@@ -253,10 +213,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-portfolio">
-			<div class="sect-div" id="main-sect-portfolio-sect-div">
+			<!--<div class="sect-div" id="main-sect-portfolio-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
-			</div>
+			</div>-->
 			<div class="sect-short" id="portfolio-short">
 				<div class="sect-short-cont" id="portfolio-desc">
 					<div class="sect-title" id="portfolio-sect-title" data-aos="fade-up">
@@ -321,10 +281,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</h1>
 		</div>
 		<div class="main-sect-cont" id="main-sect-contact">
-			<div class="sect-div" id="main-sect-contact-sect-div">
+			<!--<div class="sect-div" id="main-sect-contact-sect-div">
 				<div class="sect-div-top"></div>
 				<div class="sect-div-angle"></div>
-			</div>
+			</div>-->
 			<div class="sect-short" id="contact-short">
 				<div class="sect-short-cont" id="contact-basic-info-cont" data-aos="fade-right">
 					<div class="contact-short-cont" id="contact-basic-info">

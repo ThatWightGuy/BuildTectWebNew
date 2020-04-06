@@ -37,7 +37,7 @@ class Homepage extends CI_Controller {
 		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
 
 
-		$this->load->view('homepage', $data);
+		$this->load->view('index', $data);
 	}
 
 	public function portfolioRedirect(){

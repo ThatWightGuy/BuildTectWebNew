@@ -10,10 +10,10 @@ $(document).ready(function(){
 		// For Portfolio Cards:
 		
 		if(($(window).width() <= 1583) && ($(window).width() >= 684)){
-			$(".portfolio-col-cont-main").css("height", (port_width)*2 + "px");
+			$(".portfolio-col-cont-main").css("height", (port_width) + "px");
 		}
 		else{
-			$(".portfolio-col-cont-main").css("height", "800px");
+			$(".portfolio-col-cont-main").css("height", "400px");
 		}
 	}
 
