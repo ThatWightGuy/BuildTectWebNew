@@ -55,12 +55,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="main-sect" id="about">
 			<div class="main-sect-cont" id="about-us">
 				<div class="sect-info-full" id="about-us-cont">
-					<div class="sect-description" id="about-us-desc-cont">
+					<form class="sect-description" id="about-us-desc-cont">
 						<h1 class="" id="about-us-desc-cont-h1">Who Are We</h1>
 						<h3 id="about-us-desc-cont-h3">
 							Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners.
 						</h3>
-					</div>
+						<button class="learn-more-button white-button">
+							<div class="button-overlay"></div>
+							<h6>Learn More</h6>
+						</button>
+					</form>
 				</div>
 			</div>
 			<div class="main-sect-cont" id="about-what-is">
@@ -68,34 +72,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-split-left" id="about-what-is-left">
 						<div class="sect-split-image">
 							<div class="sect-split-image-cont">
-								
+								<div class="sect-image-inner-cont">
+									
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="sect-split-right" id="about-what-is-right">
-						<div class="sect-description" id="about-what-is-desc-cont">
+						<form class="sect-description" id="about-what-is-desc-cont">
 							<h1 class="" id="about-what-is-desc-cont-h1">What We Do</h1>
 							<h3 id="about-what-is-desc-cont-h3">
 								Our team consists of experienced industry professionals who believe in a hands-on approach to every project, ensuring each client recieves the individual attention they deserve.
 							</h3>
-						</div>
+							<button class="learn-more-button black-button">
+								<div class="button-overlay"></div>
+								<h6>Learn More</h6>
+							</button>
+						</form>
 					</div>
 				</div>
 			</div>
 			<div class="main-sect-cont" id="about-provide">
 				<div class="sect-info-split" id="about-provide-cont">
 					<div class="sect-split-left" id="about-provide-left">
-						<div class="sect-description" id="about-provide-desc-cont">
+						<form class="sect-description" id="about-provide-desc-cont">
 							<h1 class="" id="about-provide-desc-cont-h1">What We Provide</h1>
 							<h3 id="about-provide-desc-cont-h3">
 								At Build Tect, we specialize in providing plans for custom homes, remodels, additions, commercial remodels, and tenant improvements.
 							</h3>
-						</div>
+							<button class="learn-more-button black-button">
+								<div class="button-overlay"></div>
+								<h6>Learn More</h6>
+							</button>
+						</form>
 					</div>
 					<div class="sect-split-right" id="about-provide-right">
 						<div class="sect-split-image">
 							<div class="sect-split-image-cont">
-								
+								<div class="sect-image-inner-cont">
+									
+								</div>
 							</div>
 						</div>
 					</div>
@@ -168,24 +184,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="main-sect" id="portfolio">
 			<div class="main-sect-cont" id="portfolio-start">
 				<div class="sect-info-full" id="portfolio-start-cont">
-					<div class="sect-description" id="portfolio-start-desc-cont">
+					<form class="sect-description" id="portfolio-start-desc-cont" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
 						<h1 class="" id="portfolio-start-desc-cont-h1">See Our Work</h1>
 						<h3 id="portfolio-start-desc-cont-h3">
 							Over our 30+ years in business, we have completed hundreds of residential and commerical projects. 
 						</h3>
-					</div>
+						<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="All">
+							<div class="button-overlay"></div>
+							<h6>See Projects</h6>
+						</button>
+					</form>
 				</div>
 			</div>
 			<div class="main-sect-cont" id="portfolio-sect">
 				<div class="sect-info-split" id="portfolio-cols">
 					<div class="sect-split-left" id="portfolio-cols-left">
-						<div class="sect-cont portfolio-sect-cont" id="portfolio-sect-cont-left">
-							<h1 class="portfolio-sect-cont-h1" id="portfolio-sect-cont-h1-left">Residential</h1>
+						<div class="sect-split-image portfolio-split-image">
+							<div class="sect-split-image-cont">
+								<div class="sect-image-inner-cont" id="portfolio-left-image">
+									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
+										<h1>Residential</h1>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="sect-split-right" id="portfolio-cols-right">
-						<div class="sect-cont portfolio-sect-cont" id="portfolio-sect-cont-right">
-							<h1 class="portfolio-sect-cont-h1" id="portfolio-sect-cont-h1-right">Commercial</h1>
+						<div class="sect-split-image portfolio-split-image">
+							<div class="sect-split-image-cont">
+								<div class="sect-image-inner-cont" id="portfolio-left-image">
+									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right" >
+										<h1>Commercial</h1>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

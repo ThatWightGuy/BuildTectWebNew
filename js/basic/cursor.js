@@ -35,7 +35,19 @@ $(document).ready(function(){
     $("a")
         .mouseenter(function() {
             cursor.css({
-                transform: "scale(2)"
+                transform: "scale(.5)"
+            });
+        })
+        .mouseleave(function() {
+            cursor.css({
+                transform: "scale(1)"
+            });
+        });
+
+    $("button")
+        .mouseenter(function() {
+            cursor.css({
+                transform: "scale(.5)"
             });
         })
         .mouseleave(function() {
