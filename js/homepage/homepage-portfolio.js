@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 	$(".portfolio-img-inner-cont").mouseover(function(e){
 		var overlay = $(this).find(".portfolio-inner-cont-overlay");
-		
+
 		if(e.target.nodeName != "H1"){
 			main_overlay_time = setTimeout(function(){
 				$(overlay).css({
@@ -18,6 +18,19 @@ $(document).ready(function(){
 					"height": $(portfolio_sect).height()/2 + "px",
 					"width": $(split_left).width() + "px"
 				});	
+				if($(window).width() > 430){
+					if($(this).attr("id") == "portfolio-left-inner"){
+						$(this).css({
+							"margin-bottom": "25px"
+						});
+					}
+					else{
+						$(this).css({
+							"margin-top": "25px"
+						});
+					}
+					
+				}
 			}
 			else{
 				$(this).css({

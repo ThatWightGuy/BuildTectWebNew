@@ -219,8 +219,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<div class="portfolio-circle-filler">
-					</div>
 					<div class="sect-split-right" id="portfolio-cols-right">
 						<div class="sect-split-image portfolio-split-image" id="portfolio-left-split-image">
 							<div class="sect-split-image-cont">

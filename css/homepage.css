@@ -512,29 +512,11 @@ html, body{
 	overflow-x: hidden;
 }
 
-.portfolio-circle-filler{
-	position: absolute;
-	display: none;
-	height: 40px;
-	width: 40px;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	justify-self: center;
-	align-self: center;
-	justify-content: center;
-	align-items: center;
-	border-radius: 100%;
-	z-index: 1;
-	color: white;
-	border: 4px solid #1885ff;
-	background-color: white;
-}
-
 .portfolio-split-image{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 500px;
+	max-width: 600px;
 	z-index: 2;
 }
 
@@ -666,16 +648,13 @@ html, body{
 	}
 
 	#portfolio-cols{
+		display: block;
 		grid-template-areas: 
 		"left"
 		"right";
 		grid-template-columns: 1fr;
 		grid-template-rows: auto auto;
 		background-color: white;
-	}
-
-	.portfolio-split-image{
-		max-width: 700px;
 	}
 
 	#portfolio-cols-right{
@@ -688,22 +667,24 @@ html, body{
 		min-height: 0px;
 	}
 
+	.portfolio-split-image{
+		max-width: none;
+	}
+
 	.portfolio-circle-filler{
 		display: flex;
 	}
 
 	#portfolio-right-split-image{
-		
-
+		padding-bottom: 25px;
 	}
 
 	#portfolio-left-split-image{
-		
-
+		padding-top: 25px;
 	}
 
 	.portfolio-split-image .sect-split-image-cont{
-		padding-top: calc((2/3) * 100%);
+		padding-top: calc((9/16) * 100%);
 	}
 
 	#portfolio-left-image{
