@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-main.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-layout.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-request.js"></script>
@@ -24,6 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body ontouchmove >
 	<?php echo $navbar?>
+	<div class="cursor"></div>
 	<form id="portfolio-form">
 		<div class="portfolio-sidebar">
 			<h1 class="sidebar-button" id="sidebar-button-exit">+</h1>

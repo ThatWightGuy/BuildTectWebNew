@@ -166,7 +166,7 @@ footer h6{
 	left: 0;
 	height: 100%;
 	width: 100%;
-	border: 4px dashed #1885ff;
+	border: 4px dashed #1885ff; /* Temporary */
 	z-index: 1;
 }
 
@@ -174,12 +174,14 @@ footer h6{
 	position: relative;
 	height: 1fr;
 	grid-column-start: left;
+	overflow: hidden;
 }
 
 .sect-split-right{
 	position: relative;
 	height: 1fr;
 	grid-column-start: right;
+	overflow: hidden;
 }
 
 .img-cont-overlay{
@@ -296,6 +298,7 @@ footer h6{
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
+	outline: none;
 }
 
 /* Welcome */
@@ -318,11 +321,11 @@ footer h6{
 }
 
 .tect-blue{
-	color: #1885ff;
+	color: #1885ff; /* rgba(24, 133, 255, 1) */
 }
 
 .light-blue{
-	color: #dfeeff;
+	color: #dfeeff; /* rgba(223, 238, 255, 1) */
 }
 
 .bg-tect-blue{
@@ -408,5 +411,28 @@ footer h6{
 		position: relative;
 		width: 100%;
 		padding: 0;
+	}
+}
+
+@media only screen and (max-device-width: 1366px) and (orientation: landscape){
+	.cursor{
+		display: none;
+		pointer-events: auto;
+	}
+
+	html, *{
+		cursor: default;
+	}
+}
+
+
+@media only screen and (max-device-width: 1024px) and (orientation: portrait){
+	.cursor{
+		display: none;
+		pointer-events: auto;
+	}
+
+	html, *{
+		cursor: default;
 	}
 }

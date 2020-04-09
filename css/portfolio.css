@@ -92,7 +92,6 @@ fieldset{
 }
 
 #sidebar-button-main:hover{
-	cursor: pointer;
 	color: #1885ff;
 }
 
@@ -118,7 +117,6 @@ fieldset{
 
 #sidebar-button-exit:hover{
 	color: #dfeeff;
-	cursor: pointer;
 }
 
 .sidebar-title-cont{
@@ -129,7 +127,6 @@ fieldset{
 	align-items: center;
 	justify-content: center;
 	border-bottom: 1px solid rgba(223, 238, 255, .4);
-	cursor: default;
 }
 
 .sidebar-filter-form{
@@ -192,10 +189,6 @@ fieldset{
 	grid-row-end: 2;
 }
 
-.sidebar-filter-button:hover{
-	cursor: pointer;
-}
-
 .sidebar-filter-dropdown{
 	width: 300px; 
 	height: 0px; 
@@ -232,7 +225,6 @@ fieldset{
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	cursor: default;
 }
 
 .sidebar-drop-button{
@@ -313,7 +305,6 @@ fieldset{
 
 .slider {
 	position: absolute;
-	cursor: pointer;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -371,10 +362,6 @@ fieldset{
 
 #help-mode-underline{
 	border-bottom: 1px dotted black;
-}
-
-#help-mode-underline:hover{
-	cursor: pointer;
 }
 
 #help-mode-underline:hover ~ .popup-cont, .popup-cont:hover{

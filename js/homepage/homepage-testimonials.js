@@ -129,6 +129,23 @@ $(document).ready(function(){
 		}
 	}
 
+	function setDots(){
+		var active = "<div class=\"about-test-dot-cont\"><div class=\"about-test-dot about-test-dot-active\"></div</div>";
+		var inactive = "<div class=\"about-test-dot-cont\"><div class=\"about-test-dot about-test-dot-inactive\"></div</div>";
+		var dot_container = $(".about-test-foot-cont");
+
+		dot_container.empty();
+
+		for(var i = 0; i < num_groups; i++){
+			if(i == current_group){
+				dot_container.append(active);
+			}
+			else{
+				dot_container.append(inactive);
+			}
+		}
+	}
+
 	function doAll(){
 		if(page_width >= 1200) {
 			getNumGroups();
@@ -136,6 +153,7 @@ $(document).ready(function(){
 			setInitGroups();
 			showButtons();
 			showGroup();
+			setDots();
 		}
 		else if(page_width < 1200 && page_width >= 740){
 			getNumGroups(2);
@@ -143,6 +161,7 @@ $(document).ready(function(){
 			setInitGroups(2);
 			showButtons();
 			showGroup();
+			setDots();
 		}
 		else if(page_width < 740){
 			getNumGroups(1);
@@ -150,6 +169,7 @@ $(document).ready(function(){
 			setInitGroups(1);
 			showButtons();
 			showGroup();
+			setDots();
 		}
 	}
 
@@ -178,6 +198,7 @@ $(document).ready(function(){
 
 				showButtons();
 				showGroup();
+				setDots();
 			}
 		}
 		else if($(this).val() == "right"){
@@ -196,6 +217,7 @@ $(document).ready(function(){
 				
 				showButtons();
 				showGroup();
+				setDots();
 			}
 		}
 	});

@@ -179,6 +179,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					<?php endfor; ?>
 				</div>
+				<div class="sect-short" id="about-testimonials-footer">
+					<div class="about-test-foot-cont">
+						
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="main-sect" id="portfolio">
@@ -199,22 +204,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="main-sect-cont" id="portfolio-sect">
 				<div class="sect-info-split" id="portfolio-cols">
 					<div class="sect-split-left" id="portfolio-cols-left">
-						<div class="sect-split-image portfolio-split-image">
+						<div class="sect-split-image portfolio-split-image" id="portfolio-right-split-image">
 							<div class="sect-split-image-cont">
 								<div class="sect-image-inner-cont" id="portfolio-left-image">
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
-										<h1>Residential</h1>
+									<div class="portfolio-img-inner-cont" id="portfolio-left-inner">
+										<div class="portfolio-inner-cont-overlay" id="portfolio-left-main-overlay">
+											
+										</div>
+										<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
+											<h1>Residential</h1>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="sect-split-right" id="portfolio-cols-right">
-						<div class="sect-split-image portfolio-split-image">
+						<div class="sect-split-image portfolio-split-image" id="portfolio-left-split-image">
 							<div class="sect-split-image-cont">
 								<div class="sect-image-inner-cont" id="portfolio-left-image">
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right" >
-										<h1>Commercial</h1>
+									<div class="portfolio-img-inner-cont" id="portfolio-right-inner">
+										<div class="portfolio-inner-cont-overlay" id="portfolio-right-main-overlay">
+											
+										</div>
+										<div class="portfolio-sect-cont-h1" id="portfolio-h1-right">
+											<h1>Commercial</h1>
+										</div>
 									</div>
 								</div>
 							</div>
