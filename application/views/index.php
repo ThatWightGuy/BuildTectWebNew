@@ -320,7 +320,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 	</div>
-	<footer class="main-footer">
-		
-	</footer>
+	<?php echo $footer ?>
 </body>

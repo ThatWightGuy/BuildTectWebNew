@@ -35,7 +35,7 @@ class Homepage extends CI_Controller {
 		);	
 
 		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
-
+		$data['footer'] = $this->load->view('segments/footer_main', null, TRUE);
 
 		$this->load->view('index', $data);
 	}
