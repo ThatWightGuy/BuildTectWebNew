@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo base_url();?>js/basic/jquery.browser.mobile.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-testimonials.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>
@@ -31,9 +32,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="welcome-top"></div>
 			<div class="welcome-logo">
 				<img class="welcome-logo-img" src="img/Logo.png">
-				<h1>
-					Build <span class="tect-blue">Tect</span>
-				</h1>
 				<!--<h6>Building Designs</h6>-->
 			</div>
 			<div class="welcome-nav">
@@ -54,6 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="main-sect" id="about">
 		<div class="main-sect-cont" id="about-us">
 			<div class="sect-info-full" id="about-us-cont">
+				<div class="sect-info-side-title">
+					<div class="sect-title-line sect-title-top-line"></div>
+					<h6>About</h6>
+					<div class="sect-title-line sect-title-bottom-line"></div>
+				</div>
 				<form class="sect-description" id="about-us-desc-cont">
 					<h1 class="" id="about-us-desc-cont-h1">Who Are We</h1>
 					<h3 id="about-us-desc-cont-h3">
@@ -109,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-split-image">
 						<div class="sect-split-image-cont">
 							<div class="sect-image-inner-cont">
-								
+
 							</div>
 						</div>
 					</div>
@@ -188,10 +191,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="main-sect" id="portfolio">
 		<div class="main-sect-cont" id="portfolio-start">
 			<div class="sect-info-full" id="portfolio-start-cont">
+				<div class="sect-info-side-title">
+					<div class="sect-title-line sect-title-top-line"></div>
+					<h6>Portfolio</h6>
+					<div class="sect-title-line sect-title-bottom-line"></div>
+				</div>
 				<form class="sect-description" id="portfolio-start-desc-cont" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
 					<h1 class="" id="portfolio-start-desc-cont-h1">See Our Work</h1>
 					<h3 id="portfolio-start-desc-cont-h3">
-						Over our 30+ years in business, we have completed hundreds of residential and commerical projects. 
+						Throughout our 30+ years in business, we have completed hundreds of residential and commerical projects. 
 					</h3>
 					<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="All">
 						<div class="button-overlay"></div>
@@ -207,14 +215,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="sect-split-image-cont">
 							<div class="sect-image-inner-cont" id="portfolio-left-image">
 								<div class="portfolio-img-inner-cont" id="portfolio-left-inner">
+									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
+										<h1>Residential</h1>
+									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-left-main-overlay">
-										main
+										<form class="portfolio-col-form" id="portfolio-residential-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
+											<button class="learn-more-button white-button portfolio-learn-more" name="PortfolioValue" type="submit" value="Residential">
+												<div class="button-overlay"></div>
+												<h6>See Projects</h6>
+											</button>
+										</form>
 									</div>
 									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-left-right-overlay">
 										second
-									</div>
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
-										<h1>Residential</h1>
 									</div>
 								</div>
 							</div>
@@ -226,14 +239,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="sect-split-image-cont">
 							<div class="sect-image-inner-cont" id="portfolio-left-image">
 								<div class="portfolio-img-inner-cont" id="portfolio-right-inner">
+									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right">
+										<h1>Commercial</h1>
+									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-right-main-overlay">
-										main
+										<form class="portfolio-col-form" id="portfolio-commercial-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
+											<button class="learn-more-button white-button portfolio-learn-more" name="PortfolioValue" type="submit" value="Commercial">
+												<div class="button-overlay"></div>
+												<h6>See Projects</h6>
+											</button>
+										</form>
 									</div>
 									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-right-left-overlay">
 										second
-									</div>
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right">
-										<h1>Commercial</h1>
 									</div>
 								</div>
 							</div>
@@ -244,7 +262,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<div class="main-sect" id="contact">
-		
+		<div class="main-sect-cont" id="contact-start">
+			<div class="sect-info-full" id="contact-start-cont">
+				<div class="sect-info-side-title">
+					<div class="sect-title-line sect-title-top-line"></div>
+					<h6>Contact</h6>
+					<div class="sect-title-line sect-title-bottom-line"></div>
+				</div>
+				<div class="sect-description" id="contact-start-desc-cont">
+					<h1 class="" id="contact-start-desc-cont-h1">Contact Us</h1>
+					<h3 id="contact-start-desc-cont-h3">
+						Get in touch with our team today to get started with your job.
+					</h3>
+					<button class="learn-more-button white-button" id="contact-start-button">
+						<div class="button-overlay"></div>
+						<h6>
+							See More <i class="fas fa-caret-down"></i>
+						</h6>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="sect-info-full" id="contact-form-sect-cont">
+			<div class="sect-info-split" id="contact-form-sect">
+				<div class="sect-split-left" id="contact-form-split-left">
+					<img src="<?php echo base_url();?>img/mail.png">
+				</div>
+				<div class="sect-split-right" id="contact-form-split-right">
+					<form id="contact-form" method="post">
+						<div class="contact-form-inner">
+							<div class="contact-form-input-cont" id="name-field">
+								<input type="text" name="Name" placeholder="&#xf007;  Name">
+							</div>
+							<div class="contact-form-input-cont" id="email-field">
+								<input type="text" name="Email" placeholder="&#xf0e0;  Email">
+							</div>
+							<div class="contact-form-input-cont" id="phone-field">
+								<input type="text" name="Phone" placeholder="&#xf3cd;  Phone">
+							</div>
+							<div class="contact-form-input-cont" id="subject-field">
+								<input type="text" name="Subject" placeholder="&#xf086;  Subject">
+							</div>
+							<div class="contact-form-input-cont" id="message-field">
+								<textarea placeholder="&#xf27b;  Message"></textarea>
+							</div>
+							<div class="contact-form-input-cont">
+								<button type="submit" class="learn-more-button black-button" id="contact-form-submit">
+									<div class="button-overlay"></div>
+									<h6>
+										Send Email
+									</h6>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<footer class="main-footer">
 		

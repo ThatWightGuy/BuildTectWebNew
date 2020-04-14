@@ -147,7 +147,7 @@ $(document).ready(function(){
 	}
 
 	function doAll(){
-		if(page_width >= 1200) {
+		if(page_width > 1200) {
 			getNumGroups();
 			getGroups();
 			setInitGroups();
@@ -155,7 +155,7 @@ $(document).ready(function(){
 			showGroup();
 			setDots();
 		}
-		else if(page_width < 1200 && page_width >= 740){
+		else if(page_width <= 1200 && page_width > 740){
 			getNumGroups(2);
 			getGroups(2);
 			setInitGroups(2);
@@ -163,7 +163,7 @@ $(document).ready(function(){
 			showGroup();
 			setDots();
 		}
-		else if(page_width < 740){
+		else if(page_width <= 740){
 			getNumGroups(1);
 			getGroups(1);
 			setInitGroups(1);

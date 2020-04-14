@@ -101,18 +101,12 @@ fieldset{
 }
 
 #sidebar-button-exit{
-	position: absolute;
 	padding: 0px;
-	margin: 0;
-	top: 0;
-	right: 0;
-	line-height: 25px;
-	font-size: 45px;
-	font-weight: 400;
-	color: white;
-	transform: rotate(45deg);
-	transition-property: color;
-	transition-duration: .2s;
+	margin: 0px;
+	top: 5px;
+	right: 5px;
+	height: 22.5px;
+	width: 22.5px;
 }
 
 #sidebar-button-exit:hover{

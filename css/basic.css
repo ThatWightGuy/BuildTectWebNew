@@ -47,6 +47,27 @@ footer h6{
 	transition: transform .2s;
 }
 
+.cross{
+  position: absolute;
+}
+
+.cross:after, .cross:before{
+  position: absolute;
+  content: ' ';
+  right: 50%;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+}
+
+.cross:after{
+  transform: rotate(45deg);
+}
+
+.cross:before{
+  transform: rotate(-45deg);
+}
+
 .overlay-div{
 	position: absolute;
 	width: 100%;
@@ -130,6 +151,7 @@ footer h6{
 }
 
 .sect-info-full{
+	position: relative;
 	display: grid;
 	width: 100vw;
 	grid-template-areas: 
@@ -141,11 +163,52 @@ footer h6{
 }
 
 .sect-info-split{
+	position: relative;
 	display: grid;
 	grid-template-areas: 
 	"left right";
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
+}
+
+
+.sect-info-side-title{
+	position: absolute;
+	display: grid;
+	height: 100%;
+	width: 30px;
+	top: 0;
+	left: 0;
+	grid-template-areas: 
+	"topline" 
+	"title" 
+	"bottomline";
+	grid-template-rows: 1fr auto 1fr;
+	align-items: center;
+	justify-items: center;
+	color: white;
+
+}
+
+.sect-info-side-title h6{
+	grid-area: title;
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+}
+
+.sect-title-line{
+	height: 85%;
+	width: 2px;
+	border-radius: 1px;
+	background-color: white;
+}
+
+.sect-title-top-line{
+	grid-area: topline;
+}
+
+.sect-title-bottom-line{
+	grid-area: bottomline;
 }
 
 .sect-split-image{

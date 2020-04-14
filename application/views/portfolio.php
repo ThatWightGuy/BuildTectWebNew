@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="cursor"></div>
 	<form id="portfolio-form">
 		<div class="portfolio-sidebar">
-			<h1 class="sidebar-button" id="sidebar-button-exit">+</h1>
+			<div class="cross sidebar-button" id="sidebar-button-exit"></div>
 			<div class="sidebar-title-cont">
 				<h3 id="sidebar-title-h">
 					<i class="fas fa-search"></i>Filter Search
