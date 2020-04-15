@@ -1,6 +1,170 @@
 .main-footer{
 	position: relative;
-	min-height: 200px;
 	width: 100%;
+	color: white;
+}
 
+.footer-main-sect{
+	position: relative;
+	width: 100%; 
+}
+
+#footer-main{
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-sect{
+	position: relative;
+}
+
+#footer-main-inner-sect{
+	display: block;
+	height: 100%;
+	width: 100%;
+	max-width: 1600px;
+}
+
+.footer-sect-cont-header{
+	width: 100%;
+	color: white;
+}
+
+.foooter-sect-cont-main{
+}
+
+.footer-sect-cont-header h4{
+	padding: 0px 0px 3.125px 0px;
+	margin: 0px;
+	font-weight: 600;
+}
+
+#footer-main-logo{
+	display: flex;
+	float: left;
+	width: 33.33%;
+	min-height: 300px;
+	padding: 25px;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer-main-logo img{
+	width: 200px;
+	filter: brightness(0) grayscale(1) saturate(0) invert(1);
+}
+
+#footer-main-navi{
+	float: left;
+	width: 33.33%;
+	min-height: 300px;
+	padding: 25px;
+}
+
+.footer-list{
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	width: 33.33%;
+	list-style: none;
+}
+
+.footer-list li{
+	padding: 0px;
+	margin: 0px;
+}
+
+.footer-list li h5, .footer-list li h6{
+	padding-top: 3.125px;
+	margin: 0px;
+}
+
+.footer-list li h5{
+	font-weight: 600;
+}
+
+.footer-list li h6{
+	font-weight: 300;
+}
+
+#footer-list-main{
+	column-count: 3;
+}
+
+#footer-main-contact{
+	position: relative;
+	float: left;
+	width: 33.33%;
+	min-height: 300px;
+	padding: 25px;
+}
+
+.footer-icon{
+	padding-right: 10px;
+}
+
+#footer-bottom{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+	background-color: #064b99;
+}
+
+@media only screen and (max-width: 1000px){
+	#footer-main-logo{
+		display: none;
+	}
+
+	#footer-main-navi{
+		width: 60%;
+	}
+
+	#footer-main-contact{
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width: 550px){
+	#footer-main-logo{
+		display: none;
+	}
+
+	#footer-main-navi{
+		height: 100%;
+		min-height: 0px;
+		width: 100%;
+	}
+
+	#footer-main-contact{
+		display: block;
+		height: 100%;
+		min-height: 0px;
+		width: 100%;
+	}
+
+	#address-cont{
+		width: 50%;
+		float: left;
+	}
+
+	#contact-cont{
+		width: 50%;
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 415px){
+	#address-cont{
+		width: auto;
+		float: none;
+	}
+
+	#contact-cont{
+		width: auto;
+		float: none;
+	}
 }

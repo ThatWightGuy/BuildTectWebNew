@@ -121,9 +121,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="main-sect-cont" id="about-testimonials">
 			<!--<div class="background-div bg-tect-blue" id="at-back"></div>-->
-			<div class="sect-short" id="about-testimonials-title">
-				<h1>What Our Clients Say</h1>
-			</div>
 			<div class="sect-short" id="about-testimonials-cont">
 				<div class="about-testimonial-button" id="testimonial-button-left">
 					<div class="about-testimonial-button-cont">
