@@ -11,13 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/homepage.css">
 	<link rel="shortcut icon" href="img/Logo.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
-	<script src="<?php echo base_url();?>js/basic/jquery.browser.mobile.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-testimonials.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>
