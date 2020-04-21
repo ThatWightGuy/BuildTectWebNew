@@ -25,16 +25,16 @@ class Homepage extends CI_Controller {
 		$navbar_data = array(
 			'logo_link' => '#', // href for logo
 			'links' => array(
-				array('name' => 'Contact', 'link' => "#contact"),
-				array('name' => 'Portfolio', 'link' => "#portfolio"),
-				array('name' => 'About', 'link' => "#about")
+				array('name' => 'About', 'link' => "about"),
+				array('name' => 'Portfolio', 'link' => "portfolio"),
+				array('name' => 'Contact', 'link' => "contact"),
 			),
 			'styles' => array(
 				'display: none;',
 			)
 		);	
 
-		$data['navbar'] = $this->load->view('segments/main_navigation', null, TRUE);
+		$data['navbar'] = $this->load->view('segments/main_navigation', $navbar_data, TRUE);
 		$data['footer'] = $this->load->view('segments/footer_main', null, TRUE);
 
 		$this->load->view('index', $data);

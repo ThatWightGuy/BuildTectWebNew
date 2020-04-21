@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	var sections; 
 	var item_bar = $(".navi-under-bar");
+	var current_section;
 
 	function getSections(){
 		var main_sections = $("body").find(".main-sect-cont");
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	}
 
 	function changeColor(){
-		sections = getSections();
+		var sections = getSections();
 		var position;
 
 		for(var i = 0; i < sections.length; i++){
@@ -48,29 +48,76 @@ $(document).ready(function(){
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").addClass("transparent-navi");
-
 			}
 		}
 	}
 
-	function underBar(listItem){
-		$(item_bar).css({
-			"width": (listItem.width() + 20) + "px",
-			"left": listItem[0].offsetLeft + "px"	
-		});
+	function getMainSections(){
+		var main_sections = $("body").find(".main-sect");
+		var main_sections_object = {};
+		var object_length = 0;
+
+		for(var i = 0; i < main_sections.length; i++){
+			main_sections_object[$(main_sections[i]).attr("id")] = $(main_sections[i]).offset().top;
+			object_length++;
+		}
+
+		return main_sections_object;
 	}
 
+	function underBar(listItem){
+		if(listItem.length != 0){
+			$(item_bar).css({
+				"width": (listItem.width() + 20) + "px",
+				"left": listItem[0].offsetLeft + "px"	
+			});
+		}
+		else{
+			$(item_bar).css({
+				"width": "0px",
+				"left": "0px"	
+			});
+		}
+	}
+
+	function underBarScroll(){
+		var sections = getMainSections();
+
+		for(let key in sections){
+			if($(document).scrollTop() >= (sections[key] - 100)){
+				current_section = $(".navi-main-item[id=" + key + "]");
+			}
+			else{
+				break;
+			}
+		}
+
+		underBar($(current_section));
+	}
 
 	$(".navi-main-item").mouseenter(function(){
 		underBar($(this));
+	}).mouseleave(function(){
+		underBar($(current_section));
+	});
+
+	$(".navi-main-item").click(function(){
+		var scrollTo = $(".main-sect[id='" + $(this).attr("id") + "']").offset().top;
+		
+		$('html, body').animate({
+			scrollTop: scrollTo - 99
+		}, 500);
 	});
 
 	changeColor();
-	
+	underBarScroll();
+
 	$(window).scroll(function(){
 		changeColor();
+		underBarScroll();
 	});
 	$(window).resize(function(){
 		changeColor();
+		underBarScroll();
 	});
 });

@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/mainnavigation.css">
 	<script src="<?php echo base_url();?>js/basic/navi.js"></script>
+	<script src="<?php echo base_url();?>js/basic/bars.js"></script>
 </head>
 <body>
 	<nav class="main-navigation white-navi">
@@ -17,21 +18,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div id="navi-main-sect">
 				<div id="navi-main-items">
 					<ul>
-						<li class="navi-main-item">
-							<h5>About</h5>
-						</li>
-						<li class="navi-main-item">
-							<h5>Portfolio</h5>
-						</li>
-						<li class="navi-main-item">
-							<h5>Contact</h5>
-						</li>
+						<?php foreach ($links as $link): ?>
+							<li class="navi-main-item" id=<?php echo $link['link'] ?>>
+								<h5><?php echo $link['name'] ?></h5>
+							</li>
+						<?php endforeach; ?>
+						<div class="navi-under-bar"></div>
 					</ul>
-					<div class="navi-under-bar"></div>
 				</div>
 			</div>
 			<div id="navi-bars-sect">
-			
+				<div class="bars bars-close bars-30" id="main-navi-bars">
+					<div class="bar top-bar"></div>
+					<div class="bar mid-bar"></div>
+					<div class="bar bottom-bar"></div>
+				</div>
 			</div>
 		</div>
 	</nav>
