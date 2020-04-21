@@ -41,7 +41,7 @@ class Portfolio extends CI_Controller {
 
 		$data['projectTypes'] = $this->portfolio_model->get_project_types();
 
-		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
+		$data['navbar'] = $this->load->view('segments/main_navigation', null, TRUE);
 		
 		$this->load->view('portfolio', $data);
 	}

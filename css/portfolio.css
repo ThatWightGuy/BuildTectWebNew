@@ -13,11 +13,15 @@ fieldset{
 	border: none;
 }
 
+nav{
+	position: fixed;
+}
+
 .portfolio-sidebar{
 	position: fixed;
 	width: 0;
-	height: calc(100vh - 56px);
-	top: 56px;
+	height: calc(100vh - 100px);
+	top: 100px;
 	background-color: #1885ff;
 	transition-duration: .2s;
 	transition-property: width;
@@ -42,10 +46,10 @@ fieldset{
 #portfolio-main-sect{
 	display: flex;
 	position: absolute;
-	min-height: calc(100vh - 57px);
+	min-height: calc(100vh - 100px);
 	z-index: 1;
 	overflow-x: hidden;
-	top: 56px;
+	top: 100px;
 	background-color: white;
 	transition-property: transform;
 	transition-duration: .2s;

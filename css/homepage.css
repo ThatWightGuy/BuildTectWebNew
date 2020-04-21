@@ -3,93 +3,69 @@ html, body{
 	-webkit-overflow-scrolling: touch;
 }
 
+nav{
+	position: relative;
+}
+
+#navi-logo-sect img{
+	display: none;
+}
+
+#navi-main-items{
+	min-width: 100%;
+}
+
 /* Welcome */
 
 #welcome{
-	max-height: 100%;
-	min-height: 100vh;
+
+}
+
+#welcome-background{
+	position: absolute;
+	height: 100vh;
+	min-height: 300px;
+	width: 100%;
 	background-color: white;
 }
 
 #welcome-cont{
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-areas: 
+	"toppad"
+	"logo";
 	align-items: center;
-	text-align: center;
-	flex-direction: column;
-	width: 400px;
+	justify-items: center;
+	grid-template-rows: 100px auto;
+	grid-template-columns: 1fr;
 }
 
-.welcome-top-pad{
-	height: 50px;
-}
-
-.welcome-logo h1{
-	margin: 0;
-	font-size: 72px;
-}
-
-.welcome-logo h6{
-	margin: 0;
-	padding: 0;
-	font-size: 20px;
-}
-
-.welcome-logo-img{
-	margin: 0;
-	width: 75%;
-	transition: transform .2s;
-}
-
-.welcome-logo-img:hover{
-	transform: scale(1.01);
-}
-
-.welcome-top{
-	min-height: 100px; 
-	width: 100%;
-}
-
-.welcome-nav{
+#welcome-logo-cont{
+	position: relative;
 	display: flex;
-	justify-content: center;
+	max-height: 100%;
+	height: calc(100vh - 200px);
+	min-height: 100px;
+	max-width: 400px;
+	padding: 0px 50px;
 	align-items: center;
-	flex-direction: column;
-	min-height: 100px; 
+	grid-area: logo;
+}
+
+#welcome-logo{
+	position: relative;
+	max-width: 300px;
+	max-height: 300px;
+	border-radius: 100%;
+	background-color: white;
+}
+
+#welcome-logo img{
+	transform: scale(1.08);
 	width: 100%;
-	opacity: .4;
-	transition: opacity .2s;
+	height: 100%;
 }
 
-.welcome-nav:hover{
-	opacity: 1;
-}
-
-.welcome-nav-list{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	font-size: 18px;
-}
-
-.welcome-nav-li{
-	display: inline-block;
-	padding: 5px 5px;
-	transition: color .2s;
-}
-
-.welcome-nav-li:hover{
-	color: #1885ff;
-}
-
-.welcome-nav-i{
-	font-size: 25px;
-	transition: color .2s;
-}
-
-.welcome-nav-i:hover{
-	color: #1885ff;
-}
 
 /* About */
 
@@ -1018,9 +994,6 @@ html, body{
 }
 
 @media only screen and (max-width: 400px){
-	.welcome-logo h1{
-		font-size: 18vw;
-	}
 
 }
 
@@ -1061,70 +1034,10 @@ html, body{
 /* For mobile */
 
 @media only screen and (max-device-width: 1366px) and (orientation: landscape){
-	#welcome{
-		min-height: 100%;
-		height: 100vh;
-	}
-
-	#welcome-cont{
-		width: 100%;
-		height: 100%;
-	}
-
-	.welcome-logo-img{
-		width: 20%;
-	}
-
-	.welcome-logo h1{
-		font-size: 43px;
-	}
-
-	.welcome-top{
-		min-height: 50px; 
-		width: 100%;
-	}
-
-	.welcome-nav{
-		min-height: 50px; 
-		width: 100%;
-	}
-
-	.welcome-nav-i{
-		display: none;
-	}
+	
 }
 
 
 @media only screen and (max-device-width: 1024px) and (orientation: portrait){
-	#welcome{
-		min-height: 100%;
-		height: 100vh;
-	}
 
-	#welcome-cont{
-		width: 100%;
-		height: 100%;
-	}
-
-	.welcome-logo-img{
-		width: 45%;
-	}
-
-	.welcome-logo h1{
-		font-size: 43px;
-	}
-
-	.welcome-top{
-		min-height: 50px; 
-		width: 100%;
-	}
-
-	.welcome-nav{
-		min-height: 50px; 
-		width: 100%;
-	}
-
-	.welcome-nav-i{
-		display: none;
-	}
 }

@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="shade-overlay"></div>
 		<div class="main-sect" id="portfolio-main-sect">
-			<div class="main-sect-cont" id="portfolio-main-sect-cont">
+			<div class="main-sect-cont" id="portfolio-main-sect-cont" navcolor="blue">
 				<div class="sect-short padding-100" id="portfolio-cont">
 					<div class="sect-short-cont" id="portfolio-main-dash">
 						<div id="help-mode-full">

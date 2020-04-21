@@ -17,38 +17,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
+	<script src="<?php echo base_url();?>js/homepage/homepage-main.js"></script>
+	<script src="<?php echo base_url();?>js/homepage/homepage-navi.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-testimonials.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>
 </head>
 <body ontouchmove >
 	<div class="cursor"></div>
-	<nav class="main-navbar">
-
-	</nav>
 	<div class="main-sect" id="welcome">
-		<div class="main-sect-cont" id="welcome-cont">
-			<div class="welcome-top"></div>
-			<div class="welcome-logo">
-				<img class="welcome-logo-img" src="img/Logo.png">
-				<!--<h6>Building Designs</h6>-->
-			</div>
-			<div class="welcome-nav">
-				<ul class="welcome-nav-list">
-					<li class="welcome-nav-li">
-						<a href="#about">About</a>
-					</li>
-					<li class="welcome-nav-li">
-						<a href="#portfolio">Portfolio</a>
-					</li>
-					<li class="welcome-nav-li">
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
+		<div id="welcome-background">
+			
+		</div>
+		<div class="main-sect-cont" id="welcome-cont" navcolor="transparent">
+			<div id="welcome-logo-cont">
+				<div id="welcome-logo">
+					<img src="<?php echo base_url();?>img/Logo.png">
+				</div>
 			</div>
 		</div>
 	</div>
+	<?php echo $navbar ?>
 	<div class="main-sect" id="about">
-		<div class="main-sect-cont" id="about-us">
+		<div class="main-sect-cont" id="about-us" navcolor="blue">
 			<div class="sect-info-full" id="about-us-cont">
 				<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
@@ -67,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</form>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="about-what-is">
+		<div class="main-sect-cont" id="about-what-is" navcolor="white">
 			<div class="sect-info-split" id="about-what-is-cont">
 				<div class="sect-split-left" id="about-what-is-left">
 					<div class="sect-split-image">
@@ -92,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="about-provide">
+		<div class="main-sect-cont" id="about-provide" navcolor="white">
 			<div class="sect-info-split" id="about-provide-cont">
 				<div class="sect-split-left" id="about-provide-left">
 					<form class="sect-description" id="about-provide-desc-cont">
@@ -117,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="about-testimonials">
+		<div class="main-sect-cont" id="about-testimonials" navcolor="white">
 			<!--<div class="background-div bg-tect-blue" id="at-back"></div>-->
 			<div class="sect-short" id="about-testimonials-cont">
 				<div class="about-testimonial-button" id="testimonial-button-left">
@@ -184,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<div class="main-sect" id="portfolio">
-		<div class="main-sect-cont" id="portfolio-start">
+		<div class="main-sect-cont" id="portfolio-start" navcolor="blue">
 			<div class="sect-info-full" id="portfolio-start-cont">
 				<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
@@ -203,7 +193,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</form>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="portfolio-sect">
+		<div class="main-sect-cont" id="portfolio-sect" navcolor="white">
 			<div class="sect-info-split" id="portfolio-cols">
 				<div class="sect-split-left portfolio-split-cont" id="portfolio-cols-left">
 					<div class="sect-split-image portfolio-split-image" id="portfolio-right-split-image">
@@ -215,7 +205,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-left-main-overlay">
 										<form class="portfolio-col-form" id="portfolio-residential-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-											<button class="learn-more-button white-button portfolio-learn-more" name="PortfolioValue" type="submit" value="Residential">
+											<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="Residential">
 												<div class="button-overlay"></div>
 												<h6>See Projects</h6>
 											</button>
@@ -239,7 +229,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-right-main-overlay">
 										<form class="portfolio-col-form" id="portfolio-commercial-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-											<button class="learn-more-button white-button portfolio-learn-more" name="PortfolioValue" type="submit" value="Commercial">
+											<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="Commercial">
 												<div class="button-overlay"></div>
 												<h6>See Projects</h6>
 											</button>
@@ -257,7 +247,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<div class="main-sect" id="contact">
-		<div class="main-sect-cont" id="contact-start">
+		<div class="main-sect-cont" id="contact-start" navcolor="blue">
 			<div class="sect-info-full" id="contact-start-cont">
 				<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
@@ -278,39 +268,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="sect-info-full" id="contact-form-sect-cont">
-			<div class="sect-info-split" id="contact-form-sect">
-				<div class="sect-split-left" id="contact-form-split-left">
-					<img src="<?php echo base_url();?>img/mail.png">
-				</div>
-				<div class="sect-split-right" id="contact-form-split-right">
-					<form id="contact-form" method="post">
-						<div class="contact-form-inner">
-							<div class="contact-form-input-cont" id="name-field">
-								<input type="text" name="Name" placeholder="&#xf007;  Name">
+		<div class="main-sect-cont" id="contact-form-cont" navcolor="white">
+			<div class="sect-info-full" id="contact-form-sect-cont">
+				<div class="sect-info-split" id="contact-form-sect">
+					<div class="sect-split-left" id="contact-form-split-left">
+						<img src="<?php echo base_url();?>img/mail.png">
+					</div>
+					<div class="sect-split-right" id="contact-form-split-right">
+						<form id="contact-form" method="post">
+							<div class="contact-form-inner">
+								<div class="contact-form-input-cont" id="name-field">
+									<input type="text" name="Name" placeholder="&#xf007;  Name">
+								</div>
+								<div class="contact-form-input-cont" id="email-field">
+									<input type="text" name="Email" placeholder="&#xf0e0;  Email">
+								</div>
+								<div class="contact-form-input-cont" id="phone-field">
+									<input type="text" name="Phone" placeholder="&#xf3cd;  Phone">
+								</div>
+								<div class="contact-form-input-cont" id="subject-field">
+									<input type="text" name="Subject" placeholder="&#xf086;  Subject">
+								</div>
+								<div class="contact-form-input-cont" id="message-field">
+									<textarea placeholder="&#xf27b;  Message"></textarea>
+								</div>
+								<div class="contact-form-input-cont">
+									<button type="submit" class="learn-more-button black-button" id="contact-form-submit">
+										<div class="button-overlay"></div>
+										<h6>
+											Send Email
+										</h6>
+									</button>
+								</div>
 							</div>
-							<div class="contact-form-input-cont" id="email-field">
-								<input type="text" name="Email" placeholder="&#xf0e0;  Email">
-							</div>
-							<div class="contact-form-input-cont" id="phone-field">
-								<input type="text" name="Phone" placeholder="&#xf3cd;  Phone">
-							</div>
-							<div class="contact-form-input-cont" id="subject-field">
-								<input type="text" name="Subject" placeholder="&#xf086;  Subject">
-							</div>
-							<div class="contact-form-input-cont" id="message-field">
-								<textarea placeholder="&#xf27b;  Message"></textarea>
-							</div>
-							<div class="contact-form-input-cont">
-								<button type="submit" class="learn-more-button black-button" id="contact-form-submit">
-									<div class="button-overlay"></div>
-									<h6>
-										Send Email
-									</h6>
-								</button>
-							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
