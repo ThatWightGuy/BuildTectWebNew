@@ -257,7 +257,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-description" id="contact-start-desc-cont">
 					<h1 class="" id="contact-start-desc-cont-h1">Contact Us</h1>
 					<h3 id="contact-start-desc-cont-h3">
-						Get in touch with our team today to get started with your job.
+						Get in touch with our team today to get started with your project.
 					</h3>
 					<button class="learn-more-button white-button" id="contact-start-button">
 						<div class="button-overlay"></div>

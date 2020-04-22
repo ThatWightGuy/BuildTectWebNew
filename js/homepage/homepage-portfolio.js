@@ -70,7 +70,7 @@ $(document).ready(function(){
 		$(secondary_overlay).removeAttr("style");
 
 		$(".main-navigation").css({
-			"height": "100px"
+			"height": "75px"
 		});
 		
 		$(main_header).fadeIn(500);

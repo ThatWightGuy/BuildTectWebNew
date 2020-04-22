@@ -8,6 +8,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url();?>js/basic/bars.js"></script>
 </head>
 <body>
+	<div id="main-navigation-overlay">
+		<div id="navi-overlay-cont">
+			<div class="navi-overlay-inner">
+				<div class="overlay-main-links">
+					<h1 class="tect-blue">About</h1>
+					<h1 class="tect-blue">Portfolio</h1>
+				</div>
+				<div class="overlay-page-links">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 	<nav class="main-navigation white-navi">
 		<div class="main-navi-cont">
 			<div id="navi-logo-sect">

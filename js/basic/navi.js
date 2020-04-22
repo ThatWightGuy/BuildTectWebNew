@@ -1,39 +1,43 @@
-$(document).ready(function(){
-	var item_bar = $(".navi-under-bar");
-	var current_section;
+var navi_overlay_on = false;
 
-	function getSections(){
-		var main_sections = $("body").find(".main-sect-cont");
-		var section_object = {};
-		var object_length = 0;
+function getSections(){
+	var main_sections = $("body").find(".main-sect-cont");
+	var section_object = {};
+	var object_length = 0;
 
-		for(var item = 0; item < main_sections.length; item++){
-			if($(main_sections[item]).attr("navcolor") != undefined){
-				section_object[object_length] = {
-					"offset": $(main_sections[item]).offset().top,
-					"color": $(main_sections[item]).attr("navcolor")
-				};
+	for(var item = 0; item < main_sections.length; item++){
+		if($(main_sections[item]).attr("navcolor") != undefined){
+			section_object[object_length] = {
+				"offset": $(main_sections[item]).offset().top,
+				"color": $(main_sections[item]).attr("navcolor")
+			};
 
-				object_length++;
-			}
+			object_length++;
 		}
-
-		section_object["length"] = object_length;
-
-		return section_object;
 	}
 
-	function changeColor(){
-		var sections = getSections();
-		var position;
+	section_object["length"] = object_length;
 
-		for(var i = 0; i < sections.length; i++){
-			if($(document).scrollTop() >= (sections[i].offset-100)){
-				position = sections[i];
-			}
+	return section_object;
+}
+
+function changeColor(){
+	var sections = getSections();
+	var position;
+
+	for(var i = 0; i < sections.length; i++){
+		if($(document).scrollTop() >= (sections[i].offset-75)){
+			position = sections[i];
 		}
+	}
 
-		if(position != undefined){
+	if(position != undefined){
+		if(navi_overlay_on){
+			$(".main-navigation").removeClass("white-navi");
+			$(".main-navigation").removeClass("blue-navi");
+			$(".main-navigation").addClass("transparent-navi");
+		}
+		else{
 			if(position.color == "blue"){
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("white-navi");
@@ -51,6 +55,26 @@ $(document).ready(function(){
 			}
 		}
 	}
+}
+
+function mainOverlay(){
+	if(!navi_overlay_on){
+		navi_overlay_on = true;
+
+		$("#main-navigation-overlay").fadeIn(200);
+		changeColor();
+	}
+	else{
+		navi_overlay_on = false;
+		
+		$("#main-navigation-overlay").fadeOut(200);
+		changeColor();
+	}
+}
+
+$(document).ready(function(){
+	var item_bar = $(".navi-under-bar");
+	var current_section;
 
 	function getMainSections(){
 		var main_sections = $("body").find(".main-sect");
@@ -84,7 +108,7 @@ $(document).ready(function(){
 		var sections = getMainSections();
 
 		for(let key in sections){
-			if($(document).scrollTop() >= (sections[key] - 100)){
+			if($(document).scrollTop() >= (sections[key] - 75)){
 				current_section = $(".navi-main-item[id=" + key + "]");
 			}
 			else{
@@ -104,9 +128,20 @@ $(document).ready(function(){
 	$(".navi-main-item").click(function(){
 		var scrollTo = $(".main-sect[id='" + $(this).attr("id") + "']").offset().top;
 		
+		// close overlay if open:
+		if(navi_overlay_on){
+			mainOverlay();
+			toggleBarClose($("#main-navi-bars"));
+			bar_close_open["main-navi-bars"] = false;
+		}
+		
 		$('html, body').animate({
-			scrollTop: scrollTo - 99
+			scrollTop: scrollTo - 74
 		}, 500);
+	});
+
+	$("#main-navi-bars").click(function(){
+		mainOverlay();
 	});
 
 	changeColor();

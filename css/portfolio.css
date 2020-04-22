@@ -20,8 +20,8 @@ nav{
 .portfolio-sidebar{
 	position: fixed;
 	width: 0;
-	height: calc(100vh - 100px);
-	top: 100px;
+	height: calc(100vh - 75px);
+	top: 75px;
 	background-color: #1885ff;
 	transition-duration: .2s;
 	transition-property: width;
@@ -46,10 +46,10 @@ nav{
 #portfolio-main-sect{
 	display: flex;
 	position: absolute;
-	min-height: calc(100vh - 100px);
+	min-height: calc(100vh - 75px);
 	z-index: 1;
 	overflow-x: hidden;
-	top: 100px;
+	top: 75px;
 	background-color: white;
 	transition-property: transform;
 	transition-duration: .2s;

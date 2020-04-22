@@ -11,6 +11,10 @@ nav{
 	display: none;
 }
 
+#navi-bars-sect .bars{
+	display: none;
+}
+
 #navi-main-items{
 	min-width: 100%;
 }
@@ -36,7 +40,7 @@ nav{
 	"logo";
 	align-items: center;
 	justify-items: center;
-	grid-template-rows: 100px auto;
+	grid-template-rows: 75px auto;
 	grid-template-columns: 1fr;
 }
 
@@ -44,8 +48,8 @@ nav{
 	position: relative;
 	display: flex;
 	max-height: 100%;
-	height: calc(100vh - 200px);
-	min-height: 100px;
+	height: calc(100vh - 150px);
+	min-height: 150px;
 	max-width: 400px;
 	padding: 0px 50px;
 	align-items: center;

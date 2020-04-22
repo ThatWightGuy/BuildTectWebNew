@@ -43,7 +43,7 @@ footer h6{
 	border-radius: 100%;
 	background-color: rgb(223,238,255,.9);
 	pointer-events: none;
-	z-index: 1000; 
+	z-index: 1003; 
 	transition: transform .2s;
 }
 
