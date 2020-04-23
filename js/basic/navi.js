@@ -62,12 +62,30 @@ function mainOverlay(){
 		navi_overlay_on = true;
 
 		$("#main-navigation-overlay").fadeIn(200);
+		$("#main-navigation-overlay").css({
+			"border-width": "16px"
+		});
+
+		$(".main-navigation").css({
+			"width": "calc(100% - 32px)",
+			"margin": "16px"
+		});
+
 		changeColor();
 	}
 	else{
 		navi_overlay_on = false;
 		
 		$("#main-navigation-overlay").fadeOut(200);
+		$("#main-navigation-overlay").css({
+			"border-width": "0px"
+		});
+
+		$(".main-navigation").css({
+			"width": "100%",
+			"margin": "0"
+		});
+
 		changeColor();
 	}
 }
@@ -126,6 +144,21 @@ $(document).ready(function(){
 	});
 
 	$(".navi-main-item").click(function(){
+		var scrollTo = $(".main-sect[id='" + $(this).attr("id") + "']").offset().top;
+		
+		// close overlay if open:
+		if(navi_overlay_on){
+			mainOverlay();
+			toggleBarClose($("#main-navi-bars"));
+			bar_close_open["main-navi-bars"] = false;
+		}
+		
+		$('html, body').animate({
+			scrollTop: scrollTo - 74
+		}, 500);
+	});
+
+	$(".overlay-page-item").click(function(){
 		var scrollTo = $(".main-sect[id='" + $(this).attr("id") + "']").offset().top;
 		
 		// close overlay if open:

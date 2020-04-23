@@ -8,8 +8,8 @@ $(document).ready(function(){
 			$(".main-navigation").css({
 				"position": "fixed",
 				"top": "0px",
-				"transition-property": "height, background-color",
-				"transition-duration": ".2s, .2s"
+				"transition-property": "height, background-color, width, margin",
+				"transition-duration": ".2s, .2s, .2s, .2s"
 			});
 
 			$("#welcome").css({
@@ -44,6 +44,14 @@ $(document).ready(function(){
 
 			navi_overlay_on = false;
 			$("#main-navigation-overlay").fadeOut(200);
+			$("#main-navigation-overlay").css({
+				"border-width": "0px"
+			});
+
+			$(".main-navigation").css({
+				"width": "100%",
+				"margin": "0"
+			});
 
 			if(change_bars && bar_close_open["main-navi-bars"]){
 				toggleBarClose($("#main-navi-bars"));

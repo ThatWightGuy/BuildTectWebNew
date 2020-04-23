@@ -3,35 +3,134 @@
 	position: fixed;
 	display: none;
 	top: 0px;
-	height: 100vh;
+	height: calc(100vh);
 	width: 100%;
 	z-index: 1000;
+	border: 0px solid #1885ff;
 	background-color: white;
+	transition: border-width .2s;
 }
 
 #navi-overlay-cont{
-	position: absolute;
+	position: relative;
 	display: flex;
-	width: 100%;
-	height: calc(100vh - 75px);
-	top: 75px;
-	align-items: center;
 	justify-content: center;
+	width: 100%;
+	min-height: calc(100vh - 107px);
+	top: 75px;
 }
 
 .navi-overlay-inner{
 	position: relative;
-	height: 100%;
 	max-width: 1600px;
+	min-height: 100%;
+	max-height: calc(100vh - 107px);
 	width: 100%;
-	padding: 25px;
+	padding: 0 50px;
+	overflow-y: auto;
 }
 
-.overlay-main-links h1{
+.navi-overlay-inner-cont{
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	padding: 50px 0;
+}
+
+.overlay-main-links{
+	position: relative;
+	display: block;
 	margin: 0;
 	padding: 0;
+	padding-right: 10px;
+	left: 0;
+	transition: opacity .2s; 
+}
+
+.overlay-main-links ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.overlay-main-link{
+	display: block;
+	padding-top: 30px;
+	transition: opacity .2s; 
+}
+
+.overlay-main-links:hover .overlay-main-link{
+	opacity: .6;
+}
+
+.overlay-main-links:hover .overlay-main-link:hover{
+	opacity: 1;
+}
+
+.overlay-main-link:nth-child(1){
+	padding-top: 0px;
+}
+
+.overlay-main-link button{
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.overlay-main-link button h1{
+	padding: 0;
+	margin: 0;
+	line-height: 100%;
 	font-size: 12vmin;
 	font-weight: 600;
+	color: #1885ff;
+}
+
+.overlay-page-links{
+	position: relative;
+	display: none;
+	justify-content: center;
+	width: 100%;
+}
+
+.overlay-page-links ul{
+	float: left;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.overlay-page-links ul li{
+	display: block;
+	margin: 0;
+	padding-top: 15px;
+	list-style-type: none;
+}
+
+.overlay-page-links ul li:nth-child(1){
+	padding: 0px;
+	float: none;
+}
+
+.overlay-page-links h3{
+	display: inline;
+	padding: 0; 
+	margin: 0;
+	font-weight: 600;
+	font-size: 7vmin;
+}
+
+.overlay-underline{
+	position: relative;
+	display: none;
+	float: left;
+	height: 2px;
+	width: 100%;
+	margin: 30px 0;
+	border-radius: 1px;
+	background-color: black;
 }
 
 /* Main Navigation */
@@ -44,6 +143,8 @@
 	background-color: white;
 	overflow-y: hidden;
 	z-index: 1001;
+	transition-property: width, margin;
+	transition-duration: .2s;
 }
 
 .main-navi-cont{
@@ -166,6 +267,14 @@
 }
 
 @media only screen and (max-width: 600px){
+	.overlay-underline{
+		display: block;
+	}
+
+	.overlay-page-links{
+		display: block;
+	}
+
 	.main-navigation #navi-main-items{
 		display: none
 	}
@@ -178,4 +287,7 @@
 	.home-navigation #navi-main-items{
 		display: flex;
 	}
+}
+
+@media only screen and (max-width: 450px){	
 }

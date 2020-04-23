@@ -11,12 +11,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="main-navigation-overlay">
 		<div id="navi-overlay-cont">
 			<div class="navi-overlay-inner">
-				<div class="overlay-main-links">
-					<h1 class="tect-blue">About</h1>
-					<h1 class="tect-blue">Portfolio</h1>
-				</div>
-				<div class="overlay-page-links">
-					
+				<div class="navi-overlay-inner-cont">
+					<div class="overlay-main-links">
+						<ul>
+							<li>
+								<form class="overlay-main-link">
+									<button>
+										<h1>Home</h1>
+									</button>
+								</form>
+
+								<form class="overlay-main-link">
+									<button>
+										<h1>About</h1>
+									</button>
+								</form>
+								<form class="overlay-main-link">
+									<button>
+										<h1>Portfolio</h1>
+									</button>
+								</form>
+							</li>
+						</ul>
+					</div>
+					<div class="overlay-underline"></div>
+					<div class="overlay-page-links">
+						<ul>
+							<?php foreach ($links as $link): ?>
+								<li class="overlay-page-item" id=<?php echo $link['link'] ?>>
+									<h3><?php echo $link['name'] ?></h3>
+								</li>
+							<?php endforeach; ?>
+							<div class="navi-under-bar"></div>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
