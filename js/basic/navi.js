@@ -35,22 +35,32 @@ function changeColor(){
 		if(navi_overlay_on){
 			$(".main-navigation").removeClass("white-navi");
 			$(".main-navigation").removeClass("blue-navi");
+			$(".main-navigation").removeClass("dark-blue-navi");
 			$(".main-navigation").addClass("transparent-navi");
 		}
 		else{
 			if(position.color == "blue"){
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("white-navi");
+				$(".main-navigation").removeClass("dark-blue-navi");
 				$(".main-navigation").addClass("blue-navi");
+			}
+			else if(position.color == "darkblue"){
+				$(".main-navigation").removeClass("white-navi");
+				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("transparent-navi");
+				$(".main-navigation").addClass("dark-blue-navi");
 			}
 			else if(position.color == "white"){
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("dark-blue-navi");
 				$(".main-navigation").addClass("white-navi");
 			}
 			else if(position.color == "transparent"){
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("dark-blue-navi");
 				$(".main-navigation").addClass("transparent-navi");
 			}
 		}

@@ -443,6 +443,52 @@ nav{
 	background-color: #dfeeff;
 }
 
+#about-stats-cont{
+	background-color: #064b99;
+}
+
+#about-stats-inner{
+	position: relative;
+	display: inline-block;
+	max-width: 1600px;
+	width: 100%;
+	padding: 50px 0;
+}
+
+.about-stat{
+	float: left;
+	width: 25%;
+	color: white;
+}
+
+.as-cont{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.as-num{
+	padding: 0;
+	padding-bottom: 5px;
+	margin: 0;
+	font-weight: 600;
+}
+
+.as-line{
+	width: 60px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: white;
+}
+
+.as-title{
+	padding: 0;
+	padding-top: 5px;
+	margin: 0;
+	font-weight: 500;
+}
+
 /* Portfolio */
 #portfolio{
 	flex-direction: column;
@@ -911,6 +957,14 @@ nav{
 		font-size: 20px;
 	}
 
+	.about-stat{
+		width: 50%;
+	}
+
+	.about-stat:nth-child(1), .about-stat:nth-child(2){
+		padding-bottom: 50px;
+	}
+
 	#portfolio-start-desc-cont-h3{
 		font-size: 20px;
 	}
@@ -972,6 +1026,18 @@ nav{
 	.test-signature h6{
 		font-size: 3vw;
 	}
+
+	.about-stat{
+		width: 100%;
+	}
+
+	.about-stat:nth-child(1), .about-stat:nth-child(2), .about-stat:nth-child(3){
+		padding-bottom: 50px;
+	} 
+
+	.about-stat:nth-child(4){
+		padding-bottom: 0px;
+	} 
 
 	.portfolio-split-image .sect-split-image-cont{
 		padding-top: calc(100%);

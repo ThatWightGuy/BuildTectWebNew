@@ -252,7 +252,16 @@
 	color: white;
 }
 
+.dark-blue-navi{
+	background-color: rgba(6, 75, 153, 1);
+	color: white;
+}
+
 .blue-navi img{
+	filter: brightness(0) grayscale(1) saturate(0) invert(1);
+}
+
+.dark-blue-navi img{
 	filter: brightness(0) grayscale(1) saturate(0) invert(1);
 }
 
@@ -261,6 +270,10 @@
 }
 
 .blue-navi .navi-under-bar{
+	background-color: white;
+}
+
+.dark-blue-navi .navi-under-bar{
 	background-color: white;
 }
 
@@ -273,6 +286,10 @@
 }
 
 .blue-navi .bars .bar{
+	background-color: white;
+}
+
+.dark-blue-navi .bars .bar{
 	background-color: white;
 }
 

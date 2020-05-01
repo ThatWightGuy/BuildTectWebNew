@@ -109,7 +109,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		<div class="main-sect-cont" id="about-testimonials" navcolor="white">
-			<!--<div class="background-div bg-tect-blue" id="at-back"></div>-->
+			<!--<div class="sect-info-split" id="about-testimonials-split">
+				<div class="sect-split-left" id="about-test-left">
+					<div class="testimonial-shell">
+						<div class="test-shell-cont">
+							
+						</div>
+					</div>
+				</div>
+				<div class="sect-split-right" id="about-test-right">
+					
+				</div>
+			</div>
+			<div class="background-div bg-tect-blue" id="at-back"></div>-->
 			<div class="sect-short" id="about-testimonials-cont">
 				<div class="about-testimonial-button" id="testimonial-button-left">
 					<div class="about-testimonial-button-cont">
@@ -170,6 +182,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="sect-short" id="about-testimonials-footer">
 				<div class="about-test-foot-cont">
 					
+				</div>
+			</div>
+		</div>
+		<div class="main-sect-cont" id="about-stats" navcolor="darkblue">
+			<div class="sect-info-full" id="about-stats-cont">
+				<div class="sect-short" id="about-stats-inner">
+					<div class="about-stat">
+						<div class="as-cont">
+							<h1 class="as-num">30+</h1>
+							<div class="as-line"></div>
+							<h6 class="as-title">Years in Business</h6>
+						</div>
+					</div>
+					<div class="about-stat">
+						<div class="as-cont">
+							<h1 class="as-num">100+</h1>
+							<div class="as-line"></div>
+							<h6 class="as-title">Projects Done</h6>
+						</div>
+					</div>
+					<div class="about-stat">
+						<div class="as-cont">
+							<h1 class="as-num">100+</h1>
+							<div class="as-line"></div>
+							<h6 class="as-title">Clients Served</h6>
+						</div>
+					</div>
+					<div class="about-stat">
+						<div class="as-cont">
+							<h1 class="as-num">100%</h1>
+							<div class="as-line"></div>
+							<h6 class="as-title">Happy Clients</h6>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
