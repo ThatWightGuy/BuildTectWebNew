@@ -74,6 +74,7 @@ $(document).ready(function(){
 			var sidebar_width = $(".portfolio-sidebar").width();
 
 			$(".portfolio-sidebar").css("width", "300px");
+			$("#sidebar-contents").css("width", "300px");
 
 			if($(window).width() <= 584){
 				$("#portfolio-main-sect").css("transform", "translateX(0px)");
@@ -95,6 +96,7 @@ $(document).ready(function(){
 		}
 		else{
 			$(".portfolio-sidebar").css("width", "0px");
+			$("#sidebar-contents").css("width", "0px");
 			$("#portfolio-main-sect").css("transform", "translateX(0px)");
 			$("#portfolio-main-sect").css("width", $(window).width() + "px");
 			$("#portfolio-main-sect").css("display", "flex");
@@ -108,6 +110,23 @@ $(document).ready(function(){
 			open = false;
 		}
 	}
+
+	/*function closeSidebar(){
+		if(open){
+			$(".portfolio-sidebar").css("width", "0px");
+			$("#portfolio-main-sect").css("transform", "translateX(0px)");
+			$("#portfolio-main-sect").css("width", $(window).width() + "px");
+			$("#portfolio-main-sect").css("display", "flex");
+			$(".shade-overlay").css("display", "none");
+
+			// all layout stuff goes here:
+			layoutResize();
+
+			// all layout stuff goes here (end)	
+
+			open = false;
+		}
+	}*/
 
 	$(".sidebar-button").click(function(){
 		openSidebar();
@@ -146,5 +165,15 @@ $(document).ready(function(){
 		}
 
 		layoutResize();
+
+		/*if(isOnScreen($(".main-footer"))){
+			closeSidebar();
+		}*/
 	});
+
+	/*$(window).scroll(function(){
+		if(isOnScreen($(".main-footer"))){
+			closeSidebar();
+		}
+	});*/
 });

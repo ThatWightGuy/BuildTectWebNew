@@ -43,7 +43,6 @@ function toggleBarClose(barclose){
 		);
 	}
 	else{
-		console.log("close");
 		$(top).animate(
 			{deg: 0},
 			{

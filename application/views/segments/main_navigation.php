@@ -15,19 +15,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="overlay-main-links">
 						<ul>
 							<li>
-								<form class="overlay-main-link">
+								<form class="overlay-main-link" action="<?php echo base_url(); ?>" method="post" id="home-overlay">
 									<button>
 										<h1>Home</h1>
 									</button>
 								</form>
 
-								<form class="overlay-main-link">
+								<form class="overlay-main-link" id="about-overlay">
 									<button>
 										<h1>About</h1>
 									</button>
 								</form>
-								<form class="overlay-main-link">
-									<button>
+								
+								<form class="overlay-main-link" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post" id="portfolio-overlay">
+									<button name="PortfolioValue" type="submit" value="All">
 										<h1>Portfolio</h1>
 									</button>
 								</form>
@@ -38,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="overlay-page-links">
 						<ul>
 							<?php foreach ($links as $link): ?>
-								<li class="overlay-page-item" id=<?php echo $link['link'] ?>>
+								<li class="overlay-page-item" pageid=<?php echo $link['link'] ?>>
 									<h3><?php echo $link['name'] ?></h3>
 								</li>
 							<?php endforeach; ?>
@@ -60,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div id="navi-main-items">
 					<ul>
 						<?php foreach ($links as $link): ?>
-							<li class="navi-main-item" id=<?php echo $link['link'] ?>>
+							<li class="navi-main-item" pageid=<?php echo $link['link'] ?>>
 								<h5><?php echo $link['name'] ?></h5>
 							</li>
 						<?php endforeach; ?>

@@ -1,7 +1,36 @@
 $(document).ready(function(){
+	var sidebar_offset = $("#portfolio-main-sect").height() + 75;
+
 	var isClicked = {
 		"Job-Type-Filter-Button": false, 
 		"Project-Type-Filter-Button": false,
+	}
+
+	function sidebarSticky(){
+		var contents_offset = ($(".main-navigation").offset().top) + "px";
+		
+		$(".portfolio-sidebar").css({
+			"height": $("#portfolio-main-sect").height() + "px"
+		});
+		
+		if(isOnScreen($(".main-footer"))){
+			/*$(".portfolio-sidebar").css({
+				"position": "absolute",
+				"top": (($("#portfolio-main-sect").height() - $(this).height()) + 150) + "px"
+			});*/
+
+			$("#sidebar-contents").css({
+				"position": "absolute",
+				"top": contents_offset
+			});
+		}
+
+		else{
+			$("#sidebar-contents").css({
+				"position": "fixed",
+				"top": "75px"
+			});
+		}
 	}
 
 	$(".sidebar-filter-button")
@@ -38,5 +67,15 @@ $(document).ready(function(){
 
 			isClicked[id] = false;
 		}
+	});
+
+	sidebarSticky();
+
+	$(window).resize(function(){
+		sidebarSticky();
+	});
+
+	$(window).scroll(function(){
+		sidebarSticky();
 	});
 });

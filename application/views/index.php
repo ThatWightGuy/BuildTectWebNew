@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-main.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-navi.js"></script>

@@ -1,6 +1,5 @@
 html, body{
 	height: 100%;
-	background-color: #1885ff;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -29,6 +28,7 @@ nav{
 #welcome-background{
 	position: absolute;
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 	min-height: 300px;
 	width: 100%;
 	background-color: white;
@@ -41,16 +41,16 @@ nav{
 	"logo";
 	align-items: center;
 	justify-items: center;
-	grid-template-rows: 75px auto;
+	grid-template-rows: 50px auto;
 	grid-template-columns: 1fr;
 }
 
 #welcome-logo-cont{
 	position: relative;
 	display: flex;
-	max-height: 100%;
-	height: calc(100vh - 150px);
-	min-height: 150px;
+	height: calc(100vh - 125px);
+	height: calc((var(--vh, 1vh) * 100) - 125px);
+	min-height: 125px;
 	max-width: 400px;
 	padding: 0px 50px;
 	align-items: center;
@@ -76,6 +76,7 @@ nav{
 
 #about{
 	flex-direction: column;
+	background-color: #1885ff;
 }
 
 #about-us-cont{
@@ -445,6 +446,7 @@ nav{
 /* Portfolio */
 #portfolio{
 	flex-direction: column;
+	background-color: #1885ff;
 }
 
 #portfolio-start-cont{
@@ -606,6 +608,7 @@ nav{
 /* Contact */
 #contact{
 	flex-direction: column;
+	background-color: #1885ff;
 }
 
 #contact-start-cont{
@@ -692,6 +695,7 @@ nav{
 	outline: none;
 	border-radius: 24.5px;
 	border: 3px solid #dfeeff;
+	box-shadow: 0 3px 7px rgba(0,0,0,.1);
 }
 
 #email-field{

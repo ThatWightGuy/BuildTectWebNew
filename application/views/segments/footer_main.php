@@ -19,49 +19,49 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div class="foooter-sect-cont-main">
 						<div class="footer-list" id="footer-general">
-							<section>
+							<form>
 								<h5>Home</h5>
-								<h6>
-									<a href="">Welcome</a>
-								</h6>
-								<h6>
-									<a href="">About</a>
-								</h6>
-								<h6>
-									<a href="">Portfolio</a>
-								</h6>
-								<h6>
-									<a href="">Contact</a>
-								</h6>
-							</section>
+								<button>
+									<h6>Welcome</h6>
+								</button>
+								<button>
+									<h6>About</h6>
+								</button>
+								<button>
+									<h6>Portfolio</h6>
+								</button>
+								<button>
+									<h6>Contact</h6>
+								</button>
+							</form>
 						</div>
 						<div class="footer-list" id="footer-about">
-							<section>
+							<form>
 								<h5>About</h5>
-								<h6>
-									<a href="">About Us</a>
-								</h6>
-								<h6>
-									<a href="">Our Team</a>
-								</h6>
-								<h6>
-									<a href="">Services</a>
-								</h6>
-							</section>
+								<button>
+									<h6>About Us</h6>
+								</button>
+								<button>
+									<h6>Our Team</h6>
+								</button>
+								<button>
+									<h6>Services</h6>
+								</button>
+							</form>
 						</div>
 						<div class="footer-list"id="footer-portfolio">
-							<section>
+							<form action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
 								<h5>Portfolio</h5> 
-								<h6>
-									<a href="">All Projects</a>
-								</h6>
-								<h6>
-									<a href="">Residential</a>
-								</h6>
-								<h6>
-									<a href="">Commercial</a>
-								</h6>
-							</section>
+								<button name="PortfolioValue" type="submit" value="All">
+									<h6>All Projects</h6>
+								</button>
+								<button name="PortfolioValue" type="submit" value="Residential">
+									<h6>Residential</h6>
+								</button>
+								<button name="PortfolioValue" type="submit" value="Commercial">
+									<h6>Commercial</h6>
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>

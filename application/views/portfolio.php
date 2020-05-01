@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
+	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-main.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-layout.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-request.js"></script>
@@ -28,88 +29,90 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="cursor"></div>
 	<form id="portfolio-form">
 		<div class="portfolio-sidebar">
-			<div class="cross sidebar-button" id="sidebar-button-exit"></div>
-			<div class="sidebar-title-cont">
-				<h3 id="sidebar-title-h">
-					<i class="fas fa-search"></i>Filter Search
-				</h3>
-			</div>
-			<div class="sidebar-filter-form">
-				<div class="sidebar-filter-cont">
-					<button class="sidebar-filter-button" id="Job-Type-Filter-Button" type="button">
-						<div class="sidebar-filter-button-cont">
-							<div class="sidebar-button-title">
-								<h5>Job Type</h5>
-							</div>
-							<div class="sidebar-button-indicator">
-								<h5>+</h5>
-							</div>
-						</div>
-					</button>
-					<fieldset class="sidebar-filter-dropdown" name="JobType">
-						<div class="sidebar-dropdown-item">
-							<div class="sidebar-drop-title">
-								<h6>All</h6>
-							</div>
-							<div class="sidebar-drop-button">
-								<label class="switch sidebar-drop-switch">
-									<input type="radio" name="JobType" value="All" class="sidebar-drop-switch-input" <?php if($flashdata == "All"){echo "checked";}?>>
-									<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
-						<div class="sidebar-dropdown-item">
-							<div class="sidebar-drop-title">
-								<h6>Residential</h6>
-							</div>
-							<div class="sidebar-drop-button">
-								<label class="switch sidebar-drop-switch">
-									<input type="radio" name="JobType" value="Residential" class="sidebar-drop-switch-input" <?php if($flashdata == "Residential"){echo "checked";}?>>
-			  						<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
-						<div class="sidebar-dropdown-item">
-							<div class="sidebar-drop-title">
-								<h6>Commercial</h6>
-							</div>
-							<div class="sidebar-drop-button">
-								<label class="switch sidebar-drop-switch">
-									<input type="radio" name="JobType" value="Commercial" class="sidebar-drop-switch-input" <?php if($flashdata == "Commercial"){echo "checked";}?>>
-			  						<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
-					</fieldset>
+			<div id="sidebar-contents">
+				<div class="cross sidebar-button" id="sidebar-button-exit"></div>
+				<div class="sidebar-title-cont">
+					<h3 id="sidebar-title-h">
+						<i class="fas fa-search"></i>Filter Search
+					</h3>
 				</div>
-				<div class="sidebar-filter-cont">
-					<button class="sidebar-filter-button" id="Project-Type-Filter-Button" type="button">
-						<div class="sidebar-filter-button-cont">
-							<div class="sidebar-button-title">
-								<h5>Project Type</h5>
+				<div class="sidebar-filter-form">
+					<div class="sidebar-filter-cont">
+						<button class="sidebar-filter-button" id="Job-Type-Filter-Button" type="button">
+							<div class="sidebar-filter-button-cont">
+								<div class="sidebar-button-title">
+									<h5>Job Type</h5>
+								</div>
+								<div class="sidebar-button-indicator">
+									<h5>+</h5>
+								</div>
 							</div>
-							<div class="sidebar-button-indicator">
-								<h5>+</h5>
-							</div>
-						</div>
-					</button>
-					<fieldset class="sidebar-filter-dropdown" name="ProjectType">
-						<?php foreach($projectTypes as $projectType): ?>
+						</button>
+						<fieldset class="sidebar-filter-dropdown" name="JobType">
 							<div class="sidebar-dropdown-item">
 								<div class="sidebar-drop-title">
-									<h6>
-										<?php echo $projectType["projectType"]; ?>
-									</h6>
+									<h6>All</h6>
 								</div>
 								<div class="sidebar-drop-button">
 									<label class="switch sidebar-drop-switch">
-										<input type="checkbox" name="ProjectType[]" value="<?php echo $projectType["projectTypeID"]?>" class="sidebar-drop-switch-input">
+										<input type="radio" name="JobType" value="All" class="sidebar-drop-switch-input" <?php if($flashdata == "All"){echo "checked";}?>>
 										<span class="slider round"></span>
 									</label>
 								</div>
 							</div>
-						<?php endforeach; ?>
-					</fieldset>
+							<div class="sidebar-dropdown-item">
+								<div class="sidebar-drop-title">
+									<h6>Residential</h6>
+								</div>
+								<div class="sidebar-drop-button">
+									<label class="switch sidebar-drop-switch">
+										<input type="radio" name="JobType" value="Residential" class="sidebar-drop-switch-input" <?php if($flashdata == "Residential"){echo "checked";}?>>
+				  						<span class="slider round"></span>
+									</label>
+								</div>
+							</div>
+							<div class="sidebar-dropdown-item">
+								<div class="sidebar-drop-title">
+									<h6>Commercial</h6>
+								</div>
+								<div class="sidebar-drop-button">
+									<label class="switch sidebar-drop-switch">
+										<input type="radio" name="JobType" value="Commercial" class="sidebar-drop-switch-input" <?php if($flashdata == "Commercial"){echo "checked";}?>>
+				  						<span class="slider round"></span>
+									</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="sidebar-filter-cont">
+						<button class="sidebar-filter-button" id="Project-Type-Filter-Button" type="button">
+							<div class="sidebar-filter-button-cont">
+								<div class="sidebar-button-title">
+									<h5>Project Type</h5>
+								</div>
+								<div class="sidebar-button-indicator">
+									<h5>+</h5>
+								</div>
+							</div>
+						</button>
+						<fieldset class="sidebar-filter-dropdown" name="ProjectType">
+							<?php foreach($projectTypes as $projectType): ?>
+								<div class="sidebar-dropdown-item">
+									<div class="sidebar-drop-title">
+										<h6>
+											<?php echo $projectType["projectType"]; ?>
+										</h6>
+									</div>
+									<div class="sidebar-drop-button">
+										<label class="switch sidebar-drop-switch">
+											<input type="checkbox" name="ProjectType[]" value="<?php echo $projectType["projectTypeID"]?>" class="sidebar-drop-switch-input">
+											<span class="slider round"></span>
+										</label>
+									</div>
+								</div>
+							<?php endforeach; ?>
+						</fieldset>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -118,25 +121,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="main-sect-cont" id="portfolio-main-sect-cont" navcolor="blue">
 				<div class="sect-short padding-100" id="portfolio-cont">
 					<div class="sect-short-cont" id="portfolio-main-dash">
-						<div id="help-mode-full">
-							<h6>
-								<span id="help-mode-underline">Help Mode</span>: 
-								<span class="tect-blue" id="help-mode-status">Off</span>
-								<div class="popup-cont" id="help-mode-popup">
-									<p class="popup-text">
-										Toggling "Help Mode" will provide on-screen assistance for the various sections of our protfolio search engine. Just hover any button/text field/etc., and a popup like this will provide you with an explaination of its function.  
-									</p>
-								</div>
-							</h6>
-						</div>
-						<label class="switch" id="help-switch">
-							<input type="checkbox" id="help-checkbox">
-	  						<span class="slider round"></span>
-						</label>
-						
 						<div class="short-cont" id="portfolio-search-cont">
 							<div class="sidebar-button" id="sidebar-button-main">
-								<i class="fas fa-bars"></i>
+								<div class="bars bars-25" id="sidebar-button-bars">
+									<div class="bar top-bar"></div>
+									<div class="bar mid-bar"></div>
+									<div class="bar bottom-bar"></div>
+								</div>
 							</div>
 							<div class="portfolio-search">
 								<input id="portfolio-search-bar" type="search" name="PortfolioSearch" placeholder="Search" autocomplete="off">
@@ -163,6 +154,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
+		<?php echo $footer ?>
 	</form>
 </body>
 </html>

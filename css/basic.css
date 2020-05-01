@@ -82,6 +82,11 @@ footer h6{
 	height: 20px;
 }
 
+.bars-25{
+	width: 25px;
+	height: 16.6666666667px;
+}
+
 .bars .top-bar{
 	top: 0px;
 }

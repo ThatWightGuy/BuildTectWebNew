@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var window_offset = $("#welcome-cont").height();
 	var change_bars = true;
+	
 	function sticky(){
 		window_offset = $("#welcome-cont").height();
 
@@ -43,6 +44,7 @@ $(document).ready(function(){
 			$(".main-navigation").addClass("home-navigation");
 
 			navi_overlay_on = false;
+
 			$("#main-navigation-overlay").fadeOut(200);
 			$("#main-navigation-overlay").css({
 				"border-width": "0px"
