@@ -51,4 +51,17 @@ class Homepage extends CI_Controller {
 		$this->session->set_flashdata('test_flash', $data);
 		redirect(base_url().'portfolio');
 	}
+
+	public function aboutRedirect(){
+		$this->load->helper('url');
+
+		/*$post_data = $this->input->post();
+		$data = array();
+
+		$data['response'] = $post_data['PortfolioValue'];
+
+		$this->session->set_flashdata('test_flash', $data);*/
+		
+		redirect(base_url().'about');
+	}
 }

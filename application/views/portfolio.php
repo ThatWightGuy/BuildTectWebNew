@@ -5,14 +5,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<title>Build Tect | Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Online Links -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
+	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/basic.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/portfolio.css">
 	<link rel="shortcut icon" href="img/Logo.png">
+
+	<!-- Online JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
+
+	<!-- Custom JS -->
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
@@ -26,7 +35,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body ontouchmove >
 	<?php echo $navbar?>
-	<div class="cursor"></div>
+	<div class="cursor-main cursor-main-blue"></div>
+	<div class="cursor-follower cursor-follower-blue">
+		<div class="cf-arc"></div>
+	</div>
 	<form id="portfolio-form">
 		<div class="portfolio-sidebar">
 			<div id="sidebar-contents">

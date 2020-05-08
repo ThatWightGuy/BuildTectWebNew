@@ -52,7 +52,9 @@ $(document).ready(function(){
 
 			$(".main-navigation").css({
 				"width": "100%",
-				"margin": "0"
+				"margin": "0",
+				"transition-property": "width, margin",
+				"transition-duration": ".2s, .2s"
 			});
 
 			if(change_bars && bar_close_open["main-navi-bars"]){

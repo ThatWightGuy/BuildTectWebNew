@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 	<div id="main-navigation-overlay">
-		<div id="navi-overlay-cont">
+		<div id="navi-overlay-cont" cursor="white">
 			<div class="navi-overlay-inner">
 				<div class="navi-overlay-inner-cont">
 					<div class="overlay-main-links">
@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</button>
 								</form>
 
-								<form class="overlay-main-link" id="about-overlay">
+								<form class="overlay-main-link" action="<?php echo base_url(); ?>index.php/Homepage/aboutRedirect" method="post" id="about-overlay">
 									<button>
 										<h1>About</h1>
 									</button>

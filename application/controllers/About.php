@@ -26,15 +26,15 @@ class About extends CI_Controller {
 		$navbar_data = array(
 			'logo_link' => base_url(), // href for logo
 			'links' => array(
-				array('name' => 'Services', 'link' => base_url()),
-				array('name' => 'History', 'link' => base_url())
+				array('name' => 'About Us', 'link' => 'about-us'),
+				array('name' => 'Our Team', 'link' => 'our-team'),
+				array('name' => 'Services', 'link' => 'services')
 			),
 			'styles' => array()
 		);	
 
-		$data['navbar'] = $this->load->view('segments/navi_main', $navbar_data, TRUE);
-		
-		$data['query'] = $this->test_model->get_images_by_id(1);
+		$data['navbar'] = $this->load->view('segments/main_navigation', $navbar_data, TRUE);
+		$data['footer'] = $this->load->view('segments/footer_main', null, TRUE);
 
 		$this->load->view('about', $data);
 	}

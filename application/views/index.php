@@ -4,18 +4,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
 	<title>Build Tect Building Designs</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Online Links -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
+	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/basic.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/homepage.css">
 	<link rel="shortcut icon" href="img/Logo.png">
+	
+	<!-- Online JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	
+	<!-- Downloaded JS -->
+	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
+	<script src="<?php echo base_url();?>js/basic/flowtype.js"></script>
+	
+	<!-- Custom JS -->
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
 	</script>
-	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
 	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-main.js"></script>
@@ -24,7 +38,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>
 </head>
 <body ontouchmove >
-	<div class="cursor"></div>
+	<div class="cursor-main cursor-main-blue"></div>
+	<div class="cursor-follower cursor-follower-blue">
+		<div class="cf-arc"></div>
+	</div>
+	
 	<div class="main-sect" id="welcome">
 		<div id="welcome-background">
 			
@@ -47,9 +65,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-title-line sect-title-bottom-line"></div>
 				</div>
 				<form class="sect-description" id="about-us-desc-cont">
-					<h1 class="" id="about-us-desc-cont-h1">Who Are We</h1>
+					<h1 class="sect-title" id="about-us-desc-cont-h1">Who Are We</h1>
 					<h3 id="about-us-desc-cont-h3">
-						Build Tect Building Designs is a design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners.
+						Build Tect Building Designs is an architectural design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners.
 					</h3>
 					<button class="learn-more-button white-button">
 						<div class="button-overlay"></div>
@@ -62,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="sect-info-split" id="about-what-is-cont">
 				<div class="sect-split-left" id="about-what-is-left">
 					<div class="sect-split-image">
-						<div class="sect-split-image-cont">
+						<div class="sect-split-image-cont" id="about-what-is-img">
 							<div class="sect-image-inner-cont">
 								
 							</div>
@@ -71,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="sect-split-right" id="about-what-is-right">
 					<form class="sect-description" id="about-what-is-desc-cont">
-						<h1 class="" id="about-what-is-desc-cont-h1">What We Do</h1>
+						<h1 class="sect-title" id="about-what-is-desc-cont-h1">What We Do</h1>
 						<h3 id="about-what-is-desc-cont-h3">
 							Our team consists of experienced industry professionals who believe in a hands-on approach to every project, ensuring each client recieves the individual attention they deserve.
 						</h3>
@@ -87,11 +105,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="sect-info-split" id="about-provide-cont">
 				<div class="sect-split-left" id="about-provide-left">
 					<form class="sect-description" id="about-provide-desc-cont">
-						<h1 class="" id="about-provide-desc-cont-h1">What We Provide</h1>
+						<h1 class="sect-title" id="about-provide-desc-cont-h1">What We Provide</h1>
 						<h3 id="about-provide-desc-cont-h3">
 							At Build Tect, we specialize in providing plans for custom homes, remodels, additions, commercial remodels, and tenant improvements.
 						</h3>
-						<button class="learn-more-button black-button">
+						<button class="learn-more-button black-button" cursor="blue">
 							<div class="button-overlay"></div>
 							<h6>Learn More</h6>
 						</button>
@@ -99,7 +117,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="sect-split-right" id="about-provide-right">
 					<div class="sect-split-image">
-						<div class="sect-split-image-cont">
+						<div class="sect-split-image-cont" id="about-provide-img">
 							<div class="sect-image-inner-cont">
 
 							</div>
@@ -108,7 +126,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="about-testimonials" navcolor="white">
+		<div class="main-sect-cont" id="about-testimonials">
 			<!--<div class="sect-info-split" id="about-testimonials-split">
 				<div class="sect-split-left" id="about-test-left">
 					<div class="testimonial-shell">
@@ -122,67 +140,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 			<div class="background-div bg-tect-blue" id="at-back"></div>-->
+			<div id="about-testimonials-title">
+				<h1 class="sect-title" id="about-testimonials-h1">What People Say</h1>
+			</div>
+			<div class="main-sect-cont" id="at-top-half-back" navcolor="white"></div>
+			<div class="main-sect-cont" id="at-bottom-half-back" navcolor="blue"></div>
 			<div class="sect-short" id="about-testimonials-cont">
-				<div class="about-testimonial-button" id="testimonial-button-left">
-					<div class="about-testimonial-button-cont">
-						<div class="test-button-cont">
-							<button class="test-button" value="left">
-								<div class="tb-cont">
-									<i class="fas fa-chevron-left"></i>
-								</div>
-							</button>
-						</div>	
-					</div>
-				</div>
-				<div class="about-testimonial-button" id="testimonial-button-right">
-					<div class="about-testimonial-button-cont">
-						<div class="test-button-cont">
-							<button class="test-button" value="right">
-								<div class="tb-cont">
-									<i class="fas fa-chevron-right"></i>
-								</div>
-							</button>
-						</div>	
-					</div>
-				</div>
-				<?php for($i = 0; $i < 12; $i++): ?>
+				<?php for($i = 0; $i < 5; $i++): ?>
 					<div class="about-testimonial">
 						<div class="about-testimonial-cont">
-							<div class="about-test-inner">
-								<div class="testimonial-header">
-									<div class="th-img">
-										<img src="<?php echo base_url();?>img/stock3.jpg">
+							<div class="about-test-main" cursor="white">
+								<div class="at-main-cont">
+									<div class="at-main-icon">
+										<i class="fas fa-quote-left"></i>
+									</div>
+									<div class="at-main-cont-inner">
+										<div class="atm-cont">
+											<p>
+												Build Tect was the perfect choice for our kitchen remodel project. Excellent service!
+											</p>
+										</div>
+									</div>
+									<div class="at-bottom-icon">
+										<i class="fas fa-quote-right"></i>
 									</div>
 								</div>
-								<div class="background-div bg-tect-blue bg-div-test"></div>
-								<div class="testimonial-desc">
-									<div class="testimonial-desc-cont">
-										<div class="test-icon">
-											<div class="test-icon-line test-line-left"></div>
-											<i class="fas fa-quote-left"></i>
-											<div class="test-icon-line test-line-right"></div>
-										</div>
-										<div class="test-quote">
-											<h3>
-												Test <?php echo $i; ?>
-											</h3>
-										</div>
-										<div class="test-signature">
-											<h6>
-												<span class="test-sig-name">Rick Sanchez</span>
-											</h6>
-										</div>
-									</div>
+							</div>
+							<div class="about-test-bottom" cursor="blue">
+								<div class="at-img-cont">
+									<img src="<?php echo base_url();?>img/stock3.jpg">
+								</div>
+								<div class="at-title-cont">
+									<h6 class="at-title-name">Dean Wight</h6>
+									<h6 class="at-title-title">Owner</h6>
 								</div>
 							</div>
 						</div>
 					</div>
 				<?php endfor; ?>
-			</div>
-			<div class="sect-short" id="about-testimonials-footer">
-				<div class="about-test-foot-cont">
-					
-				</div>
 			</div>
 		</div>
 		<div class="main-sect-cont" id="about-stats" navcolor="darkblue">
@@ -190,28 +185,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-short" id="about-stats-inner">
 					<div class="about-stat">
 						<div class="as-cont">
-							<h1 class="as-num">30+</h1>
+							<h1 class="as-num">
+								<span class="as-num-num">30</span>+
+							</h1>
 							<div class="as-line"></div>
 							<h6 class="as-title">Years in Business</h6>
 						</div>
 					</div>
 					<div class="about-stat">
 						<div class="as-cont">
-							<h1 class="as-num">100+</h1>
+							<h1 class="as-num">
+								<span class="as-num-num">100</span>+
+							</h1>
 							<div class="as-line"></div>
 							<h6 class="as-title">Projects Done</h6>
 						</div>
 					</div>
 					<div class="about-stat">
 						<div class="as-cont">
-							<h1 class="as-num">100+</h1>
+							<h1 class="as-num">
+								<span class="as-num-num">100</span>+
+							</h1>
 							<div class="as-line"></div>
 							<h6 class="as-title">Clients Served</h6>
 						</div>
 					</div>
 					<div class="about-stat">
 						<div class="as-cont">
-							<h1 class="as-num">100%</h1>
+							<h1 class="as-num">
+								<span class="as-num-num">100</span>%
+							</h1>
 							<div class="as-line"></div>
 							<h6 class="as-title">Happy Clients</h6>
 						</div>
@@ -229,7 +232,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-title-line sect-title-bottom-line"></div>
 				</div>
 				<form class="sect-description" id="portfolio-start-desc-cont" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-					<h1 class="" id="portfolio-start-desc-cont-h1">See Our Work</h1>
+					<h1 class="sect-title" id="portfolio-start-desc-cont-h1">See Our Work</h1>
 					<h3 id="portfolio-start-desc-cont-h3">
 						Throughout our 30+ years in business, we have completed hundreds of residential and commerical projects. 
 					</h3>
@@ -246,7 +249,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-split-image portfolio-split-image" id="portfolio-right-split-image">
 						<div class="sect-split-image-cont">
 							<div class="sect-image-inner-cont" id="portfolio-left-image">
-								<div class="portfolio-img-inner-cont" id="portfolio-left-inner">
+								<div class="portfolio-img-inner-cont" id="portfolio-left-inner" cursor="blue">
 									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
 										<h1>Residential</h1>
 									</div>
@@ -270,7 +273,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-split-image portfolio-split-image" id="portfolio-left-split-image">
 						<div class="sect-split-image-cont">
 							<div class="sect-image-inner-cont" id="portfolio-left-image">
-								<div class="portfolio-img-inner-cont" id="portfolio-right-inner">
+								<div class="portfolio-img-inner-cont" id="portfolio-right-inner" cursor="blue">
 									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right">
 										<h1>Commercial</h1>
 									</div>
@@ -302,7 +305,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="sect-title-line sect-title-bottom-line"></div>
 				</div>
 				<div class="sect-description" id="contact-start-desc-cont">
-					<h1 class="" id="contact-start-desc-cont-h1">Contact Us</h1>
+					<h1 class="sect-title" id="contact-start-desc-cont-h1">Contact Us</h1>
 					<h3 id="contact-start-desc-cont-h3">
 						Get in touch with our team today to get started with your project.
 					</h3>
@@ -355,4 +358,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<?php echo $footer ?>
+	<script type="text/javascript">
+		$('.atm-cont').flowtype({
+			minFont: 13,
+			maxFont: 25,
+			minimum: 100,
+			maximum: 420,
+			fontRatio: 15
+		});
+	</script>
 </body>

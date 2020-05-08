@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 	<footer class="main-footer">
-		<div class="footer-main-sect" id="footer-main">
+		<div class="footer-main-sect" id="footer-main" cursor="blue">
 			<div class="footer-sect" id="footer-main-inner-sect">
 				<div class="footer-sect-cont" id="footer-main-logo">
 					<img src="<?php echo base_url(); ?>img/Logo.png">

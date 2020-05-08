@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var testimonials = $("#about-testimonials-cont").find(".about-testimonial");
+	/*var testimonials = $("#about-testimonials-cont").find(".about-testimonial");
 	var num_groups = 1;
 	var prev_group_size = null;
 	var current_group = null;
@@ -220,5 +220,48 @@ $(document).ready(function(){
 				setDots();
 			}
 		}
+	});*/
+
+	var container = $(".at-main-cont");
+	var inner = $(".atm-cont");
+
+	function doResize(){
+		scale = Math.min(
+			$(container).height() / ($(inner).height() + 50), 
+			$(container).width() / ($(inner).width() + 50)
+		);
+
+		$(".atm-cont h2").css({
+			"font-size": (25/(100 * (1 - (1/scale)))) + "px"
+		});
+	}
+
+	$("#about-testimonials-cont").slick({
+		slidesToShow: 3,
+		infinite: true,
+		dots: false,
+		autoplay: true, 
+		autoplaySpeed: 3000,
+		responsive: [
+			{
+				breakpoint: 951,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 601,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+			{
+				breakpoint: 432,
+				settings: {
+					slidesToShow: 1,
+					arrows: false
+				}
+			},
+		]
 	});
 });
