@@ -9,8 +9,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Online Links -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">-->
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/basic.css">
@@ -20,7 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Online JS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>-->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	
 	<!-- Downloaded JS -->
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
@@ -145,7 +147,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="main-sect-cont" id="at-top-half-back" navcolor="white"></div>
 			<div class="main-sect-cont" id="at-bottom-half-back" navcolor="blue"></div>
-			<div class="sect-short" id="about-testimonials-cont">
+			<div class="sect-short carousel" id="about-testimonials-cont" data-flickity=
+			'{
+				"cellSelector": ".about-testimonial",
+				"contain": true,
+				"autoPlay": 1500,
+				"wrapAround": true,
+				"pageDots": false
+			}'>
 				<?php for($i = 0; $i < 5; $i++): ?>
 					<div class="about-testimonial">
 						<div class="about-testimonial-cont">

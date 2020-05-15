@@ -236,7 +236,23 @@ nav{
 	position: relative;
 	display: block;
 	float: left;
+	width: 33.33%;
 	padding: 0 12.5px; 
+}
+
+.flickity-button{
+	cursor: none;
+	transform: scale(.5);
+}
+
+.flickity-prev-next-button.previous{
+	left: -35px;
+	cursor: none;
+}
+
+.flickity-prev-next-button.next{
+	right: -35px;
+	cursor: none;
 }
 
 .about-testimonial-cont{
@@ -745,6 +761,18 @@ nav{
 		grid-template-rows: auto auto;
 	}
 
+	.about-testimonial{
+		width: 50%;
+	}
+	
+	.flickity-prev-next-button.previous{
+		left: -40px;
+	}
+
+	.flickity-prev-next-button.next{
+		right: -40px;
+	}
+
 	#portfolio-cols{
 		display: block;
 		background-color: white;
@@ -877,6 +905,18 @@ nav{
 		max-width: 350px;
 	}*/
 
+	.about-testimonial{
+		width: 100%;
+	}
+
+	.flickity-prev-next-button.previous{
+		left: -35px;
+	}
+
+	.flickity-prev-next-button.next{
+		right: -35px;
+	}
+	
 	.atm-cont p{
 		
 	}
@@ -927,6 +967,10 @@ nav{
 	#about-testimonials-title{
 		margin: 0;
 		padding: 50px 37.5px;
+	}
+
+	.flickity-prev-next-button{
+		display: none;
 	}
 
 	.about-stat{
