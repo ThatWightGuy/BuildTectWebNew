@@ -53,5 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['redirect/home/(:any)'] = 'homepage/homeRedirect/$1';
+$route['redirect/about/(:any)'] = 'homepage/aboutRedirect/$1';
+$route['redirect/portfolio/(:any)'] = 'homepage/portfolioRedirect/$1';
 $route['about'] = 'about';
 $route['portfolio'] = 'portfolio';

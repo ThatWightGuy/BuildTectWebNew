@@ -15,23 +15,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="overlay-main-links">
 						<ul>
 							<li>
-								<form class="overlay-main-link" action="<?php echo base_url(); ?>" method="post" id="home-overlay">
-									<button>
+								<div class="overlay-main-link" id="home-overlay">
+									<a href="<?php echo base_url();?>">
 										<h1>Home</h1>
-									</button>
-								</form>
+									</a>
+								</div>
 
-								<form class="overlay-main-link" action="<?php echo base_url(); ?>index.php/Homepage/aboutRedirect" method="post" id="about-overlay">
-									<button>
+								<div class="overlay-main-link" id="about-overlay">
+									<a href="<?php echo base_url();?>about">
 										<h1>About</h1>
-									</button>
-								</form>
+									</a>
+								</div>
 								
-								<form class="overlay-main-link" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post" id="portfolio-overlay">
-									<button name="PortfolioValue" type="submit" value="All">
+								<div class="overlay-main-link" id="portfolio-overlay">
+									<a href="<?php echo base_url();?>redirect/portfolio/All">
 										<h1>Portfolio</h1>
-									</button>
-								</form>
+									</a>
+								</div>
 							</li>
 						</ul>
 					</div>

@@ -74,7 +74,7 @@
 	padding-top: 0px;
 }
 
-.overlay-main-link button{
+.overlay-main-link a{
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -82,7 +82,7 @@
 	background-color: transparent;
 }
 
-.overlay-main-link button h1{
+.overlay-main-link a h1{
 	padding: 0;
 	margin: 0;
 	line-height: 100%;
@@ -237,6 +237,11 @@
 	right: 0px;
 }
 
+.home-transparent-navi{
+	background-color: none;
+	color: black;
+}
+
 .transparent-navi{
 	background-color: none;
 	color: black;
@@ -265,6 +270,10 @@
 	filter: brightness(0) grayscale(1) saturate(0) invert(1);
 }
 
+.home-transparent-navi .navi-under-bar{
+	background-color: transparent;
+}
+
 .transparent-navi .navi-under-bar{
 	background-color: transparent;
 }
@@ -279,6 +288,10 @@
 
 .white-navi .navi-under-bar{
 	background-color: rgba(24, 133, 255, 1);
+}
+
+.home-transparent-navi .bars .bar{
+	background-color: white;
 }
 
 .transparent-navi .bars .bar{
@@ -320,5 +333,14 @@
 	}
 }
 
-@media only screen and (max-width: 450px){	
+@media only screen and (max-width: 550px){
+	.home-transparent-navi{
+		color: white;
+	}
+}
+
+@media only screen and (max-height: 550px){
+	.home-transparent-navi{
+		color: white;
+	}
 }

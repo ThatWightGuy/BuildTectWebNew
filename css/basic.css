@@ -183,6 +183,10 @@ footer h6{
 	font-size: 17px;
 }
 
+.sect-description a{
+	display: inline-block;
+}
+
 .sect-short-cont{
 	width: 100%;
 	padding: 0; 
@@ -426,6 +430,7 @@ footer h6{
 	padding: 0;
 	margin: 0;
 	outline: none;
+	overflow: hiddensect-description;
 }
 
 /* Welcome */
@@ -455,7 +460,9 @@ footer h6{
 	color: #dfeeff; /* rgba(223, 238, 255, 1) */
 }
 
-/* Dark Color: #064b99 */
+/* Dark Color: #064b99 | rgba(6, 75, 153, 1) */
+
+/* Super Dark Color: #020C1A*/
 
 .bg-tect-blue{
 	background-color: #1885ff;

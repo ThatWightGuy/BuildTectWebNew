@@ -1,7 +1,9 @@
 $(document).ready(function(){
 	var window_offset = $("#welcome-cont").height();
 	var change_bars = true;
-	
+	var first_load = true;
+
+
 	function sticky(){
 		window_offset = $("#welcome-cont").height();
 
@@ -50,13 +52,14 @@ $(document).ready(function(){
 				"border-width": "0px"
 			});
 
+
 			$(".main-navigation").css({
 				"width": "100%",
 				"margin": "0",
 				"transition-property": "width, margin",
 				"transition-duration": ".2s, .2s"
 			});
-
+			
 			if(change_bars && bar_close_open["main-navi-bars"]){
 				toggleBarClose($("#main-navi-bars"));
 				bar_close_open["main-navi-bars"] = false;

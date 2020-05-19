@@ -220,7 +220,7 @@ $(document).ready(function(){
 				setDots();
 			}
 		}
-	});*/
+	});
 
 	var container = $(".at-main-cont");
 	var inner = $(".atm-cont");
@@ -263,5 +263,5 @@ $(document).ready(function(){
 				}
 			},
 		]
-	});
+	});*/
 });

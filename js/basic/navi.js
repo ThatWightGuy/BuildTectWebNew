@@ -40,6 +40,7 @@ function changeColor(){
 		}
 		else{
 			if(position.color == "blue"){
+				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
@@ -48,10 +49,12 @@ function changeColor(){
 			else if(position.color == "darkblue"){
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").addClass("dark-blue-navi");
 			}
 			else if(position.color == "white"){
+				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
@@ -61,7 +64,15 @@ function changeColor(){
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").addClass("transparent-navi");
+			}
+			else if(position.color == "home-transparent"){
+				$(".main-navigation").removeClass("white-navi");
+				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").removeClass("transparent-navi");
+				$(".main-navigation").addClass("home-transparent-navi");
 			}
 		}
 	}

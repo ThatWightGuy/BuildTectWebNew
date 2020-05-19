@@ -24,22 +24,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Custom JS -->
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
+		var scrollData = "";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-main.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-layout.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-lightbox.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-request.js"></script>
 	<script type="text/javascript" src="<?php echo base_url();?>js/portfolio/portfolio-sidebar.js"></script>
 </head>
 <body ontouchmove >
+	<form id="portfolioForm" action="preventDefault()"></form>
+
 	<?php echo $navbar?>
+
+	<?php echo $portfolioOverlay?>
+
 	<div class="cursor-main cursor-main-blue"></div>
 	<div class="cursor-follower cursor-follower-blue">
 		<div class="cf-arc"></div>
 	</div>
-	<form id="portfolio-form">
+	<div id="portfolio-form">
 		<div class="portfolio-sidebar">
 			<div id="sidebar-contents">
 				<div class="cross sidebar-button" id="sidebar-button-exit"></div>
@@ -50,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="sidebar-filter-form">
 					<div class="sidebar-filter-cont">
-						<button class="sidebar-filter-button" id="Job-Type-Filter-Button" type="button">
+						<button class="sidebar-filter-button" id="Job-Type-Filter-Button" type="button" form="portfolioForm">
 							<div class="sidebar-filter-button-cont">
 								<div class="sidebar-button-title">
 									<h5>Job Type</h5>
@@ -67,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 								<div class="sidebar-drop-button">
 									<label class="switch sidebar-drop-switch">
-										<input type="radio" name="JobType" value="All" class="sidebar-drop-switch-input" <?php if($flashdata == "All"){echo "checked";}?>>
+										<input type="radio" name="JobType" value="All" class="sidebar-drop-switch-input" <?php if($flashdata == "All"){echo "checked";}?> form="portfolioForm">
 										<span class="slider round"></span>
 									</label>
 								</div>
@@ -78,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 								<div class="sidebar-drop-button">
 									<label class="switch sidebar-drop-switch">
-										<input type="radio" name="JobType" value="Residential" class="sidebar-drop-switch-input" <?php if($flashdata == "Residential"){echo "checked";}?>>
+										<input type="radio" name="JobType" value="Residential" class="sidebar-drop-switch-input" <?php if($flashdata == "Residential"){echo "checked";}?> form="portfolioForm">
 				  						<span class="slider round"></span>
 									</label>
 								</div>
@@ -89,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 								<div class="sidebar-drop-button">
 									<label class="switch sidebar-drop-switch">
-										<input type="radio" name="JobType" value="Commercial" class="sidebar-drop-switch-input" <?php if($flashdata == "Commercial"){echo "checked";}?>>
+										<input type="radio" name="JobType" value="Commercial" class="sidebar-drop-switch-input" <?php if($flashdata == "Commercial"){echo "checked";}?> form="portfolioForm">
 				  						<span class="slider round"></span>
 									</label>
 								</div>
@@ -97,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</fieldset>
 					</div>
 					<div class="sidebar-filter-cont">
-						<button class="sidebar-filter-button" id="Project-Type-Filter-Button" type="button">
+						<button class="sidebar-filter-button" id="Project-Type-Filter-Button" type="button" form="portfolioForm">
 							<div class="sidebar-filter-button-cont">
 								<div class="sidebar-button-title">
 									<h5>Project Type</h5>
@@ -117,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									</div>
 									<div class="sidebar-drop-button">
 										<label class="switch sidebar-drop-switch">
-											<input type="checkbox" name="ProjectType[]" value="<?php echo $projectType["projectTypeID"]?>" class="sidebar-drop-switch-input">
+											<input type="checkbox" name="ProjectType[]" value="<?php echo $projectType["projectTypeID"]?>" class="sidebar-drop-switch-input" form="portfolioForm">
 											<span class="slider round"></span>
 										</label>
 									</div>
@@ -142,7 +149,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							</div>
 							<div class="portfolio-search">
-								<input id="portfolio-search-bar" type="search" name="PortfolioSearch" placeholder="Search" autocomplete="off">
+								<input id="portfolio-search-bar" type="search" name="PortfolioSearch" placeholder="Search Projects" autocomplete="off" form="portfolioForm">
 							</div>
 						</div>
 						
@@ -152,21 +159,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div class="sect-short-cont" id="portfolio-items">
 						<div class="portfolio-items-cont">
-
-							<?php for ($i=0; $i < 70; $i++): ?>
-								<div class="portfolio-item portfolio-item-default">
-									<div class="portfolio-item-cont">
-										
-									</div>
-								</div>
-							<?php endfor; ?>
-
+							<?php echo $portfolioItems; ?>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<?php echo $footer ?>
-	</form>
+	</div>
 </body>
 </html>

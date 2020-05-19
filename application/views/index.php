@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Custom JS -->
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
+		var scrollData = "<?php echo $flashdata;?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
@@ -46,10 +47,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	
 	<div class="main-sect" id="welcome">
-		<div id="welcome-background">
-			
+		<div id="welcome-background" style="background-image: url('<?php echo base_url();?>img/Home/Main.jpg')">
 		</div>
-		<div class="main-sect-cont" id="welcome-cont" navcolor="transparent">
+		<div class="main-sect-cont" id="welcome-cont" navcolor="home-transparent">
 			<div id="welcome-logo-cont">
 				<div id="welcome-logo">
 					<img src="<?php echo base_url();?>img/Logo.png">
@@ -66,16 +66,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h6>About</h6>
 					<div class="sect-title-line sect-title-bottom-line"></div>
 				</div>
-				<form class="sect-description" id="about-us-desc-cont">
-					<h1 class="sect-title" id="about-us-desc-cont-h1">Who Are We</h1>
+				<div class="sect-description" id="about-us-desc-cont" action="">
+					<h1 class="sect-title" id="about-us-desc-cont-h1">Who We Are</h1>
 					<h3 id="about-us-desc-cont-h3">
 						Build Tect Building Designs is an architectural design firm based in the San Fernando Valley that aims to serve the design and planning needs of contractors, developers, and owners.
 					</h3>
-					<button class="learn-more-button white-button">
+					<a class="learn-more-button white-button" href="<?php echo base_url();?>redirect/about/about-us">
 						<div class="button-overlay"></div>
 						<h6>Learn More</h6>
-					</button>
-				</form>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="main-sect-cont" id="about-what-is" navcolor="white">
@@ -90,32 +90,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="sect-split-right" id="about-what-is-right">
-					<form class="sect-description" id="about-what-is-desc-cont">
+					<div class="sect-description" id="about-what-is-desc-cont">
 						<h1 class="sect-title" id="about-what-is-desc-cont-h1">What We Do</h1>
 						<h3 id="about-what-is-desc-cont-h3">
 							Our team consists of experienced industry professionals who believe in a hands-on approach to every project, ensuring each client recieves the individual attention they deserve.
 						</h3>
-						<button class="learn-more-button black-button">
+						<a class="learn-more-button black-button" href="<?php echo base_url();?>redirect/about/our-team">
 							<div class="button-overlay"></div>
 							<h6>Learn More</h6>
-						</button>
-					</form>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="main-sect-cont" id="about-provide" navcolor="white">
 			<div class="sect-info-split" id="about-provide-cont">
 				<div class="sect-split-left" id="about-provide-left">
-					<form class="sect-description" id="about-provide-desc-cont">
+					<div class="sect-description" id="about-provide-desc-cont">
 						<h1 class="sect-title" id="about-provide-desc-cont-h1">What We Provide</h1>
 						<h3 id="about-provide-desc-cont-h3">
 							At Build Tect, we specialize in providing plans for custom homes, remodels, additions, commercial remodels, and tenant improvements.
 						</h3>
-						<button class="learn-more-button black-button" cursor="blue">
+						<a class="learn-more-button black-button" href="<?php echo base_url();?>redirect/about/services">
 							<div class="button-overlay"></div>
 							<h6>Learn More</h6>
-						</button>
-					</form>
+						</a>
+					</div>
 				</div>
 				<div class="sect-split-right" id="about-provide-right">
 					<div class="sect-split-image">
@@ -240,16 +240,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h6>Portfolio</h6>
 					<div class="sect-title-line sect-title-bottom-line"></div>
 				</div>
-				<form class="sect-description" id="portfolio-start-desc-cont" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
+				<div class="sect-description" id="portfolio-start-desc-cont">
 					<h1 class="sect-title" id="portfolio-start-desc-cont-h1">See Our Work</h1>
 					<h3 id="portfolio-start-desc-cont-h3">
 						Throughout our 30+ years in business, we have completed hundreds of residential and commerical projects. 
 					</h3>
-					<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="All">
+					<a class="learn-more-button white-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/All">
 						<div class="button-overlay"></div>
 						<h6>See Projects</h6>
-					</button>
-				</form>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="main-sect-cont" id="portfolio-sect" navcolor="white">
@@ -263,12 +263,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<h1>Residential</h1>
 									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-left-main-overlay">
-										<form class="portfolio-col-form" id="portfolio-residential-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-											<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="Residential">
-												<div class="button-overlay"></div>
-												<h6>See Projects</h6>
-											</button>
-										</form>
+										<a class="learn-more-button white-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Residential">
+											<div class="button-overlay"></div>
+											<h6>See Projects</h6>
+										</a>
 									</div>
 									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-left-right-overlay">
 										second
@@ -287,12 +285,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										<h1>Commercial</h1>
 									</div>
 									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-right-main-overlay">
-										<form class="portfolio-col-form" id="portfolio-commercial-form" action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-											<button class="learn-more-button white-button" name="PortfolioValue" type="submit" value="Commercial">
-												<div class="button-overlay"></div>
-												<h6>See Projects</h6>
-											</button>
-										</form>
+										<a class="learn-more-button white-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Commercial">
+											<div class="button-overlay"></div>
+											<h6>See Projects</h6>
+										</a>
 									</div>
 									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-right-left-overlay">
 										second

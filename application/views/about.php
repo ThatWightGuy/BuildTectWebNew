@@ -9,7 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Online Links -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/basic.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/about.css">
@@ -19,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://kit.fontawesome.com/dacea39428.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	
 	<!-- Downloaded JS -->
 	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
@@ -27,6 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!-- Custom JS -->
 	<script type="text/javascript">
 		var baseURL = "<?php echo base_url(); ?>";
+		var scrollData = "<?php echo $flashdata;?>";
 	</script>
 	<script src="<?php echo base_url();?>js/basic/basic.js"></script>
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
@@ -87,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="sect-short" id="about-us-history-images-cont">
 				<div class="auh-image">
 					<div class="auh-image-cont">
-						
+						<img src="<?php echo base_url(); ?>img/About/HistorySub1.jpg">
 					</div>
 				</div>
 				<div class="auh-image">
@@ -155,6 +158,159 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="sect-description" id="services-desc-cont">
 					<h1 class="sect-title" id="services-desc-cont-h1">Services</h1>
 				</div>
+			</div>
+		</div>
+		<div class="main-sect-cont" id="services-main" navcolor="white">
+			<div class="sect-info-full" id="services-main-cont">
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Design Services</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Pre-Design Services</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Construction</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Surveying</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Bin Negotiations</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Site Development</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>City Interactions</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-drafting-compass"></i>
+									</div>
+									<h5>Structural Services</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-sect-cont" id="services-info" navcolor="darkblue">
+			<div class="sect-info-full" id="services-info-cont">
+				
 			</div>
 		</div>
 	</div>

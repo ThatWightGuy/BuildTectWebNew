@@ -19,49 +19,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div class="foooter-sect-cont-main">
 						<div class="footer-list" id="footer-general">
-							<form>
-								<h5>Home</h5>
-								<button>
-									<h6>Welcome</h6>
-								</button>
-								<button>
-									<h6>About</h6>
-								</button>
-								<button>
-									<h6>Portfolio</h6>
-								</button>
-								<button>
-									<h6>Contact</h6>
-								</button>
-							</form>
+							<h5>Home</h5>
+							<a href="<?php echo base_url();?>">
+								<h6>Welcome</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/home/about">
+								<h6>About</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/home/portfolio">
+								<h6>Portfolio</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/home/contact">
+								<h6>Contact</h6>
+							</a>
 						</div>
 						<div class="footer-list" id="footer-about">
-							<form>
-								<h5>About</h5>
-								<button>
-									<h6>About Us</h6>
-								</button>
-								<button>
-									<h6>Our Team</h6>
-								</button>
-								<button>
-									<h6>Services</h6>
-								</button>
-							</form>
+							<h5>About</h5>
+							<a href="<?php echo base_url();?>redirect/about/about-us">
+								<h6>About Us</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/about/our-team">
+								<h6>Our Team</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/about/services">
+								<h6>Services</h6>
+							</a>
 						</div>
-						<div class="footer-list"id="footer-portfolio">
-							<form action="<?php echo base_url(); ?>index.php/Homepage/portfolioRedirect" method="post">
-								<h5>Portfolio</h5> 
-								<button name="PortfolioValue" type="submit" value="All">
-									<h6>All Projects</h6>
-								</button>
-								<button name="PortfolioValue" type="submit" value="Residential">
-									<h6>Residential</h6>
-								</button>
-								<button name="PortfolioValue" type="submit" value="Commercial">
-									<h6>Commercial</h6>
-								</button>
-							</form>
+						<div class="footer-list" id="footer-portfolio">
+							<h5>Portfolio</h5> 
+							<a href="<?php echo base_url();?>redirect/portfolio/All">
+								<h6>All Projects</h6>
+							</button>
+							<a href="<?php echo base_url();?>redirect/portfolio/Residential">
+								<h6>Residential</h6>
+							</a>
+							<a href="<?php echo base_url();?>redirect/portfolio/Commercial">
+								<h6>Commercial</h6>
+							</a>
 						</div>
 					</div>
 				</div>

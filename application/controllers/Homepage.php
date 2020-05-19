@@ -22,6 +22,14 @@ class Homepage extends CI_Controller {
 	{	
 		$this->load->helper('url');
 
+		$flash = $this->session->flashdata('test_flash');
+
+		$data['flashdata'] = "";
+
+		if(!is_null($flash)){
+			$data['flashdata'] = $flash['response'];
+		}
+		
 		$navbar_data = array(
 			'logo_link' => '#', // href for logo
 			'links' => array(
@@ -40,27 +48,35 @@ class Homepage extends CI_Controller {
 		$this->load->view('index', $data);
 	}
 
-	public function portfolioRedirect(){
+	public function homeRedirect($value){
 		$this->load->helper('url');
-
-		$post_data = $this->input->post();
 		$data = array();
 
-		$data['response'] = $post_data['PortfolioValue'];
+		$data['response'] = $value;
+
+		$this->session->set_flashdata('test_flash', $data);
+		
+		redirect(base_url());
+	}
+
+	public function portfolioRedirect($value){
+		$this->load->helper('url');
+
+		$data = array();
+
+		$data['response'] = $value;
 
 		$this->session->set_flashdata('test_flash', $data);
 		redirect(base_url().'portfolio');
 	}
 
-	public function aboutRedirect(){
+	public function aboutRedirect($value){
 		$this->load->helper('url');
-
-		/*$post_data = $this->input->post();
 		$data = array();
 
-		$data['response'] = $post_data['PortfolioValue'];
+		$data['response'] = $value;
 
-		$this->session->set_flashdata('test_flash', $data);*/
+		$this->session->set_flashdata('test_flash', $data);
 		
 		redirect(base_url().'about');
 	}

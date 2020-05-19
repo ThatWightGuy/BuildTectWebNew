@@ -109,8 +109,15 @@ footer{
 	position: relative;
 	padding-top: calc(100%);
 	background-color: white;
-	border: 4px dashed #1885ff;
 	box-shadow: 0 3px 7px rgba(0,0,0,.2);
+}
+
+.auh-image-cont img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: auto;
 }
 
 #about-us-blurbs{
@@ -167,13 +174,108 @@ footer{
 
 #services{
 	position: relative;
+	flex-direction: column;
 	background-color: #1885ff;
 }
 
-@media only screen and (max-width: 1300px){
+#services-main{
+	background-color: white;
+}
+
+#services-main-cont{
+	position: relative;
+	display: block;
+	padding: 75px 25px;
+	width: 100%;
+	max-width: 1600px;
+}
+
+.service-info-icon{
+	position: relative;
+	float: left;
+	padding: 25px;
+	width: 25%;
+}
+
+.service-info-icon-cont{
+	position: relative;
+	padding-top: calc((6/5) * 100%);
+	box-shadow: 0 3px 7px rgba(0,0,0,.2);
+	background-color: white;
+}
+
+.sii-inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+}
+
+.sii-inner-cont{
+	position: relative;
+	display: grid;
+	grid-template-areas:
+	"icon"
+	"more";
+	grid-template-rows: 1fr auto;
+	align-items: center;
+	justify-items: center;
+	height: 100%;
+	padding: 25px;
+	border: 2px solid #1885ff;
+}
+
+.sii-inner-cont h6{
+	margin: 0;
+}
+
+.sii-icon-cont{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sii-icon-cont h5{
+	padding: 12.5px 0;
+	margin: 0;
+	text-align: center;
+	font-weight: 600;
+}
+
+.sii-icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	background-color: #1885ff;
+}
+
+.sii-icon i{
+	color: white;
+	font-size: 35px;
+}
+
+.service-info-button{
+	margin: 0;
+}
+
+@media only screen and (max-width: 1350px){
 	.about-us-blurb-cont h3{
 		width: 90%;
 		text-align: center;
+	}
+
+	#services-main-cont{
+		max-width: 800px;
+	}
+	
+	.service-info-icon{
+		width: 50%;
 	}
 }
 
@@ -237,6 +339,16 @@ footer{
 	}
 }
 
+@media only screen and (max-width: 680px){
+	#services-main-cont{
+		max-width: 400px;
+	}
+	
+	.service-info-icon{
+		width: 100%;
+	}
+}
+
 @media only screen and (max-width: 600px){
 	#about-us-history-desc-cont-h3{
 		font-size: 17px;
@@ -269,5 +381,40 @@ footer{
 	.about-us-blurb-cont h3{
 		width: 100%;
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 400px){
+	#services-main-cont{
+		position: relative;
+		display: block;
+		padding: 50px 0px;
+		width: 100%;
+	}
+
+	.service-info-icon-cont{
+		padding-top: calc((7/6) * 100%);
+	}
+
+	.sii-inner-cont {
+	    grid-template-rows: 1fr auto;
+	}
+
+	.sii-icon{
+		height: 25vw;
+		width: 25vw;
+	}
+
+	.sii-icon i{
+		font-size: 35px;
+	}
+
+	.sii-icon-cont h5{
+		font-size: 4.5vw;
+		padding-bottom: 0px;
+	}
+
+	.service-info-button{
+		
 	}
 }

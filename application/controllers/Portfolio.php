@@ -18,6 +18,7 @@ class Portfolio extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
 	public function index()
 	{	
 		$this->load->model('portfolio_model');
@@ -30,6 +31,10 @@ class Portfolio extends CI_Controller {
 		if(!is_null($flash)){
 			$data['flashdata'] = $flash['response'];
 		}
+
+		$data['portfolioItems'] = $this->initSearch($data['flashdata']);
+
+		$data['portfolioOverlay'] = $this->load->view('segments/portfolio_overlay', null, TRUE);
 
 		$navbar_data = array(
 			'logo_link' => base_url(), // href for logo
@@ -48,15 +53,24 @@ class Portfolio extends CI_Controller {
 		$this->load->view('portfolio', $data);
 	}
 
+	// For Search on Initial Load
+	public function initSearch($initProjectType){
+		$view_data = array();
+
+		$view_data['project'] = $initProjectType;
+
+		return $data['PortfolioView'] = $this->load->view('segments/portfolio_items', $view_data, TRUE);
+	}
+
+	// For Search on Form Submit
 	public function searchForm(){
 		$post_data = $this->input->post();
 		$data = array();
 		$view_data = array();
-
-		$view_data['search'] = $post_data['PortfolioSearch'];
-		$view_data['job'] = $post_data['JobType'];
 		
 		if(array_key_exists('ProjectType', $post_data)){
+			$view_data['search'] = $post_data['PortfolioSearch'];
+			$view_data['job'] = $post_data['JobType'];
 			$view_data['project'] = $post_data['ProjectType'];
 		}
 		else{
@@ -67,5 +81,6 @@ class Portfolio extends CI_Controller {
 		
 		echo json_encode($data);
 	}
+
 }
 ?>

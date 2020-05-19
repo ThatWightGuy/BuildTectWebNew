@@ -22,6 +22,14 @@ class About extends CI_Controller {
 	{	
 		$this->load->model('test_model');
 		$this->load->helper('url');
+
+		$flash = $this->session->flashdata('test_flash');
+
+		$data['flashdata'] = "";
+
+		if(!is_null($flash)){
+			$data['flashdata'] = $flash['response'];
+		}
 		
 		$navbar_data = array(
 			'logo_link' => base_url(), // href for logo

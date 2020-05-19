@@ -2,7 +2,7 @@ $(document).ready(function(){
     var time; 
 
 	function formSubmit(){
-		var form_data = $("#portfolio-form").serializeArray();
+		var form_data = $("#portfolioForm").serializeArray();
     	
     	$.ajax({
     		url: baseURL + "index.php/Portfolio/searchForm",
@@ -11,14 +11,17 @@ $(document).ready(function(){
     		dataType: "json",
     		success: function(response){
     			//console.log($("#portfolio-form").serialize());
-    			$(".portfolio-items-cont").empty();
+    			//$(".portfolio-items-cont").empty();
     			$(".portfolio-items-cont").html(response["PortfolioView"]);
+                layoutResize();
     		}
     	});
 	}
 
-    formSubmit();
-
+    $("#portfolioForm").submit(function(e){
+        e.preventDefault();
+    });
+    
     $("#portfolio-search-bar").keyup(function(){
         clearTimeout(time);
         time = setTimeout(formSubmit, 200);
