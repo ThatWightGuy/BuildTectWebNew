@@ -13,8 +13,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<button id="portfolio-lightbox-exit">
 							<div class="cross"></div>
 						</button>
-						<div class="portfolio-lightbox-image">
-						
+						<div id="lightbox-info-button-cont">
+							<button class="learn-more-button black-button" id="lightbox-info-button">
+								<div class="button-overlay"></div>
+								<h6>Project Info</h6>
+							</button>
+						</div>
+						<div class="portfolio-lightbox-image-cont" data-flickity=
+						'{
+							"cellSelector": ".portfolio-lightbox-image",
+							"pageDots": false,
+							"setGallerySize": false
+						}'>
+							<div class="portfolio-lightbox-image">
+								<img class="lightbox-img" src="<?php echo base_url(); ?>img/Home/Main.jpg">
+							</div>
+							<div class="portfolio-lightbox-image">
+								<img class="lightbox-img" src="<?php echo base_url(); ?>img/stock3.jpg">
+							</div>
 						</div>
 						<div class="portfolio-lightbox-info">
 							

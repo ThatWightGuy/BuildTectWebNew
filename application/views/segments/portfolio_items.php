@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</h6>
 						<button class="portfolio-lightbox-open learn-more-button white-button">
 							<div class="button-overlay"></div>
-							<h6>See Project</h6>
+							<h6>Details</h6>
 						</button>
 					</div>
 				</div>

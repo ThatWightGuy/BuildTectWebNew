@@ -20,22 +20,22 @@ footer{
 
 .portfolio-main-overlay{
 	position: fixed;
-	display: none;
+	display: flex;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	/*height: calc(var(--vh, 1vh) * 100);*/
-	z-index: 1002;
-	background-color: rgba(0, 0, 0, .5);
+	z-index: 0;
+	background-color: rgba(0, 0, 0, .8);
 }
 
 .portfolio-lightbox{
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	max-width: 1400px;
+	max-width: 1600px;
 	width: 100%;
-	padding: 25px 50px;
+	padding: 50px 50px;
 	margin-top: auto;
 	margin-bottom: auto;
 }
@@ -48,7 +48,7 @@ footer{
 .portfolio-lightbox-inner{
 	position: relative;
 	width: 100%;
-	padding-top: calc((9/16) * 100%);
+	padding-top: calc((618.75/1430) * 100%);
 	box-shadow: 0 3px 7px rgba(0,0,0,.2);
 	background-color: white;
 }
@@ -61,12 +61,26 @@ footer{
 	width: 100%;
 }
 
-.portfolio-lightbox-image{
+.portfolio-lightbox-image-cont{
 	position: relative;
 	float: left;
 	width: 70%;
 	height: 100%;
-	background-color: #064b99;
+	background-color: #020C1A;
+}
+
+.portfolio-lightbox-image{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.lightbox-img{
+	max-height: 100%;
+	max-width: 100%;
 }
 
 #portfolio-lightbox-exit{
@@ -82,7 +96,7 @@ footer{
 	outline: none;
 	border-radius: 100%;
 	box-shadow: 0 3px 7px rgba(0,0,0,.2);
-	background-color: #064b99;
+	background-color: #1885ff;
 }
 
 #portfolio-lightbox-exit .cross{
@@ -100,6 +114,20 @@ footer{
 	width: 30%;
 	height: 100%;
 	background-color: white;
+}
+
+#lightbox-info-button-cont{
+	position: absolute;
+	display: none;
+	justify-content: center;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+#lightbox-info-button{
+	box-shadow: 0 3px 7px rgba(0,0,0,.2);
 }
 
 /* Portfolio Main Section */
@@ -583,4 +611,49 @@ footer{
 /* 100px 20px */
 .padding-100-20{
 	padding: 50px 20px;
+}
+
+@media only screen and (max-width: 1000px){
+	.portfolio-lightbox{
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.portfolio-lightbox-inner{
+		width: 100%;
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		padding-top: 0px;
+	}
+
+	.portfolio-lightbox-image-cont{
+		width: 100%;
+		height: 100%;
+	}
+
+	#portfolio-lightbox-exit{
+		right: auto;
+		top: 15px;
+		left: 15px;
+		height: 50px;
+		width: 50px;
+		background-color: white;
+	}
+
+	#portfolio-lightbox-exit .cross:before, #portfolio-lightbox-exit .cross:after{
+		background-color: black;
+	}
+
+	.portfolio-lightbox-info{
+		position: absolute;
+		right: 0;
+		width: 0px;
+		box-shadow: 0 2px 7px rgba(0,0,0,.5);
+		z-index: 3;
+		background-color: white;
+	}
+
+	#lightbox-info-button-cont{
+		display: flex;
+	}
 }

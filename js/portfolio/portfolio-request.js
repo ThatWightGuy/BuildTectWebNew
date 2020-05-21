@@ -14,6 +14,7 @@ $(document).ready(function(){
     			//$(".portfolio-items-cont").empty();
     			$(".portfolio-items-cont").html(response["PortfolioView"]);
                 layoutResize();
+                lightbox_open();
     		}
     	});
 	}
