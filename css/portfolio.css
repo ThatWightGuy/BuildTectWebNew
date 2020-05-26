@@ -415,7 +415,6 @@ footer{
 .portfolio-item-cont{
 	position: relative;
 	padding-top: calc(100%);
-	box-shadow: 0 3px 7px rgba(0,0,0,.2);
 	transition-property: transform;
 	transition-duration: .2s;
 }
@@ -430,6 +429,7 @@ footer{
 	left: 0;
 	height: 100%;
 	width: 100%;
+	box-shadow: 0 3px 7px rgba(0,0,0,.2);
 }
 
 .portfolio-item-inner:hover .portfolio-item-overlay{
