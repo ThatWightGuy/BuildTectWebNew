@@ -3,11 +3,10 @@ html, body{
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: ;
 }
 
 html, *{
-	cursor: none;
+	/*cursor: none;*/
 }
 
 a{
@@ -430,7 +429,7 @@ footer h6{
 	padding: 0;
 	margin: 0;
 	outline: none;
-	overflow: hiddensect-description;
+	overflow: hidden;
 }
 
 /* Welcome */
@@ -450,6 +449,23 @@ footer h6{
 	display: flex;
 	width: 100%;
 	justify-content: center;
+}
+
+.main-sect-background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 125%;
+}
+
+.main-sect-background-overlay{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(24, 133, 255, .6);
 }
 
 .tect-blue{
@@ -564,7 +580,7 @@ footer h6{
 	.sect-split-image{
 		position: relative;
 		width: 100%;
-		padding: 0;
+		padding: 0 25px 25px 25px;
 	}
 }
 

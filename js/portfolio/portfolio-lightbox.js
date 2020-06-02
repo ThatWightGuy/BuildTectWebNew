@@ -10,12 +10,33 @@ function lightbox_open(){
 $(document).ready(function(){
 	var lightbox_info_open = false;
 
-	function lightbox_info(){
-		var width = $(window).width();
+	function lightbox_info_cont(){
+		var width = getFullWidth();
 
-		if(width < 984){
+		if(width < 1020){
+			if($(window).width() <= 300){
+				$(".portfolio-lightbox-info-cont").css({
+					"width": $(window).width() + "px"
+				}, 250);
+			}
+			else{
+				$(".portfolio-lightbox-info-cont").css({
+					"width": "300px"
+				}, 250);
+			}
+		}
+		else{
+			$(".portfolio-lightbox-info-cont").removeAttr("style");
+		}
+	}
+
+	function lightbox_info(){
+		var width = getFullWidth();
+
+		if(width < 1020){
 			if(!lightbox_info_open){
-				if(width <= 300){
+				if($(window).width() <= 300){
+					console.log("here");
 					$(".portfolio-lightbox-info").animate({
 						"width": "100%"
 					}, 250);
@@ -25,7 +46,8 @@ $(document).ready(function(){
 						"width": "300px"
 					}, 250);
 				}
-				
+
+				$("#lightbox-info-button h6").html("Close Info");
 
 				lightbox_info_open = true;
 			}
@@ -33,6 +55,10 @@ $(document).ready(function(){
 				$(".portfolio-lightbox-info").animate({
 					"width": "0px"
 				}, 250);
+
+				//$("#lightbox-info-button-cont").removeAttr("style");
+				$("#lightbox-info-button h6").html("Project Info");
+
 				lightbox_info_open = false;
 			}
 		}
@@ -54,9 +80,12 @@ $(document).ready(function(){
 		lightbox_info();
 	});
 
+	lightbox_info_cont();
+	
 	$(window).resize(function(){
-		if($(window).width() >= 984){
+		if(getFullWidth() >= 1020){
 			$(".portfolio-lightbox-info").removeAttr("style");
+			$("#lightbox-info-button h6").html("Project Info");
 			lightbox_info_open = false;
 		}
 		else{
@@ -73,5 +102,7 @@ $(document).ready(function(){
 				}
 			}
 		}
+
+		lightbox_info_cont();
 	});
 });

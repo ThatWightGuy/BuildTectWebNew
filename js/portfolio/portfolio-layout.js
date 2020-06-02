@@ -68,7 +68,7 @@ $(document).ready(function(){
 			$(".portfolio-sidebar").css("width", "300px");
 			$("#sidebar-contents").css("width", "300px");
 
-			if($(window).width() <= 584){
+			if(getFullWidth() <= 600){
 				$("#portfolio-main-sect").css("transform", "translateX(0px)");
 				$("#portfolio-main-sect").css("width", $(window).width() + "px");
 				$(".shade-overlay").css("display", "block");
@@ -137,7 +137,7 @@ $(document).ready(function(){
 			$(".portfolio-sidebar").css("width", "300px");
 			sidebar_width = $(".portfolio-sidebar").width();
 			
-			if($(window).width() <= 584){
+			if(getFullWidth() <= 600){
 				$("#portfolio-main-sect").css("width", $(window).width() + "px");
 				$("#portfolio-main-sect").css("transform", "translateX(0px)");
 				$(".shade-overlay").css("display", "block");

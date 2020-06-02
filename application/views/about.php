@@ -35,21 +35,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url();?>js/basic/cursor.js"></script>
 </head>
 <body ontouchmove >
-	<div class="cursor-main cursor-main-blue"></div>
+	<!--<div class="cursor-main cursor-main-blue"></div>
 	<div class="cursor-follower cursor-follower-blue">
 		<div class="cf-arc"></div>
-	</div>
+	</div>-->
 
 	<?php echo $navbar; ?>
 
 	<div class="main-sect" id="about-us">
 		<div class="main-sect-cont" id="about-us-head" navcolor="blue">
 			<div class="sect-info-full" id="about-us-cont">
-				<div class="sect-info-side-title">
+				<!--<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
 					<h6>About Us</h6>
 					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
+				</div>-->
 				<div class="sect-description" id="about-us-desc-cont">
 					<h1 class="sect-title" id="about-us-desc-cont-h1">About Us</h1>
 				</div>
@@ -135,11 +135,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="main-sect" id="our-team">
 		<div class="main-sect-cont" id="our-team-head" navcolor="blue">
 			<div class="sect-info-full" id="our-team-cont">
-				<div class="sect-info-side-title">
+				<!--<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
 					<h6>Our Team</h6>
 					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
+				</div>-->
 				<div class="sect-description" id="our-team-desc-cont">
 					<h1 class="sect-title" id="our-team-desc-cont-h1">Our Team</h1>
 				</div>
@@ -150,11 +150,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="main-sect" id="services">
 		<div class="main-sect-cont" id="services-head" navcolor="blue">
 			<div class="sect-info-full" id="services-cont">
-				<div class="sect-info-side-title">
+				<!--<div class="sect-info-side-title">
 					<div class="sect-title-line sect-title-top-line"></div>
 					<h6>Services</h6>
 					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
+				</div>-->
 				<div class="sect-description" id="services-desc-cont">
 					<h1 class="sect-title" id="services-desc-cont-h1">Services</h1>
 				</div>

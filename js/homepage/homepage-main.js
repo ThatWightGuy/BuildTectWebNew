@@ -40,7 +40,7 @@ $(document).ready(function(){
 				"opacity": "1"
 			}, 500);
 
-			if($(window).width() >= 538 && $(window).height() >= 551){
+			if(getFullWidth() >= 550 && $(window).height() >= 551){
 				$(".home-transparent-navi").css({
 					//"color": 'black'
 				});
@@ -83,7 +83,7 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		//welcomeResize();
 
-		if($(window).width() >= 538 && $(window).height() >= 551){
+		if(getFullWidth() >= 550 && $(window).height() >= 551){
 			$("#welcome-background").css({
 				"border-width": "75px"
 			});

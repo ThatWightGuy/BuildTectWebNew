@@ -89,6 +89,10 @@ nav{
 	min-height: 500px;
 }
 
+#about-us-background{
+	background-image: url("../img/Home/About.jpg");
+}
+
 #about-us-desc-cont{
 	height: auto;
 	color: white;
@@ -202,7 +206,7 @@ nav{
 	background-color: white;
 	flex-direction: column;
 	align-items: center;
-	padding: 0px 37.5px 100px 37.5px;
+	padding: 0px 37.5px 50px 37.5px;
 }
 
 #about-testimonials-title{
@@ -229,13 +233,14 @@ nav{
 	height: 50%;
 	width: 100%;
 	bottom: 0;
-	background-color: #1885ff;
+	background-color: #064b99;
 }
 
 #about-testimonials-cont{
 	position: relative;
 	max-width: 1600px;
 	width: 100%;
+	padding: 15px 0;
 }
 
 .about-testimonial{
@@ -247,20 +252,18 @@ nav{
 }
 
 .flickity-button{
-	cursor: none;
+	/*cursor: none;*/
 	transform: scale(.5);
 }
 
 .flickity-prev-next-button.previous{
 	left: -35px;
-	color: #064b99;
-	cursor: none;
+	/*cursor: none;*/
 }
 
 .flickity-prev-next-button.next{
 	right: -35px;
-	color: #064b99;
-	cursor: none;
+	/*cursor: none;*/
 }
 
 .about-testimonial-cont{
@@ -341,13 +344,12 @@ nav{
 	display: flex;
 	align-items: center;
 	height: 100%;
+	font-weight: 300;
 }
 
 .atm-cont p{
 	display: inline;
 	margin: 0;
-
-	font-weight: 500;
 }
 
 .about-test-bottom{
@@ -447,6 +449,10 @@ nav{
 	min-height: 500px;
 }
 
+#portfolio-start-background{
+	background-image: url("../img/Home/Portfolio.jpg");
+}
+
 #portfolio-start-desc-cont{
 	height: auto;
 	color: white;
@@ -458,7 +464,69 @@ nav{
 	font-weight: 600;
 }
 
-#portfolio-cols{
+#portfolio-sect{
+	background-color: white;
+}
+
+#portfolio-sect-cont{
+	position: relative;
+	display: block;
+	max-width: 1600px;
+	width: 100%;
+	padding: 25px;
+}
+
+.portfolio-item{
+	position: relative;
+	float: left;
+	width: 50%;
+	padding: 25px;
+}
+
+.portfolio-item-cont{
+	position: relative;
+	padding-top: calc(100%);
+	background-color: white;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+}
+
+.portfolio-item-cont img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-item-inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+}
+
+.portfolio-item-inner-cont{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border: 25px solid white;
+	padding: 25px;
+}
+
+.portfolio-item-inner-h1{
+	margin: 0;
+	color: white;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+/*#portfolio-cols{
 	display: grid;
 	width: 100%;
 }
@@ -566,7 +634,7 @@ nav{
 
 .portfolio-learn-more h6{
 	font-size: 30px;
-}
+}*/
 
 /*.portfolio-img-inner-cont:hover{
 	width: 50vw;
@@ -607,21 +675,16 @@ nav{
 }
 
 #contact-start-cont{
+	max-width: 1600px;
+	width: 100%;
 	min-height: 500px;
 }
 
 #contact-start-desc-cont{
 	height: auto;
-	color: white;
 	padding: 50px;
 	max-width: 600px;
-}
-
-#contact-start-desc-cont{
-	height: auto;
 	color: white;
-	padding: 50px;
-	max-width: 600px;
 }
 
 #contact-start-desc-cont-h1{
@@ -629,7 +692,6 @@ nav{
 }
 
 #contact-form-sect-cont{
-	background-color: white;
 	min-height: 500px;
 	width: 100%;
 }
@@ -639,11 +701,14 @@ nav{
 	width: 100%;
 }
 
-.contact-form-cont{
+#contact-form-cont{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding: 50px;
+}
+
+#contact-form-background{
+	background-image: url("../img/Home/Contact.jpg");
 }
 
 #contact-form-split-left{
@@ -665,49 +730,69 @@ nav{
 
 #contact-form{
 	position: relative;
-	padding: 50px;
 	width: 100%;
 	max-width: 600px;
+	padding: 50px;
 }
 
-.contact-form-inner{
+#contact-form-inner{
 	position: relative;
-	display: block;
-	width: 100%;
+	display: inline-block;
+	padding: 25px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+	background-color: white;
+}
+
+#contact-form-inner-title{
+	margin: 0;
+	padding-bottom: 10px; 
+	text-align: center;
+	font-weight: 600;
 }
 
 .contact-form-input-cont{
-	width: 100%;
-	padding: 5px;
+	position: relative;
+	display: block;
 	float: left;
-}
-
-.contact-form-input-cont input, .contact-form-input-cont textarea{
-	font-family: sans-serif, FontAwesome;
 	width: 100%;
+	height: 60px;
+	padding: 5px;
+}
+
+.contact-form-input{
+	width: 100%;
+	height: 100%;
 	padding: 10px 20px;
-	font-size: 1.17em;
+	margin: 0;
+	font-size: 18px;
+	font-weight: 500;
+	border: 2px solid #dfeeff;
+	border-radius: 30px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
 	outline: none;
-	border-radius: 24.5px;
-	border: 3px solid #dfeeff;
-	box-shadow: 0 3px 7px rgba(0,0,0,.1);
+	font-family: FontAwesome, sans-serif;
 }
 
-#email-field{
-	width: 55%;
+#phone-field, #email-field{
+	width: 50%;
 }
 
-#phone-field{
-	width: 45%;
+#message-field{
+	width: 100%;
+	height: 350px;
 }
 
-.contact-form-input-cont textarea{
+#message-field textarea{
 	resize: none;
-	min-height: 300px;
 }
 
-#contact-form-submit{
-	margin: 0px;
+#button-field .learn-more-button{
+	margin: 0;
+	margin-top: 5px;
+}
+
+#button-field .learn-more-button:hover{
+	cursor: pointer;
 }
 
 /*#contact-start-button{
@@ -773,6 +858,23 @@ nav{
 		width: 50%;
 	}
 	
+	#portfolio-sect-cont{
+		max-width: 800px;
+	}
+
+	#portfolio-start-background{
+		background-size: 200%;
+	}
+
+	#about-us-background{
+		height: 100%;
+		background-size: 200%;
+	}
+
+	.portfolio-item{
+		width: 100%;
+	}
+
 	.flickity-prev-next-button.previous{
 		left: -40px;
 	}
@@ -781,97 +883,33 @@ nav{
 		right: -40px;
 	}
 
-	#portfolio-cols{
-		display: block;
-		background-color: white;
-	}
-
-	#portfolio-cols-right{
-		width: 100%;
-		min-height: 0px;
-	}
-
-	#portfolio-cols-left{
-		width: 100%;
-		min-height: 0px;
-	}
-
-	.portfolio-split-image{
-		max-width: none;
-	}
-
-	.portfolio-circle-filler{
-		display: flex;
-	}
-
-	#portfolio-right-split-image{
-		padding-top: 50px;
-		padding-bottom: 25px;
-	}
-
-	#portfolio-right-split-image{
-		padding-bottom: 25px;
-	}
-
-	#portfolio-left-split-image{
-		padding-top: 25px;
-	}
-
-	.portfolio-split-image .sect-split-image-cont{
-		padding-top: calc((9/16) * 100%);
-	}
-
-	#portfolio-left-image{
-		align-items: center;
-		justify-content: center;
-		padding: 0px;
-	}
-
-	#portfolio-right-image{
-		align-items: center;
-		justify-content: center;
-	}
-
-	.portfolio-sect-cont-h1 {
-		-webkit-text-stroke: 1px black;
-		-webkit-text-fill-color: white;
-	}
-
-	#portfolio-h1-left{
-		justify-self: center;
-		align-self: center;
-		height: auto;
-		left: auto;
-		bottom: auto;
-		writing-mode: horizontal-tb;
-		transform: rotate(0deg);
-	}
-
-	#portfolio-h1-right{
-		position: relative;
-		right: auto;
-		bottom: auto;
-		writing-mode: horizontal-tb;
-		transform: rotate(0deg);
-	}
-
-	.portfolio-learn-more{
-		padding: 5px 15px;
-	}
-
-	.portfolio-learn-more h6{
-		font-size: 1.08em;
-	}
-
-	#contact-form-sect{
+	#contact-start-cont{
 		grid-template-areas: 
-		"right";
+		"left" "right";
 		grid-template-columns: 1fr;
-		grid-template-rows: 1fr auto;
+		grid-template-rows: auto auto;
+	}
+
+	#contact-form-background{
+		height: 500px;
+		background-size: 200%;
 	}
 
 	#contact-form-split-left{
-		display: none;
+		width: 100%;
+		min-height: 500px;
+		grid-area: left;
+	}
+
+	#contact-form-split-right{
+		width: 100%;
+		grid-area: right;
+		background-color: white;
+	}
+
+	#contact-form-inner{
+		padding: 0px;
+		box-shadow: none;
 	}
 }
 
@@ -888,8 +926,7 @@ nav{
 
 }
 
-@media only screen and (max-width: 740px){
-
+@media only screen and (max-width: 725px){
 }
 
 @media only screen and (max-width: 600px){
@@ -950,18 +987,53 @@ nav{
 	}
 }
 
-@media only screen and (max-width: 480px){
-	#email-field{
-		width: 50%;
+@media only screen and (max-width: 530px){
+
+}
+
+@media only screen and (max-width: 500px){
+	#portfolio-sect-cont{
+		padding: 12.5px;
 	}
 
-	#phone-field{
-		width: 50%;
+	.portfolio-item{
+		width: 100%;
+		padding: 12.5px;
+	}
+
+	.portfolio-item-inner{
+		padding: 12.5px;
+	}
+
+	.portfolio-item-inner-cont{
+		border: 12.5px solid white;
+	}
+
+	.portfolio-item-inner-cont h1{
+		font-size: 10.5vw;
+	}
+
+	#phone-field, #email-field{
+		width: 100%;
 	}
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 480px){
 
+}
+
+@media only screen and (max-width: 460px){
+	#about-us-background{
+		background-size: 350%;
+	}
+
+	#portfolio-start-background{
+		background-size: 325%;
+	}
+
+	#contact-form-background{
+		background-size: 325%;
+	}
 }
 
 @media only screen and (max-width: 430px){
@@ -996,34 +1068,9 @@ nav{
 	.portfolio-split-image .sect-split-image-cont{
 		padding-top: calc(100%);
 	}
-
-	#portfolio-cols-right{
-		padding: 0px;
-	}
-
-	#portfolio-cols-left{
-		padding: 0px;
-	}
-
-	#portfolio-left-split-image{
-		padding: 0px;
-	}
-
-	#portfolio-right-split-image{
-		padding: 0px;
-	}
-
-	#email-field{
-		width: 100%;
-	}
-
-	#phone-field{
-		width: 100%;
-	}
 }
 
 @media only screen and (max-width: 400px){
-
 }
 
 @media only screen and (max-width: 350px){

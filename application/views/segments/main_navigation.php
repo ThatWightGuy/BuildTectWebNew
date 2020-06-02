@@ -35,6 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</li>
 						</ul>
 					</div>
+					
 					<div class="overlay-underline"></div>
 					<div class="overlay-page-links">
 						<ul>
@@ -47,6 +48,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</ul>
 					</div>
 				</div>
+				<!--<div class="overlay-tools-links">
+					<ul>
+						<li>
+							<a href="">
+								<h5>Make a Payment</h5>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<h5>Get a Quote</h5>
+							</a>
+						</li>
+					</ul>
+				</div>-->
 			</div>
 		</div>
 	</div>

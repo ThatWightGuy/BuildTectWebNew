@@ -33,9 +33,11 @@ function changeColor(){
 
 	if(position != undefined){
 		if(navi_overlay_on){
+			$(".main-navigation").removeClass("home-transparent-navi");
 			$(".main-navigation").removeClass("white-navi");
 			$(".main-navigation").removeClass("blue-navi");
 			$(".main-navigation").removeClass("dark-blue-navi");
+			$(".main-navigation").removeClass("darkest-blue-navi");
 			$(".main-navigation").addClass("transparent-navi");
 		}
 		else{
@@ -44,6 +46,7 @@ function changeColor(){
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").removeClass("darkest-blue-navi");
 				$(".main-navigation").addClass("blue-navi");
 			}
 			else if(position.color == "darkblue"){
@@ -51,19 +54,30 @@ function changeColor(){
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").removeClass("transparent-navi");
+				$(".main-navigation").removeClass("darkest-blue-navi");
 				$(".main-navigation").addClass("dark-blue-navi");
+			}
+			else if(position.color == "darkestblue"){
+				$(".main-navigation").removeClass("white-navi");
+				$(".main-navigation").removeClass("blue-navi");
+				$(".main-navigation").removeClass("home-transparent-navi");
+				$(".main-navigation").removeClass("transparent-navi");
+				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").addClass("darkest-blue-navi");
 			}
 			else if(position.color == "white"){
 				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").removeClass("transparent-navi");
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").removeClass("darkest-blue-navi");
 				$(".main-navigation").addClass("white-navi");
 			}
 			else if(position.color == "transparent"){
 				$(".main-navigation").removeClass("white-navi");
 				$(".main-navigation").removeClass("blue-navi");
 				$(".main-navigation").removeClass("dark-blue-navi");
+				$(".main-navigation").removeClass("darkest-blue-navi");
 				$(".main-navigation").removeClass("home-transparent-navi");
 				$(".main-navigation").addClass("transparent-navi");
 			}

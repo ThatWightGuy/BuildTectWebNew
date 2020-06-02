@@ -385,6 +385,14 @@ footer{
 }
 
 @media screen and (max-width: 400px){
+	#about-us-history-images-cont{
+		padding: 25px 0;
+	}
+
+	.auh-image{
+		padding: 12.5px 25px;
+	}
+
 	#services-main-cont{
 		position: relative;
 		display: block;

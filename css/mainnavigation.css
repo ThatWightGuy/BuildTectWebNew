@@ -12,6 +12,10 @@
 	transition: border-width .2s;
 }
 
+.navi-main-item:hover, #main-navi-bars:hover{
+	cursor: pointer;
+}
+
 #navi-overlay-cont{
 	position: relative;
 	display: flex;
@@ -91,6 +95,26 @@
 	color: #1885ff;
 }
 
+.overlay-tools-links{
+	position: relative;
+	float: right;
+	padding: 25px 35px;
+	min-width: 275px;
+	margin-top: 50px;
+	background-color: #1885ff;
+}
+
+.overlay-tools-links ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+.overlay-tools-links h5{
+	font-weight: 600;
+}
+
 .overlay-page-links{
 	position: relative;
 	display: none;
@@ -114,6 +138,10 @@
 	padding-top: 15px;
 	list-style-type: none;
 	transition: opacity .2s;
+}
+
+.overlay-page-item:hover{
+	cursor: pointer;
 }
 
 .overlay-page-item:nth-child(1){
@@ -237,6 +265,8 @@
 	right: 0px;
 }
 
+
+
 .home-transparent-navi{
 	background-color: none;
 	color: black;
@@ -262,11 +292,20 @@
 	color: white;
 }
 
+.darkest-blue-navi{
+	background-color: #020C1A;
+	color: white;
+}
+
 .blue-navi img{
 	filter: brightness(0) grayscale(1) saturate(0) invert(1);
 }
 
 .dark-blue-navi img{
+	filter: brightness(0) grayscale(1) saturate(0) invert(1);
+}
+
+.darkest-blue-navi img{
 	filter: brightness(0) grayscale(1) saturate(0) invert(1);
 }
 
@@ -283,6 +322,10 @@
 }
 
 .dark-blue-navi .navi-under-bar{
+	background-color: white;
+}
+
+.darkest-blue-navi .navi-under-bar{
 	background-color: white;
 }
 
@@ -306,8 +349,16 @@
 	background-color: white;
 }
 
+.darkest-blue-navi .bars .bar{ 
+	background-color: white;
+}
+
 .white-navi .bars .bar{
 	background-color: black;
+}
+
+@media only screen and (max-width: 850px){
+
 }
 
 @media only screen and (max-width: 600px){

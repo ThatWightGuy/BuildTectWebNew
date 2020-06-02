@@ -13,7 +13,16 @@ nav{
 }
 
 footer{
+	z-index: 3;
 	margin-top: 75px;
+}
+
+#white-overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: white;
 }
 
 /* Portfolio Main Overlay */
@@ -83,6 +92,14 @@ footer{
 	max-width: 100%;
 }
 
+.portfolio-lightbox-open{
+	margin-bottom: 0;
+}
+
+.portfolio-lightbox-open:hover{
+	cursor: pointer;
+}
+
 #portfolio-lightbox-exit{
 	position: absolute;
 	margin: 0;
@@ -99,6 +116,10 @@ footer{
 	background-color: #1885ff;
 }
 
+#portfolio-lightbox-exit:hover{
+	cursor: pointer;
+}
+
 #portfolio-lightbox-exit .cross{
 	padding: 0px;
 	margin: 0px;
@@ -108,27 +129,89 @@ footer{
 	width: 30px;
 }
 
+.flickity-prev-next-button.previous{
+
+}
+
+.flickity-prev-next-button.next{
+
+}
+
 .portfolio-lightbox-info{
 	position: relative;
 	float: left;
 	width: 30%;
 	height: 100%;
+	overflow-y: auto;
 	background-color: white;
+}
+
+.portfolio-lightbox-info-cont{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	width: 100%;
+	padding: 25px;
 }
 
 #lightbox-info-button-cont{
 	position: absolute;
 	display: none;
 	justify-content: center;
-	left: 0;
+	right: 0;
 	bottom: 0;
 	width: 100%;
-	z-index: 2;
+	z-index: 4;
+}
+
+.plic-main-header{
+	margin: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 600; 
+}
+
+.plic-underline{
+	position: relative;
+	height: 2px;
+	width: 80%;
+	margin: 10px 0;
+	border-radius: 1px;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.plic-secondary-header{
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 0;
+}
+
+.plic-secondary-header-title{
+	position: relative;
+}
+
+.plic-secondary-header-title h5{
+	font-weight: 600;
+	margin: 0;
+}
+
+.plic-secondary-header-content{
+}
+
+.plic-secondary-header-content h6{
+	margin: 0;
 }
 
 #lightbox-info-button{
 	box-shadow: 0 3px 7px rgba(0,0,0,.2);
 }
+
+#lightbox-info-button:hover{
+	cursor: pointer;
+}
+
 
 /* Portfolio Main Section */
 
@@ -232,6 +315,7 @@ footer{
 
 #sidebar-button-main:hover{
 	color: #1885ff;
+	cursor: pointer;
 }
 
 #sidebar-button-main i{
@@ -254,6 +338,7 @@ footer{
 
 #sidebar-button-exit:hover{
 	color: #dfeeff;
+	cursor: pointer;
 }
 
 .sidebar-title-cont{
@@ -300,6 +385,10 @@ footer{
 	border: none;
 	transition-property: background-color;
 	transition-duration: .2s;
+}
+
+.sidebar-filter-button-cont:hover{
+	cursor: pointer;
 }
 
 .sidebar-button-title{
@@ -613,7 +702,7 @@ footer{
 	padding: 50px 20px;
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1020px){
 	.portfolio-lightbox{
 		padding: 0px;
 		margin: 0px;
@@ -655,5 +744,11 @@ footer{
 
 	#lightbox-info-button-cont{
 		display: flex;
+	}
+}
+
+@media only screen and (max-width: 660px){
+	.portfolio-lightbox-info-cont{
+		padding: 25px 25px 68px 25px;
 	}
 }

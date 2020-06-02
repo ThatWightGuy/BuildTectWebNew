@@ -43,11 +43,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php echo $navbar?>
 
 	<?php echo $portfolioOverlay?>
+	
+	<div id="white-overlay"></div>
 
-	<div class="cursor-main cursor-main-blue"></div>
+	<!--<div class="cursor-main cursor-main-blue"></div>
 	<div class="cursor-follower cursor-follower-blue">
 		<div class="cf-arc"></div>
-	</div>
+	</div>-->
 	<div id="portfolio-form">
 		<div class="portfolio-sidebar">
 			<div id="sidebar-contents">

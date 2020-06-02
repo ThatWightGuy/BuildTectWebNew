@@ -25,7 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	
 	<!-- Downloaded JS -->
-	<script src="<?php echo base_url();?>js/basic/jquery.ui.touch-punch.min.js"></script>
 	<script src="<?php echo base_url();?>js/basic/flowtype.js"></script>
 	
 	<!-- Custom JS -->
@@ -38,13 +37,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="<?php echo base_url();?>js/homepage/homepage-main.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-navi.js"></script>
 	<script src="<?php echo base_url();?>js/homepage/homepage-testimonials.js"></script>
-	<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>
+	<script src="<?php echo base_url();?>js/homepage/homepage-contact.js"></script>
+	<!--<script src="<?php echo base_url();?>js/homepage/homepage-portfolio.js"></script>-->
 </head>
 <body ontouchmove >
-	<div class="cursor-main cursor-main-blue"></div>
+	<!--<div class="cursor-main cursor-main-blue"></div>
 	<div class="cursor-follower cursor-follower-blue">
 		<div class="cf-arc"></div>
-	</div>
+	</div>-->
 	
 	<div class="main-sect" id="welcome">
 		<div id="welcome-background" style="background-image: url('<?php echo base_url();?>img/Home/Main.jpg')">
@@ -60,12 +60,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php echo $navbar ?>
 	<div class="main-sect" id="about">
 		<div class="main-sect-cont" id="about-us" navcolor="blue">
+			<div class="main-sect-background" id="about-us-background"> 
+				<div class="main-sect-background-overlay"></div>
+			</div>
 			<div class="sect-info-full" id="about-us-cont">
-				<div class="sect-info-side-title">
-					<div class="sect-title-line sect-title-top-line"></div>
-					<h6>About</h6>
-					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
 				<div class="sect-description" id="about-us-desc-cont" action="">
 					<h1 class="sect-title" id="about-us-desc-cont-h1">Who We Are</h1>
 					<h3 id="about-us-desc-cont-h3">
@@ -146,11 +144,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<h1 class="sect-title" id="about-testimonials-h1">What People Say</h1>
 			</div>
 			<div class="main-sect-cont" id="at-top-half-back" navcolor="white"></div>
-			<div class="main-sect-cont" id="at-bottom-half-back" navcolor="blue"></div>
+			<div class="main-sect-cont" id="at-bottom-half-back" navcolor="darkblue"></div>
 			<div class="sect-short carousel" id="about-testimonials-cont" data-flickity=
 			'{
 				"cellSelector": ".about-testimonial",
-				"contain": true,
 				"autoPlay": 1500,
 				"wrapAround": true,
 				"pageDots": false
@@ -234,12 +231,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div class="main-sect" id="portfolio">
 		<div class="main-sect-cont" id="portfolio-start" navcolor="blue">
+			<div class="main-sect-background" id="portfolio-start-background"> 
+				<div class="main-sect-background-overlay"></div>
+			</div>
 			<div class="sect-info-full" id="portfolio-start-cont">
-				<div class="sect-info-side-title">
-					<div class="sect-title-line sect-title-top-line"></div>
-					<h6>Portfolio</h6>
-					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
 				<div class="sect-description" id="portfolio-start-desc-cont">
 					<h1 class="sect-title" id="portfolio-start-desc-cont-h1">See Our Work</h1>
 					<h3 id="portfolio-start-desc-cont-h3">
@@ -253,47 +248,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 		<div class="main-sect-cont" id="portfolio-sect" navcolor="white">
-			<div class="sect-info-split" id="portfolio-cols">
-				<div class="sect-split-left portfolio-split-cont" id="portfolio-cols-left">
-					<div class="sect-split-image portfolio-split-image" id="portfolio-right-split-image">
-						<div class="sect-split-image-cont">
-							<div class="sect-image-inner-cont" id="portfolio-left-image">
-								<div class="portfolio-img-inner-cont" id="portfolio-left-inner" cursor="blue">
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-left">
-										<h1>Residential</h1>
-									</div>
-									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-left-main-overlay">
-										<a class="learn-more-button white-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Residential">
-											<div class="button-overlay"></div>
-											<h6>See Projects</h6>
-										</a>
-									</div>
-									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-left-right-overlay">
-										second
-									</div>
-								</div>
+			<div class="sect-info-full" id="portfolio-sect-cont">
+				<div class="portfolio-item">
+					<div class="portfolio-item-cont">
+						<img src="<?php echo base_url(); ?>/img/Home/Residential_Square.jpg">
+						<div class="portfolio-item-inner">
+							<div class="portfolio-item-inner-cont">
+								<h1 class="portfolio-item-inner-h1">Residential</h1>
+								<a class="learn-more-button black-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Residential">
+									<div class="button-overlay"></div>
+									<h6>See Projects</h6>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="sect-split-right portfolio-split-cont" id="portfolio-cols-right">
-					<div class="sect-split-image portfolio-split-image" id="portfolio-left-split-image">
-						<div class="sect-split-image-cont">
-							<div class="sect-image-inner-cont" id="portfolio-left-image">
-								<div class="portfolio-img-inner-cont" id="portfolio-right-inner" cursor="blue">
-									<div class="portfolio-sect-cont-h1" id="portfolio-h1-right">
-										<h1>Commercial</h1>
-									</div>
-									<div class="portfolio-inner-cont-overlay main-overlay" id="portfolio-right-main-overlay">
-										<a class="learn-more-button white-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Commercial">
-											<div class="button-overlay"></div>
-											<h6>See Projects</h6>
-										</a>
-									</div>
-									<div class="portfolio-inner-cont-overlay secondary-overlay" id="portfolio-right-left-overlay">
-										second
-									</div>
-								</div>
+				<div class="portfolio-item">
+					<div class="portfolio-item-cont">
+						<img src="<?php echo base_url(); ?>/img/Home/Main_Square.jpg">
+						<div class="portfolio-item-inner">
+							<div class="portfolio-item-inner-cont">
+								<h1 class="portfolio-item-inner-h1">Commercial</h1>
+								<a class="learn-more-button black-button" name="PortfolioValue" href="<?php echo base_url();?>redirect/portfolio/Commercial">
+									<div class="button-overlay"></div>
+									<h6>See Projects</h6>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -302,57 +281,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 	<div class="main-sect" id="contact">
-		<div class="main-sect-cont" id="contact-start" navcolor="blue">
-			<div class="sect-info-full" id="contact-start-cont">
-				<div class="sect-info-side-title">
-					<div class="sect-title-line sect-title-top-line"></div>
-					<h6>Contact</h6>
-					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>
-				<div class="sect-description" id="contact-start-desc-cont">
-					<h1 class="sect-title" id="contact-start-desc-cont-h1">Contact Us</h1>
-					<h3 id="contact-start-desc-cont-h3">
-						Get in touch with our team today to get started with your project.
-					</h3>
-					<button class="learn-more-button white-button" id="contact-start-button">
-						<div class="button-overlay"></div>
-						<h6>
-							See More <i class="fas fa-caret-down"></i>
-						</h6>
-					</button>
-				</div>
+		<div class="main-sect-cont" id="contact-form-cont">
+			<div class="main-sect-background" id="contact-form-background"> 
+				<div class="main-sect-background-overlay"></div>
 			</div>
-		</div>
-		<div class="main-sect-cont" id="contact-form-cont" navcolor="white">
 			<div class="sect-info-full" id="contact-form-sect-cont">
-				<div class="sect-info-split" id="contact-form-sect">
-					<div class="sect-split-left" id="contact-form-split-left">
-						<img src="<?php echo base_url();?>img/mail.png">
+				<div class="sect-info-split" id="contact-start-cont">
+					<div class="main-sect-cont sect-split-left" id="contact-form-split-left" navcolor="blue">
+						<div class="sect-description" id="contact-start-desc-cont">
+							<h1 class="sect-title" id="contact-start-desc-cont-h1">Contact Us</h1>
+							<h3 id="contact-start-desc-cont-h3">
+								Get in touch with our team today to get started with your project.
+							</h3>
+						</div>
 					</div>
-					<div class="sect-split-right" id="contact-form-split-right">
-						<form id="contact-form" method="post">
-							<div class="contact-form-inner">
+					<div class="main-sect-cont sect-split-right" id="contact-form-split-right">
+						<form id="contact-form">
+							<div id="contact-form-inner">
+								
 								<div class="contact-form-input-cont" id="name-field">
-									<input type="text" name="Name" placeholder="&#xf007;  Name">
-								</div>
-								<div class="contact-form-input-cont" id="email-field">
-									<input type="text" name="Email" placeholder="&#xf0e0;  Email">
+									<input type="text" name="Name" placeholder="&#xf007;  Name" class="contact-form-input">
 								</div>
 								<div class="contact-form-input-cont" id="phone-field">
-									<input type="text" name="Phone" placeholder="&#xf3cd;  Phone">
+									<input type="text" name="Phone" placeholder="&#xf3cd;  Phone" class="contact-form-input">
 								</div>
-								<div class="contact-form-input-cont" id="subject-field">
-									<input type="text" name="Subject" placeholder="&#xf086;  Subject">
+								<div class="contact-form-input-cont" id="email-field">
+									<input type="text" name="Email" placeholder="&#xf0e0;  Email" class="contact-form-input">
 								</div>
 								<div class="contact-form-input-cont" id="message-field">
-									<textarea placeholder="&#xf27b;  Message"></textarea>
+									<textarea type="text" name="Message" placeholder="&#xf075;  Message" class="contact-form-input"></textarea>
 								</div>
-								<div class="contact-form-input-cont">
-									<button type="submit" class="learn-more-button black-button" id="contact-form-submit">
+								<div class="contact-form-input-cont" id="button-field">
+									<button class="learn-more-button black-button">
 										<div class="button-overlay"></div>
-										<h6>
-											Send Email
-										</h6>
+										<h6>Send Email</h6>
 									</button>
 								</div>
 							</div>
