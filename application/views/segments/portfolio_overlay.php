@@ -29,26 +29,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 						<div class="portfolio-lightbox-info">
 							<div class="portfolio-lightbox-info-cont">
-								<h3 class="plic-main-header">
+								<h4 class="plic-main-header">
 									Wight Residence
-								</h3>
+								</h4>
 								<!--<div class="plic-underline"></div>-->
-								<div class="plic-secondary-header">
+								<div class="plic-secondary-header" id="plic-project-type">
 									<div class="plic-secondary-header-title">
-										<h5>Job Type</h5>
+										<h5>Project Type</h5>
 									</div>
 									<div class="plic-secondary-header-content">
 										<h6>Residential</h6>
 									</div>
 								</div>
-								<div class="plic-secondary-header">
+								<div class="plic-secondary-header" id="plic-year-completed">
 									<div class="plic-secondary-header-title">
-										<h5>Address</h5>
+										<h5>Year</h5>
 									</div>
 									<div class="plic-secondary-header-content">
-										<h6>9707 Woodley Ave. Northridge CA</h6>
+										<h6>2020</h6>
 									</div>
 								</div>
+								<div class="plic-secondary-header" id="plic-job-type">
+									<div class="plic-secondary-header-title">
+										<h5>Job Type</h5>
+									</div>
+									<div class="plic-secondary-header-content">
+										<h6>Addition, New Construction, Pool, Remodel, Renovation</h6>
+									</div>
+								</div>
+								<div class="plic-secondary-header" id="plic-location">
+									<div class="plic-secondary-header-title">
+										<h5>Location</h5>
+									</div>
+									<div class="plic-secondary-header-content">
+										<h6>Northridge, CA</h6>
+									</div>
+								</div>
+								<div class="plic-secondary-header" id="plic-description">
+									<div class="plic-secondary-header-title">
+										<h5>Description</h5>
+									</div>
+									<div class="plic-secondary-header-content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									</div>
+								</div>						
 							</div>
 						</div>
 					</div>

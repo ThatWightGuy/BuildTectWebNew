@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="about-what-is" navcolor="white">
+		<!--<div class="main-sect-cont" id="about-what-is" navcolor="white">
 			<div class="sect-info-split" id="about-what-is-cont">
 				<div class="sect-split-left" id="about-what-is-left">
 					<div class="sect-split-image">
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<div class="main-sect-cont" id="about-provide" navcolor="white">
 			<div class="sect-info-split" id="about-provide-cont">
 				<div class="sect-split-left" id="about-provide-left">

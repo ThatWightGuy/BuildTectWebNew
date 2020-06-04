@@ -38,9 +38,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<a href="<?php echo base_url();?>redirect/about/about-us">
 								<h6>About Us</h6>
 							</a>
-							<a href="<?php echo base_url();?>redirect/about/our-team">
+							<!--<a href="<?php echo base_url();?>redirect/about/our-team">
 								<h6>Our Team</h6>
-							</a>
+							</a>-->
 							<a href="<?php echo base_url();?>redirect/about/services">
 								<h6>Services</h6>
 							</a>

@@ -35,7 +35,6 @@ class About extends CI_Controller {
 			'logo_link' => base_url(), // href for logo
 			'links' => array(
 				array('name' => 'About Us', 'link' => 'about-us'),
-				array('name' => 'Our Team', 'link' => 'our-team'),
 				array('name' => 'Services', 'link' => 'services')
 			),
 			'styles' => array()

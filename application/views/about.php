@@ -132,20 +132,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 
-	<div class="main-sect" id="our-team">
+	<!--<div class="main-sect" id="our-team">
 		<div class="main-sect-cont" id="our-team-head" navcolor="blue">
 			<div class="sect-info-full" id="our-team-cont">
-				<!--<div class="sect-info-side-title">
-					<div class="sect-title-line sect-title-top-line"></div>
-					<h6>Our Team</h6>
-					<div class="sect-title-line sect-title-bottom-line"></div>
-				</div>-->
 				<div class="sect-description" id="our-team-desc-cont">
 					<h1 class="sect-title" id="our-team-desc-cont-h1">Our Team</h1>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 	<div class="main-sect" id="services">
 		<div class="main-sect-cont" id="services-head" navcolor="blue">
@@ -162,6 +157,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="main-sect-cont" id="services-main" navcolor="white">
 			<div class="sect-info-full" id="services-main-cont">
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-home"></i>
+									</div>
+									<h5>Site Development</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="service-info-icon">
+					<div class="service-info-icon-cont">
+						<div class="sii-inner">
+							<div class="sii-inner-cont">
+								<div class="sii-icon-cont">
+									<div class="sii-icon">
+										<i class="fas fa-clipboard"></i>
+									</div>
+									<h5>Pre-Design Services</h5>
+								</div>
+								<button class="learn-more-button black-button service-info-button">
+									<div class="button-overlay"></div>
+									<h6>See More</h6>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="service-info-icon">
 					<div class="service-info-icon-cont">
 						<div class="sii-inner">
@@ -186,117 +217,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="sii-inner-cont">
 								<div class="sii-icon-cont">
 									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Pre-Design Services</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Construction</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Surveying</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Bin Negotiations</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Site Development</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
+										<i class="fas fa-city"></i>
 									</div>
 									<h5>City Interactions</h5>
-								</div>
-								<button class="learn-more-button black-button service-info-button">
-									<div class="button-overlay"></div>
-									<h6>See More</h6>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
-						<div class="sii-inner">
-							<div class="sii-inner-cont">
-								<div class="sii-icon-cont">
-									<div class="sii-icon">
-										<i class="fas fa-drafting-compass"></i>
-									</div>
-									<h5>Structural Services</h5>
 								</div>
 								<button class="learn-more-button black-button service-info-button">
 									<div class="button-overlay"></div>

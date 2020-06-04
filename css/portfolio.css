@@ -142,6 +142,7 @@ footer{
 	float: left;
 	width: 30%;
 	height: 100%;
+	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: white;
 }
@@ -149,7 +150,10 @@ footer{
 .portfolio-lightbox-info-cont{
 	position: relative;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: flex-start;
 	min-height: 100%;
 	width: 100%;
 	padding: 25px;
@@ -166,10 +170,16 @@ footer{
 }
 
 .plic-main-header{
+	position: relative;
+	width: 100%;
 	margin: 0;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
+	padding: 15px;
 	text-align: center;
 	font-weight: 600; 
+	color: white;
+	box-shadow: 0 3px 7px rgba(0,0,0,.2);
+	background-color: #064b99;
 }
 
 .plic-underline{
@@ -186,6 +196,15 @@ footer{
 	display: block;
 	margin: 0;
 	padding: 5px 0;
+	flex: 0 1 100%;
+}
+
+#plic-year-completed{
+	flex: 0 1 45%;
+}
+
+#plic-project-type{
+	flex: 0 1 55%;
 }
 
 .plic-secondary-header-title{
@@ -200,7 +219,8 @@ footer{
 .plic-secondary-header-content{
 }
 
-.plic-secondary-header-content h6{
+.plic-secondary-header-content h6, .plic-secondary-header-content p{
+	font-size: 15px;
 	margin: 0;
 }
 
@@ -747,7 +767,7 @@ footer{
 	}
 }
 
-@media only screen and (max-width: 660px){
+@media only screen and (max-width: 685px){
 	.portfolio-lightbox-info-cont{
 		padding: 25px 25px 68px 25px;
 	}
