@@ -55,7 +55,8 @@
 .footer-sect-cont-header h4{
 	padding: 0px 0px 3.125px 0px;
 	margin: 0px;
-	font-weight: 600;
+	font-weight: 300;
+	font-style: italic;
 }
 
 #footer-main-logo{
@@ -94,11 +95,11 @@
 }
 
 .footer-list h5{
-	font-weight: 600;
+	font-weight: 400;
 }
 
 .footer-list h6{
-	font-weight: 300;
+	font-weight: 200;
 }
 
 #footer-general{
@@ -149,6 +150,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+#address-cont h6, #contact-cont h6{
+	font-weight: 300;
 }
 
 #social-cont{

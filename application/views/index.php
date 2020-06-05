@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">-->
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
 
 	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/basic.css">
@@ -141,14 +142,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 			<div class="background-div bg-tect-blue" id="at-back"></div>-->
 			<div id="about-testimonials-title">
-				<h1 class="sect-title" id="about-testimonials-h1">What People Say</h1>
+				<h1 class="sect-title" id="about-testimonials-h1">What Our Clients Say</h1>
 			</div>
 			<div class="main-sect-cont" id="at-top-half-back" navcolor="white"></div>
 			<div class="main-sect-cont" id="at-bottom-half-back" navcolor="darkblue"></div>
 			<div class="sect-short carousel" id="about-testimonials-cont" data-flickity=
 			'{
 				"cellSelector": ".about-testimonial",
-				"autoPlay": 1500,
+				"autoPlay": 5000,
 				"wrapAround": true,
 				"pageDots": false
 			}'>

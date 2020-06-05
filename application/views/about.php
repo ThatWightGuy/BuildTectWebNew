@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
 
 	<!-- Custom Links -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/css/basic.css">
@@ -155,10 +156,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont" id="services-main" navcolor="white">
+		<!--<div class="main-sect-cont" id="services-main" navcolor="white">
 			<div class="sect-info-full" id="services-main-cont">
 				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
+					<div class="service-info-icon-cont" id="sii-site-development">
 						<div class="sii-inner">
 							<div class="sii-inner-cont">
 								<div class="sii-icon-cont">
@@ -176,7 +177,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
+					<div class="service-info-icon-cont" id="sii-pre-design-services">
 						<div class="sii-inner">
 							<div class="sii-inner-cont">
 								<div class="sii-icon-cont">
@@ -194,7 +195,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
+					<div class="service-info-icon-cont" id="sii-design-services">
 						<div class="sii-inner">
 							<div class="sii-inner-cont">
 								<div class="sii-icon-cont">
@@ -212,7 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<div class="service-info-icon">
-					<div class="service-info-icon-cont">
+					<div class="service-info-icon-cont" id="sii-city-interactions">
 						<div class="sii-inner">
 							<div class="sii-inner-cont">
 								<div class="sii-icon-cont">
@@ -230,10 +231,154 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 			</div>
+		</div>-->
+		<div class="main-sect-cont services-info" id="services-info-site-development" navcolor="white">
+			<div class="services-info-split sect-info-split">
+				<div class="sect-split-left">
+					<div class="services-info-split-image sect-split-image">
+						<div class="sect-split-image-cont">
+							<div class="sect-image-inner-cont">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sect-split-right">
+					<div class="sect-description">
+						<h1 class="sect-title">Site Development</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</h3>
+						<ul>
+							<li>
+								<h6>Site Analysis and Selections</h6>
+							</li>
+							<li>
+								<h6>Site Master Planning</h6>
+							</li>
+							<li>
+								<h6>Detailed Site Planning</h6>
+							</li>
+							<li>
+								<h6>Zoning Analysis</h6>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="main-sect-cont" id="services-info" navcolor="darkblue">
-			<div class="sect-info-full" id="services-info-cont">
-				
+		<div class="main-sect-cont services-info" id="services-info-pre-design" navcolor="white">
+			<div class="services-info-split sect-info-split">
+				<div class="sect-split-left">
+					<div class="services-info-split-image sect-split-image">
+						<div class="sect-split-image-cont">
+							<div class="sect-image-inner-cont">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sect-split-right">
+					<div class="sect-description">
+						<h1 class="sect-title">Pre-Design Services</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</h3>
+						<ul>
+							<li>
+								<h6>Project Development</h6>
+							</li>
+							<li>
+								<h6>Project Programming</h6>
+							</li>
+							<li>
+								<h6>Space Planning</h6>
+							</li>
+							<li>
+								<h6>Existing Building Surveys</h6>
+							</li>
+							<li>
+								<h6>Consultation</h6>
+							</li>
+							<li>
+								<h6>Initial Concept and Budget Review</h6>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-sect-cont services-info" id="services-info-design" navcolor="white">
+			<div class="services-info-split sect-info-split">
+				<div class="sect-split-left">
+					<div class="services-info-split-image sect-split-image">
+						<div class="sect-split-image-cont">
+							<div class="sect-image-inner-cont">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sect-split-right">
+					<div class="sect-description">
+						<h1 class="sect-title">Design Services</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</h3>
+						<ul>
+							<li>
+								<h6>Schematic Design</h6>
+							</li>
+							<li>
+								<h6>Engineering Systems Analysis</h6>
+							</li>
+							<li>
+								<h6>Design Development</h6>
+							</li>
+							<li>
+								<h6>Interior Design</h6>
+							</li>
+							<li>
+								<h6>Graphics Design</h6>
+							</li>
+							<li>
+								<h6>Renderings, Models, and Mock-Ups</h6>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-sect-cont services-info" id="services-info-city-interactions" navcolor="white">
+			<div class="services-info-split sect-info-split">
+				<div class="sect-split-left">
+					<div class="services-info-split-image sect-split-image">
+						<div class="sect-split-image-cont">
+							<div class="sect-image-inner-cont">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sect-split-right">
+					<div class="sect-description">
+						<h1 class="sect-title">City Interactions</h1>
+						<h3>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</h3>
+						<ul>
+							<li>
+								<h6>Research Services</h6>
+							</li>
+							<li>
+								<h6>Plan Submittal</h6>
+							</li>
+							<li>
+								<h6>Permit Obtainment</h6>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -91,30 +91,9 @@
 	margin: 0;
 	line-height: 100%;
 	font-size: 12vmin;
-	font-weight: 600;
+	font-weight: 400;
 	color: #1885ff;
 }
-
-.overlay-tools-links{
-	position: relative;
-	float: right;
-	padding: 25px 35px;
-	min-width: 275px;
-	margin-top: 50px;
-	background-color: #1885ff;
-}
-
-.overlay-tools-links ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	color: white;
-}
-
-.overlay-tools-links h5{
-	font-weight: 600;
-}
-
 .overlay-page-links{
 	position: relative;
 	display: none;
@@ -161,7 +140,6 @@
 	display: inline;
 	padding: 0; 
 	margin: 0;
-	font-weight: 600;
 	font-size: 7vmin;
 }
 
@@ -252,7 +230,6 @@
 	height: 75px;
 	line-height: 75px;
 	margin: 0;
-	font-weight: 600;
 }
 
 #navi-bars-sect{
@@ -280,21 +257,25 @@
 .white-navi{
 	background-color: rgba(255, 255, 255, 1);
 	color: black;
+	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
 }
 
 .blue-navi{
 	background-color: rgba(24, 133, 255, 1);
 	color: white;
+	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
 }
 
 .dark-blue-navi{
 	background-color: rgba(6, 75, 153, 1);
 	color: white;
+	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
 }
 
 .darkest-blue-navi{
 	background-color: #020C1A;
 	color: white;
+	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
 }
 
 .blue-navi img{
