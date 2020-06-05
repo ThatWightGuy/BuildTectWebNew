@@ -260,6 +260,12 @@
 	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
 }
 
+.light-blue-navi{
+	background-color: rgba(223, 238, 255, 1);
+	color: black;
+	box-shadow: rgba(0, 0, 0, 0.12) -30px 35px 60px 0px;
+}
+
 .blue-navi{
 	background-color: rgba(24, 133, 255, 1);
 	color: white;
@@ -314,11 +320,19 @@
 	background-color: rgba(24, 133, 255, 1);
 }
 
+.light-blue-navi .navi-under-bar{
+	background-color: rgba(24, 133, 255, 1);
+}
+
 .home-transparent-navi .bars .bar{
 	background-color: white;
 }
 
 .transparent-navi .bars .bar{
+	background-color: black;
+}
+
+.light-blue-navi .bars .bar{
 	background-color: black;
 }
 

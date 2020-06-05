@@ -267,7 +267,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont services-info" id="services-info-pre-design" navcolor="white">
+		<div class="main-sect-cont services-info" id="services-info-pre-design" navcolor="lightblue">
 			<div class="services-info-split sect-info-split">
 				<div class="sect-split-left">
 					<div class="services-info-split-image sect-split-image">
@@ -349,7 +349,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<div class="main-sect-cont services-info" id="services-info-city-interactions" navcolor="white">
+		<div class="main-sect-cont services-info" id="services-info-city-interactions" navcolor="lightblue">
 			<div class="services-info-split sect-info-split">
 				<div class="sect-split-left">
 					<div class="services-info-split-image sect-split-image">
